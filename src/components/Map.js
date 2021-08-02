@@ -6,7 +6,7 @@ export class MapContainer extends Component {
     super(props);
 
     this.state = {
-      stores: [{ lat: 47.49855629475769, lng: -122.14184416996333 }],
+      stores: [{ lat: 47.900238, lng: 106.909943 }],
     };
   }
 
@@ -28,15 +28,16 @@ export class MapContainer extends Component {
 
   render() {
     const mapStyles = {
+      zIndex: 1,
       width: "100%",
-      height: "100%",
+      height: "70%",
     };
     return (
-      <section className="contact_map">
+      <section className="contact_map" id="myAdress">
         <Map
           google={this.props.google}
-          zoom={8}
-          initialCenter={{ lat: 47.444, lng: -122.176 }}
+          zoom={17}
+          initialCenter={{ lat: 47.900238, lng: 106.909943 }}
           style={mapStyles}
         >
           {this.displayMarkers()}

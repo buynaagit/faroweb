@@ -11,6 +11,7 @@ import AppTeam from "../components/Team/AppTeam";
 import FooterTwo from "../components/Footer/FooterTwo";
 import ServiceData from "../components/Service/ServiceData";
 import FooterData from "../components/Footer/FooterData";
+import Map from "../components/Map";
 
 const Landing = () => {
   return (
@@ -28,6 +29,7 @@ const Landing = () => {
       <AppTestimonial />
       <ScreenshowCase />
       <AppGetstarted />
+      <Map />
       <AppTeam />
       <FooterTwo FooterData={FooterData} />
     </div>
