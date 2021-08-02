@@ -51,7 +51,7 @@ class OnepageMenu extends Component {
                       offset={0}
                       duration={500}
                     >
-                      Home
+                      Нүүр
                     </Link>
                   </li>
                   <li className="nav-item">
@@ -64,7 +64,7 @@ class OnepageMenu extends Component {
                       offset={0}
                       duration={1000}
                     >
-                      Features
+                      Бидний тухай
                     </Link>
                   </li>
                   <li className="nav-item">
@@ -77,7 +77,7 @@ class OnepageMenu extends Component {
                       offset={-90}
                       duration={1000}
                     >
-                      Work
+                      Мэдээ
                     </Link>
                   </li>
                   <li className="nav-item">
@@ -90,7 +90,7 @@ class OnepageMenu extends Component {
                       offset={0}
                       duration={1000}
                     >
-                      Testimonial
+                      Холбоо барих
                     </Link>
                   </li>
                   <li className="nav-item">
@@ -103,26 +103,26 @@ class OnepageMenu extends Component {
                       offset={0}
                       duration={1000}
                     >
-                      Showcase
+                      Ажлын байр
                     </Link>
                   </li>
                   <li className="nav-item">
                     <Link
                       className="nav-link"
                       activeClass="active"
-                      to="myAdress"
+                      to="team"
                       spy={true}
                       smooth={true}
                       offset={-90}
                       duration={1000}
                     >
-                      Address
+                      Team
                     </Link>
                   </li>
                 </ul>
-                <a className={`btn_get btn_hover ${hbtnClass}`} href="#get-app">
+                {/* <a className={`btn_get btn_hover ${hbtnClass}`} href="#get-app">
                   Get Started
-                </a>
+                </a> */}
               </div>
             </div>
           </nav>
