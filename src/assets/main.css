@@ -11899,7 +11899,7 @@ button:focus {
 }
 
 .app_screenshot_area .app_screenshot_slider .item .screenshot_img img {
-  max-width: 100%;
+  width: 100%;
 }
 
 .app_screenshot_area .app_screenshot_slider .slick-dots {
@@ -11920,7 +11920,7 @@ button:focus {
 .app_screenshot_area .app_screenshot_slider .owl-next {
   position: absolute;
   bottom: 0;
-  width: 50px;
+  width: 100%;
   height: 50px;
   border: 1px solid #d9e1ea;
   background: #fbfbfd;
@@ -11954,10 +11954,10 @@ button:focus {
 /*================= app_screenshot_area css =============*/
 /*=============== get started area css ===============*/
 .get_started_area {
-  background-image: -moz-linear-gradient(140deg, #672dde 0%, #4069eb 100%);
-  background-image: -webkit-linear-gradient(140deg, #672dde 0%, #4069eb 100%);
-  background-image: -ms-linear-gradient(140deg, #672dde 0%, #4069eb 100%);
-  background-image: linear-gradient(140deg, #672dde 0%, #4069eb 100%);
+  background-image: -moz-linear-gradient(140deg, #ff3366 0%, #ff33669a 100%);
+  background-image: -webkit-linear-gradient(140deg, #ff3366 0%, #ff33669a 100%);
+  background-image: -ms-linear-gradient(140deg, #ff3366 0%, #ff33669a 100%);
+  background-image: linear-gradient(140deg, #ff3366 0%, #ff33669a 100%);
   padding: 120px 0px 80px;
   position: relative;
   overflow: hidden;
