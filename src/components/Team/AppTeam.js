@@ -3,6 +3,7 @@ import Sectitle from "../Title/Sectitle";
 import Teamitem from "../Team/Teamitem";
 import Reveal from "react-reveal";
 import TeamTitle from "../Title/TeamTitle";
+import { newData } from "../Footer/FooterData";
 const AppTeam = () => {
   return (
     <section className="experts_team_area sec_pad" id="team">
@@ -15,34 +16,19 @@ const AppTeam = () => {
         />
         <Reveal bottom cascade>
           <div className="row">
-            <div className="col-lg-3 col-sm-6">
-              <Teamitem
-                teamImage="team_01.jpg"
-                memberN="Ider-Od Bat-Erdene"
-                memberd="Founder CEO"
-              />
-            </div>
-            <div className="col-lg-3 col-sm-6">
-              <Teamitem
-                teamImage="team_02.jpg"
-                memberN="Byambajargal Ayushjav"
-                memberd="Founder CEO"
-              />
-            </div>
-            <div className="col-lg-3 col-sm-6">
-              <Teamitem
-                teamImage="team_03.jpg"
-                memberN="Amartungalag"
-                memberd="CEO of Hippocards"
-              />
-            </div>
-            <div className="col-lg-3 col-sm-6">
-              <Teamitem
-                teamImage="team_04.jpg"
-                memberN="Bailey Wonger"
-                memberd="Marketer"
-              />
-            </div>
+            {newData.map((item, index) => {
+              return (
+                <div className="col-lg-3 col-sm-6">
+                  <Teamitem
+                    item={item}
+                    index={index}
+                    teamImage={item.image}
+                    memberN="Ider-Od Bat-Erdene"
+                    memberd={item.desc}
+                  />
+                </div>
+              );
+            })}
             <div className="col-lg-12 text-center">
               <a href=".#" className="learn_btn">
                 Meet All Team <i className="ti-arrow-right"></i>

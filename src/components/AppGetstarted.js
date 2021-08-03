@@ -29,7 +29,7 @@ const AppGetstarted = () => {
                   language in most efficient way.
                 </p>
                 <a
-                  href=".#"
+                  href="https://play.google.com/store/apps/details?id=com.hippocards&hl=en&gl=US"
                   className="app_btn app_btn_one wow fadeInLeft"
                   data-wow-delay="0.5s"
                 >
@@ -37,7 +37,7 @@ const AppGetstarted = () => {
                   Google Play
                 </a>
                 <a
-                  href=".#"
+                  href="https://apps.apple.com/us/app/hippocards/id1474192233"
                   className="app_btn app_btn_two wow fadeInLeft"
                   data-wow-delay="0.6s"
                 >

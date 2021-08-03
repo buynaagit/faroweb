@@ -76,7 +76,7 @@ class FooterTwo extends Component {
                 <div className="f_social_icon_two text-center">
                   {FooterData.socialIcon.map((item) => {
                     return (
-                      <a href="/" key={item.id}>
+                      <a href={item.url} key={item.id}>
                         <i className={item.icon}></i>
                       </a>
                     );
