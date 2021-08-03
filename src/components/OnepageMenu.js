@@ -110,13 +110,13 @@ class OnepageMenu extends Component {
                     <Link
                       className="nav-link"
                       activeClass="active"
-                      to="team"
+                      to="myAdress"
                       spy={true}
                       smooth={true}
                       offset={-90}
                       duration={1000}
                     >
-                      Team
+                      Хаяг
                     </Link>
                   </li>
                 </ul>

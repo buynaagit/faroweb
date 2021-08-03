@@ -28,12 +28,11 @@ export class MapContainer extends Component {
 
   render() {
     const mapStyles = {
-      zIndex: 1,
       width: "100%",
       height: "70%",
     };
     return (
-      <section className="contact_map" id="myAdress">
+      <div className="contact_map" id="myAdress">
         <Map
           google={this.props.google}
           zoom={17}
@@ -42,7 +41,7 @@ export class MapContainer extends Component {
         >
           {this.displayMarkers()}
         </Map>
-      </section>
+      </div>
     );
   }
 }
