@@ -6458,7 +6458,7 @@ button:focus {
 }
 
 .app_featured_content {
-  padding: 50px 100px 90px 0;
+  /* padding: 50px 100px 90px 0; */
 }
 
 .app_featured_content .learn_btn_two {
@@ -10965,15 +10965,20 @@ button:focus {
 /*===========experts_team_area css ==========*/
 .experts_team_area .learn_btn:hover {
   color: #4069eb;
+  /* justify-content: center;
+  align-items: center; */
 }
 
 .experts_team_area .learn_btn:hover:before {
   background: #4069eb;
+  /* justify-content: center;
+  align-items: center; */
 }
 
 .ex_team_item {
   position: relative;
   text-align: center;
+  /* justify-content: center; */
   margin-bottom: 40px;
   overflow: hidden;
   cursor: pointer;
@@ -11881,10 +11886,16 @@ button:focus {
   overflow: hidden;
 }
 
+.itemWeb {
+  width: 100px;
+  height: 100px;
+}
+
 .app_screenshot_area .app_screen_info {
   margin-left: -20px;
   margin-right: -20px;
   margin-top: -10px;
+  flex-direction: row;
 }
 
 .app_screenshot_area .app_screenshot_slider .item {

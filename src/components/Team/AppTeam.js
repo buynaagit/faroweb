@@ -1,5 +1,4 @@
 import React from "react";
-import Sectitle from "../Title/Sectitle";
 import Teamitem from "../Team/Teamitem";
 import Reveal from "react-reveal";
 import TeamTitle from "../Title/TeamTitle";

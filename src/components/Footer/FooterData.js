@@ -394,9 +394,9 @@ export const newData = [
     ],
   },
   {
-    name: "Amaraa",
-    image: "team_03.jpg",
-    desc: "CEO of Hippocards",
+    name: "Khas-Sod",
+    image: "team_04.jpg",
+    desc: "FOUNDER",
     socialLinks: [
       {
         social_name: "insta",

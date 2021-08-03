@@ -223,24 +223,6 @@ const ServiceData = {
       title: "Live page builder",
       p: "Oxford jolly good cras bugger down the pub blow off well arse tinkety tonk old fruit William bite your arm off haggle, old it's all gone to pot daft no biggie bog.!",
     },
-    {
-      id: "01",
-      icon: "ti-settings one",
-      title: "Premium plugins",
-      p: "Oxford jolly good cras bugger down the pub blow off well arse tinkety tonk old fruit William bite your arm off haggle, old it's all gone to pot daft no biggie bog.!",
-    },
-    {
-      id: "02",
-      icon: "ti-heart-broken two",
-      title: "Premium plugins",
-      p: "Oxford jolly good cras bugger down the pub blow off well arse tinkety tonk old fruit William bite your arm off haggle, old it's all gone to pot daft no biggie bog.!",
-    },
-    {
-      id: "03",
-      icon: "ti-target  three",
-      title: "Live page builder",
-      p: "Oxford jolly good cras bugger down the pub blow off well arse tinkety tonk old fruit William bite your arm off haggle, old it's all gone to pot daft no biggie bog.!",
-    },
   ],
 };
 export default ServiceData;

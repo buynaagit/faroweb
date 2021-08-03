@@ -9,7 +9,7 @@ const settings = {
   arrows: false,
   autoplay: true,
   autoplaySpeed: 2000,
-  slidesToShow: 5,
+  slidesToShow: 3,
   slidesToScroll: 1,
   responsive: [
     {
@@ -78,20 +78,6 @@ const ScreenshowCase = () => {
                     src={require("../img/websites/FaroFoundation.jpeg")}
                     alt=""
                   />
-                </a>
-              </div>
-            </div>
-            <div className="item">
-              <div className="screenshot_img">
-                <a href="http://www.vrlab.mn/" className="image-link">
-                  <img src={require("../img/websites/VRLab.png")} alt="" />
-                </a>
-              </div>
-            </div>
-            <div className="item">
-              <div className="screenshot_img">
-                <a href="http://www.ifdschool.edu.mn/" className="image-link">
-                  <img src={require("../img/websites/IFD.png")} alt="" />
                 </a>
               </div>
             </div>
