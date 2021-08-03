@@ -10985,11 +10985,7 @@ button:focus {
 
 .ex_team_item .hover_content,
 .ex_team_item .team_content {
-<<<<<<< HEAD
-  position: absolute;
-=======
   position: relative;
->>>>>>> 4547858dd26babd2f69bf02802dd18dd4aa38cca
   width: 100%;
 }
 
