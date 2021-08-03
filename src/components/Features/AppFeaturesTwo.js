@@ -112,13 +112,10 @@ class AppFeaturesTwo extends Component {
                     Компаниуд
                   </h2>
                   <p className="f_400">
-                    Bender cobblers chap grub sloshed up the duff I fantastic
-                    owt to do with me at public school, James Bond chip shop
-                    chancer my lady gormless brilliant the full monty lavatory,
-                    buggered loo horse play cracking goal butty young delinquent
-                    zonked no biggie.!
+                    это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                    Lorem Ipsum является стандартной "рыбой" для текстов на
+                    латинице с начала XVI века.
                   </p>
-
                   <p style={{ marginTop: "110px" }}></p>
                 </div>
               </Reveal>

@@ -3,6 +3,18 @@ import { Link } from "react-scroll";
 import Sticky from "react-stickynode";
 
 class OnepageMenu extends Component {
+  state = {
+    loading: true,
+    person: null,
+  };
+
+  async componentDidMount() {
+    const url = "https://api.randomuser.me/";
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log(">>>>>>>>>>>>>>", data);
+  }
+
   render() {
     var { mClass, nClass, cClass, slogo, hbtnClass } = this.props;
     return (

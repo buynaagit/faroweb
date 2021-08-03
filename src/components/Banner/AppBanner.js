@@ -21,11 +21,9 @@ const AppBanner = () => {
                   className="f_400 f_size_18 l_height30 w_color wow fadeInLeft"
                   data-wow-delay="0.3s"
                 >
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book.
+                  В то время некий безымянный печатник создал большую коллекцию
+                  размеров и форм шрифтов, используя Lorem Ipsum для распечатки
+                  образцов.
                 </p>
                 {/* <a
                   href=".#"
