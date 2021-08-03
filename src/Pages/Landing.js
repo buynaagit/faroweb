@@ -29,8 +29,8 @@ const Landing = () => {
       <AppTestimonial />
       <ScreenshowCase />
       <AppGetstarted />
-      <Map />
       <AppTeam />
+      <Map />
       <FooterTwo FooterData={FooterData} />
     </div>
   );
