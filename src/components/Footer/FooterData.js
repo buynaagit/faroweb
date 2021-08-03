@@ -159,7 +159,11 @@ const FooterData = {
       icon: "ti-pinterest",
     },
   ],
+<<<<<<< HEAD
   copywrite: "© Faro Inc.. 2016 All rights reserved.",
+=======
+  copywrite: "© SaasLand Inc.. 2019 All rights reserved.",
+>>>>>>> a59ddbf11c0189be73c302ce83f0d176f40b6249
   TestimonialText: [
     {
       id: 1,
@@ -274,7 +278,11 @@ const FooterData = {
     {
       id: 2,
       url: "#",
+<<<<<<< HEAD
       text: "Leadership",
+=======
+      text: "Leadership123123",
+>>>>>>> a59ddbf11c0189be73c302ce83f0d176f40b6249
     },
     {
       id: 3,
