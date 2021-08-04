@@ -25,7 +25,7 @@ class AppWork extends Component {
             sClass="sec_title text-center mb_70"
             Title="Мэдээ, мэдээллүүд"
             tClass="t_color3"
-            TitleP="ямар үйл ажиллагаа шинэчлэлтүүд хийж байна вэ?"
+            TitleP="Шинэ мэдээ, мэдээллүүд"
           />
           <div className="row app_service_info">
             {ServiceData.work.map((items) => {

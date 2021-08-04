@@ -43,7 +43,7 @@ const ScreenshowCase = () => {
           sClass="sec_title text-center mb_70"
           Title="Companies"
           tClass="t_color3 mb_20"
-          TitleP="Welcome to FARO"
+          TitleP="FARO салбарууд"
         />
         <div className="app_screen_info">
           <Slider className="app_screenshot_slider" {...settings}>
