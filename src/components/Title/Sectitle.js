@@ -6,9 +6,7 @@ class Sectitle extends Component {
     return (
       <div className={`${sClass}`}>
         <Reveal effect="fadeInUp" duration={1300}>
-          <h2 className={`f_p f_size_30 l_height50 f_600 ${tClass}`}>
-            Welcome to FARO
-          </h2>
+          <h2 className={`f_p f_size_30 l_height50 f_600 ${tClass}`}>News</h2>
         </Reveal>
       </div>
     );

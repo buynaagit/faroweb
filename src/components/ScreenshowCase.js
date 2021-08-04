@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import Sectitle from "./Title/Sectitle";
+import WebTitle from "./Title/WebTitle";
 
 const settings = {
   dots: true,
@@ -39,7 +39,7 @@ const ScreenshowCase = () => {
   return (
     <section className="app_screenshot_area sec_pad" id="showcase">
       <div className="container custom_container p0">
-        <Sectitle
+        <WebTitle
           sClass="sec_title text-center mb_70"
           Title="Companies"
           tClass="t_color3 mb_20"
