@@ -91,6 +91,9 @@ class FooterTwo extends Component {
                   <li>
                     <a href=".#">Privacy Policy</a>
                   </li>
+                  <li>
+                    <a href="./Admin">Admin</a>
+                  </li>
                 </ul>
               </div>
             </div>
