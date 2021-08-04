@@ -35,7 +35,7 @@ const settings = {
     },
   ],
 };
-const ScreenshowCase = () => {
+const FaroWebsites = () => {
   return (
     <section className="app_screenshot_area sec_pad" id="showcase">
       <div className="container custom_container p0">
@@ -87,4 +87,4 @@ const ScreenshowCase = () => {
     </section>
   );
 };
-export default ScreenshowCase;
+export default FaroWebsites;

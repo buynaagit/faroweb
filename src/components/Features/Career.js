@@ -1,7 +1,7 @@
 import React from "react";
 import Reveal from "react-reveal";
 import Contacts from "../Contacts";
-const AppFeatures = () => {
+const Career = () => {
   return (
     <section className="app_featured_area_two">
       <div className="triangle_shape"></div>
@@ -21,4 +21,4 @@ const AppFeatures = () => {
     </section>
   );
 };
-export default AppFeatures;
+export default Career;
