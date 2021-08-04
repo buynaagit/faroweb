@@ -208,20 +208,25 @@ const ServiceData = {
     {
       id: "01",
       icon: "ti-settings one",
-      title: "Premium plugins",
-      p: "Oxford jolly good cras bugger down the pub blow off well arse tinkety tonk old fruit William bite your arm off haggle, old it's all gone to pot daft no biggie bog.!",
+      title:
+        "КОВИД-19-ийн шинжилгээг төлбөртэй авах нь хүний эрхийн зөрчлийн шинжтэй",
+      p: "Улсын хэмжээнд он гарсаар наймдугаар сарын 4-ний байдлаар 83 удаагийн усны осол гарч, 96 хүн амь насаа алдсан байна. Үүний 75 нь том хүн, 21 нь хүүхэд байгаа юм.Гол, усны осол нь ихэвчлэн иргэдийн анхаарал болгоомжгүй байдал, бага насны хүүхдийг хараа хяналтгүй орхисноос, эцэг, эхчүүдийн сонор сэрэмжгүй байдлаас, согтууруулах ундаа хэрэглэсэн үедээ гол усанд орох зэрэг шалтгаанаас үүдэлтэй байна.Иймд:Мэргэжлийн байгууллагаас өгч байгаа заавар, зөвлөмжийг дагах,Гол, мөрөн нуурын ойролцоо амарч зугаалахдаа сонор, сэрэмжтэй байх,Гэр бүл найз нөхөд, хамт олноороо амралт зугаалгаар явахдаа нэгдсэн зохион байгуулалттай, нэгнийгээ бүртгэдэг байх,Хүүхдийг гол усны эрэг дагуу явуулж, тоглуулахгүй байх, хүүхдэд тавих хараа, хяналтаа сайжруулах,Согтууруулах ундаа хэрэглэсэн үедээ гол усанд орохгүй байх,Баталгаатай гүүр, гарам, гарцтай газраар автомашинтай зорчиж гол, усны ослоос урьдчилан сэргийлэхийг Онцгой байдлын ерөнхий газраас анхаарууллаа.",
+      image: "Img-01.jpg",
     },
     {
       id: "02",
       icon: "ti-heart-broken two",
-      title: "Premium plugins",
+      title:
+        "Гол, усны осол ихэвчлэн иргэдийн анхаарал болгоомжгүй байдлаас шалтгаалж байна",
       p: "Oxford jolly good cras bugger down the pub blow off well arse tinkety tonk old fruit William bite your arm off haggle, old it's all gone to pot daft no biggie bog.!",
+      image: "Img-02.jpg",
     },
     {
       id: "03",
       icon: "ti-target  three",
       title: "Live page builder",
       p: "Oxford jolly good cras bugger down the pub blow off well arse tinkety tonk old fruit William bite your arm off haggle, old it's all gone to pot daft no biggie bog.!",
+      image: "Img-03.jpg",
     },
   ],
 };

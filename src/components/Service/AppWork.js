@@ -2,6 +2,20 @@ import React, { Component } from "react";
 import Sectitle from "../Title/Sectitle";
 
 class AppWork extends Component {
+  state = {
+    loading: true,
+    person: null,
+  };
+
+  async componentDidMount() {
+    const url = "https://api.randomuser.me/";
+    const response = await fetch(url);
+    const data = await response.json();
+    this.setState({ person: data.results[0] });
+    this.setState({ loading: false });
+    console.log(">>>>>>>>>>>>>>", data);
+  }
+
   render() {
     let ServiceData = this.props.ServiceData;
     return (
@@ -23,7 +37,7 @@ class AppWork extends Component {
                   >
                     {/* <i className={`app_icon ${items.icon}`}></i> */}
                     <img
-                      src={require("../../img/Img-03.jpg")}
+                      src={require(`../../img/${items.image}`)}
                       alt=""
                       style={{
                         paddingLeft: 0,
@@ -32,18 +46,31 @@ class AppWork extends Component {
                         height: "200px",
                       }}
                     />
+
                     <h5
                       className="f_p f_size_18 f_600 t_color3 mt_40 mb-30"
                       style={{ padding: "5px", paddingLeft: 20 }}
                     >
                       {items.title}
                     </h5>
-                    <p
-                      className="f_400 f_size_15 mb-30"
-                      style={{ padding: "5px", paddingLeft: 20 }}
-                    >
-                      {items.p}{" "}
-                    </p>
+
+                    {items.p.length < 20 ? (
+                      <p
+                        className="f_400 f_size_15 mb-30"
+                        style={{ padding: "5px", paddingLeft: 20 }}
+                      >
+                        {items.p}{" "}
+                      </p>
+                    ) : (
+                      <p
+                        className="f_400 f_size_15 mb-30"
+                        style={{ padding: "5px", paddingLeft: 20 }}
+                      >
+                        {items.p.slice(0, 150)}
+                        {" ..."}
+                      </p>
+                    )}
+
                     <a
                       style={{
                         padding: "5px",
@@ -53,7 +80,7 @@ class AppWork extends Component {
                       href=".#"
                       className="learn_btn_two"
                     >
-                      Learn More{" "}
+                      Дэлгэрэнгүй{" "}
                       <i
                         className="ti-arrow-right"
                         style={{

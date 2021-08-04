@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Plx from "react-plx";
 import Reveal from "react-reveal";
-import { Link } from "react-router-dom";
 
 class AppFeaturesTwo extends Component {
   render() {
