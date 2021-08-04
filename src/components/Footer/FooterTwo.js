@@ -1,37 +1,9 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import AboutWidget from "./FooterWidget/AboutWidget";
 import SolutionWidget from "./FooterWidget/SolutionWidget";
 import TeamWidget from "./FooterWidget/TeamWidget";
 import Reveal from "react-reveal/Reveal";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
-
-function MyComponent() {
-  const [value, setValue] = useState("");
-  return <ReactQuill theme="snow" value={value} onChange={setValue} />;
-}
-
 class FooterTwo extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: "",
-      Fname: "",
-    };
-
-    this.handleInputChange = this.handleInputChange.bind(this);
-  }
-
-  handleInputChange(event) {
-    const target = event.target;
-    const value = target.type === "checkbox" ? target.checked : target.value;
-    const name = target.name;
-
-    this.setState({
-      [name]: value,
-    });
-  }
-
   render() {
     var { fClass } = this.props;
     let FooterData = this.props.FooterData;
@@ -49,22 +21,19 @@ class FooterTwo extends Component {
                         data-wow-delay="0.2s"
                       >
                         <a href="index.html" className="f-logo">
-                          <img src={require("../../img/logo.png")} alt="" />
+                          <img src={require("../../img/faro.png")} alt="" />
                         </a>
                         <div className="widget-wrap">
                           <p className="f_400 f_p f_size_15 mb-0 l_height34">
                             <span>Email:</span>{" "}
-                            <a
-                              href="mailto:saasland@gmail.com"
-                              className="f_400"
-                            >
-                              saasland@gmail.com
+                            <a href="faro@mail.com" className="f_400">
+                              faro@mail.com
                             </a>
                           </p>
                           <p className="f_400 f_p f_size_15 mb-0 l_height34">
                             <span>Phone:</span>{" "}
-                            <a href="tel:948256347968" className="f_400">
-                              +948 256 347 968
+                            <a href="tel:77665544" className="f_400">
+                              77665544
                             </a>
                           </p>
                         </div>
@@ -75,53 +44,14 @@ class FooterTwo extends Component {
                         >
                           <input
                             type="text"
-                            name="Fname"
+                            name="EMAIL"
                             className="form-control memail"
-                            placeholder="Овог"
-                            value={this.state.value}
-                            onChange={this.handleInputChange}
+                            placeholder="Email"
                           />
-                          <input
-                            type="text"
-                            name="Lname"
-                            className="form-control memail"
-                            placeholder="Нэр"
-                            value={this.state.Fname}
-                            onChange={this.handleInputChange}
-                          />
-                          <input
-                            type="text"
-                            name="age"
-                            className="form-control memail"
-                            placeholder="Нас"
-                          />
-                          <input
-                            type="text"
-                            name="sex"
-                            className="form-control memail"
-                            placeholder="Хүйс"
-                          />
-                          <input
-                            type="text"
-                            name="summary"
-                            className="form-control memail"
-                            placeholder="Товч танилцуулга"
-                          />
-                          <input
-                            type="text"
-                            name="job"
-                            className="form-control memail"
-                            placeholder="Ажлын байр"
-                          />
-                          <button
-                            className="btn btn-submit"
-                            type="submit"
-                            onClick={this.handleSubmit}
-                          >
+                          <button className="btn btn-submit" type="submit">
                             <i className="ti-arrow-right"></i>
                           </button>
                         </form>
-                        <MyComponent />
                       </div>
                     </div>
                   </Reveal>
@@ -146,7 +76,7 @@ class FooterTwo extends Component {
                 <div className="f_social_icon_two text-center">
                   {FooterData.socialIcon.map((item) => {
                     return (
-                      <a href="/" key={item.id}>
+                      <a href={item.url} key={item.id}>
                         <i className={item.icon}></i>
                       </a>
                     );

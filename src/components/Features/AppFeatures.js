@@ -1,11 +1,16 @@
 import React from "react";
 import Reveal from "react-reveal";
+<<<<<<< HEAD
+=======
+import Contacts from "../Contacts";
+>>>>>>> 7dcb1cf835e95c33ff0c09052bcb069889285e1c
 const AppFeatures = () => {
   return (
     <section className="app_featured_area_two">
       <div className="triangle_shape"></div>
       <div className="container">
         <div className="row app_feature_info">
+<<<<<<< HEAD
           <div className="col-lg-5">
             <div className="app_img">
               <div className="dot dot_one wow fadeIn" data-wow-delay="0.5s">
@@ -68,6 +73,17 @@ const AppFeatures = () => {
               </div>
             </Reveal>
           </div>
+=======
+          <div className="col-lg-5"></div>
+          <Reveal bottom cascade>
+            <div className="app_featured_content">
+              <h2 className="f_p f_size_30 f_700 t_color3 l_height45 mb-30">
+                Ажлын байр
+              </h2>
+              <Contacts />
+            </div>
+          </Reveal>
+>>>>>>> 7dcb1cf835e95c33ff0c09052bcb069889285e1c
         </div>
       </div>
     </section>

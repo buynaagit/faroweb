@@ -37,7 +37,7 @@ const Landing = () => {
       <AppFeaturesTwo />
       {/* <AppFeatures /> */}
       <AppWork ServiceData={ServiceData} />
-      <AppTestimonial />
+      {/* <AppTestimonial /> */}
       <ScreenshowCase />
       <AppGetstarted />
       <AppTeam />

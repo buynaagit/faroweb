@@ -71,7 +71,8 @@ class AppFeaturesTwo extends Component {
                   className="app_item item_one"
                   parallaxData={exampleParallaxData}
                 >
-                  <i className="ti-face-smile f_size_40 w_color"></i>
+                  {/* <img src={require("../../img/websites/IFD.png")} alt="" /> */}
+                  <i className="ti-receipt f_size_40 w_color"></i>
                   <h6 className="f_p f_400 f_size_16 w_color l_height45">
                     IFD School
                   </h6>

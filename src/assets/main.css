@@ -6458,7 +6458,7 @@ button:focus {
 }
 
 .app_featured_content {
-  padding: 50px 100px 90px 0;
+  /* padding: 50px 100px 90px 0; */
 }
 
 .app_featured_content .learn_btn_two {
@@ -10965,15 +10965,20 @@ button:focus {
 /*===========experts_team_area css ==========*/
 .experts_team_area .learn_btn:hover {
   color: #4069eb;
+  /* justify-content: center;
+  align-items: center; */
 }
 
 .experts_team_area .learn_btn:hover:before {
   background: #4069eb;
+  /* justify-content: center;
+  align-items: center; */
 }
 
 .ex_team_item {
   position: relative;
   text-align: center;
+  /* justify-content: center; */
   margin-bottom: 40px;
   overflow: hidden;
   cursor: pointer;
@@ -11881,10 +11886,16 @@ button:focus {
   overflow: hidden;
 }
 
+.itemWeb {
+  width: 100px;
+  height: 100px;
+}
+
 .app_screenshot_area .app_screen_info {
   margin-left: -20px;
   margin-right: -20px;
   margin-top: -10px;
+  flex-direction: row;
 }
 
 .app_screenshot_area .app_screenshot_slider .item {
@@ -11899,7 +11910,7 @@ button:focus {
 }
 
 .app_screenshot_area .app_screenshot_slider .item .screenshot_img img {
-  max-width: 100%;
+  width: 100%;
 }
 
 .app_screenshot_area .app_screenshot_slider .slick-dots {
@@ -11920,7 +11931,7 @@ button:focus {
 .app_screenshot_area .app_screenshot_slider .owl-next {
   position: absolute;
   bottom: 0;
-  width: 50px;
+  width: 100%;
   height: 50px;
   border: 1px solid #d9e1ea;
   background: #fbfbfd;
@@ -11954,10 +11965,10 @@ button:focus {
 /*================= app_screenshot_area css =============*/
 /*=============== get started area css ===============*/
 .get_started_area {
-  background-image: -moz-linear-gradient(140deg, #672dde 0%, #4069eb 100%);
-  background-image: -webkit-linear-gradient(140deg, #672dde 0%, #4069eb 100%);
-  background-image: -ms-linear-gradient(140deg, #672dde 0%, #4069eb 100%);
-  background-image: linear-gradient(140deg, #672dde 0%, #4069eb 100%);
+  background-image: -moz-linear-gradient(140deg, #ff3366 0%, #ff33669a 100%);
+  background-image: -webkit-linear-gradient(140deg, #ff3366 0%, #ff33669a 100%);
+  background-image: -ms-linear-gradient(140deg, #ff3366 0%, #ff33669a 100%);
+  background-image: linear-gradient(140deg, #ff3366 0%, #ff33669a 100%);
   padding: 120px 0px 80px;
   position: relative;
   overflow: hidden;

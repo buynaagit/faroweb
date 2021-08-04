@@ -22,9 +22,11 @@ class OnepageMenu extends Component {
         <header className="header_area">
           <nav className={`navbar navbar-expand-lg menu_one ${mClass}`}>
             <div className={`container ${cClass}`}>
-              <Link className={`navbar-brand ${slogo}`} to="/">
-                <img src={require("../img/logo2.png")} alt="" />
-                <img src={require("../img/logo.png")} alt="logo" />
+              {/* <Link className={`navbar-brand ${slogo}`} to="/"> */}
+              <Link>
+                <img src={require("../img/faro.png")} alt="" />
+                {/* <img src={require("../img/logo2.png")} alt="" />
+                <img src={require("../img/logo.png")} alt="logo" /> */}
               </Link>
               <button
                 className="navbar-toggler collapsed"
@@ -70,19 +72,6 @@ class OnepageMenu extends Component {
                     <Link
                       className="nav-link"
                       activeClass="active"
-                      to="features"
-                      spy={true}
-                      smooth={true}
-                      offset={0}
-                      duration={1000}
-                    >
-                      Бидний тухай
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link
-                      className="nav-link"
-                      activeClass="active"
                       to="work"
                       spy={true}
                       smooth={true}
@@ -96,26 +85,26 @@ class OnepageMenu extends Component {
                     <Link
                       className="nav-link"
                       activeClass="active"
-                      to="testimonial"
-                      spy={true}
-                      smooth={true}
-                      offset={0}
-                      duration={1000}
-                    >
-                      Холбоо барих
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link
-                      className="nav-link"
-                      activeClass="active"
-                      to="showcase"
+                      to="app_featured_content"
                       spy={true}
                       smooth={true}
                       offset={0}
                       duration={1000}
                     >
                       Ажлын байр
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link
+                      className="nav-link"
+                      activeClass="active"
+                      to="footer_top"
+                      spy={true}
+                      smooth={true}
+                      offset={0}
+                      duration={1000}
+                    >
+                      Холбоо барих
                     </Link>
                   </li>
                   <li className="nav-item">
@@ -129,6 +118,19 @@ class OnepageMenu extends Component {
                       duration={1000}
                     >
                       Хаяг
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link
+                      className="nav-link"
+                      activeClass="active"
+                      to="features"
+                      spy={true}
+                      smooth={true}
+                      offset={0}
+                      duration={1000}
+                    >
+                      Бидний тухай
                     </Link>
                   </li>
                 </ul>

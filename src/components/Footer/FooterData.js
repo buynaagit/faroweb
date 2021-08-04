@@ -89,17 +89,17 @@ const FooterData = {
         {
           id: 1,
           url: "#",
-          text: "Support",
+          text: "CEO Founder",
         },
         {
           id: 2,
           url: "#",
-          text: "Sales",
+          text: "CEO Founder",
         },
         {
           id: 3,
           url: "#",
-          text: "Report Abuse",
+          text: "CEO of Hippocards",
         },
         {
           id: 4,
@@ -112,11 +112,11 @@ const FooterData = {
   SocialLinks: [
     {
       id: 1,
-      title: "Team Solutions",
+      title: "Management Team",
       menuItems: [
         {
           id: 1,
-          url: "#",
+          url: "https://www.facebook.com/faroedu",
           icon: "ti-facebook",
         },
         {
@@ -127,12 +127,7 @@ const FooterData = {
         {
           id: 3,
           url: "#",
-          icon: "ti-vimeo-alt",
-        },
-        {
-          id: 4,
-          url: "#",
-          icon: "ti-pinterest",
+          icon: "ti-instagram",
         },
       ],
     },
@@ -140,26 +135,16 @@ const FooterData = {
   socialIcon: [
     {
       id: 1,
-      url: "https://www.facebook.com/",
+      url: "https://www.facebook.com/faroedu",
       icon: "ti-facebook",
     },
     {
       id: 2,
-      url: "#",
-      icon: "ti-twitter-alt",
-    },
-    {
-      id: 3,
-      url: "#",
-      icon: "ti-vimeo-alt",
-    },
-    {
-      id: 4,
-      url: "#",
-      icon: "ti-pinterest",
+      url: "https://www.instagram.com/faro_edu/",
+      icon: "ti-instagram",
     },
   ],
-  copywrite: "© SaasLand Inc.. 2019 All rights reserved.",
+  copywrite: "© Faro Group. 2016 All rights reserved.",
   TestimonialText: [
     {
       id: 1,
@@ -274,7 +259,7 @@ const FooterData = {
     {
       id: 2,
       url: "#",
-      text: "Leadership123123",
+      text: "Leadership",
     },
     {
       id: 3,
@@ -362,4 +347,69 @@ const FooterData = {
     },
   ],
 };
+
+export const newData = [
+  {
+    name: "Ider-Od",
+    image: "team_01.jpg",
+    desc: "Founder CEO",
+    socialLinks: [
+      {
+        social_name: "insta",
+        icon: "ti-facebook",
+        social_url: "https://www.facebook.com/iderodbaterdene",
+      },
+      {
+        social_name: "fb",
+        icon: "ti-instagram",
+        social_url: "https://www.instagram.com/iderodcomedian/",
+      },
+      {
+        social_name: "twitter",
+        icon: "ti-twitter-alt",
+        social_url: "https://twitter.com/Iderodcomedian",
+      },
+      {
+        social_name: "youtube",
+        icon: "ti-youtube",
+        social_url: "https://www.youtube.com/channel/UC60Gg-A-TeJ-FqkpjitzlrA",
+      },
+    ],
+  },
+  {
+    name: "byamja ",
+    image: "team_02.jpg",
+    desc: "Founder CEO ",
+    socialLinks: [
+      {
+        social_name: "fb",
+        icon: "ti-facebook",
+        social_url: "https://www.facebook.com/bimjaaaa",
+      },
+      {
+        social_name: "insta",
+        icon: "ti-instagram",
+        social_url: "https://www.instagram.com/bimjaaaa/",
+      },
+    ],
+  },
+  {
+    name: "Khas-Sod",
+    image: "team_04.jpg",
+    desc: "FOUNDER",
+    socialLinks: [
+      {
+        social_name: "insta",
+        icon: "ti-facebook",
+        social_url: "https://www.facebook.com/amradw",
+      },
+      {
+        social_name: "fb",
+        icon: "ti-instagram",
+        social_url: "https://www.instagram.com/amradw/",
+      },
+    ],
+  },
+];
+
 export default FooterData;
