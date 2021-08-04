@@ -350,9 +350,9 @@ const FooterData = {
 
 export const newData = [
   {
-    name: "Ider-Od",
+    name: "Ider-Od Bat-Erdene",
     image: "team_01.jpg",
-    desc: "Founder CEO",
+    desc: "Founder and CEO",
     socialLinks: [
       {
         social_name: "insta",
@@ -377,9 +377,9 @@ export const newData = [
     ],
   },
   {
-    name: "byamja ",
+    name: "Byambajargal Ayushjav",
     image: "team_02.jpg",
-    desc: "Founder CEO ",
+    desc: "Founder and CEO ",
     socialLinks: [
       {
         social_name: "fb",
@@ -395,8 +395,25 @@ export const newData = [
   },
   {
     name: "Khas-Sod",
+    image: "team_03.jpg",
+    desc: "Co-Founder",
+    socialLinks: [
+      {
+        social_name: "insta",
+        icon: "ti-facebook",
+        social_url: "https://www.facebook.com/",
+      },
+      {
+        social_name: "fb",
+        icon: "ti-instagram",
+        social_url: "https://www.instagram.com/",
+      },
+    ],
+  },
+  {
+    name: "Amartungalag T",
     image: "team_04.jpg",
-    desc: "FOUNDER",
+    desc: "CEO of Hippocards",
     socialLinks: [
       {
         social_name: "insta",
@@ -406,7 +423,7 @@ export const newData = [
       {
         social_name: "fb",
         icon: "ti-instagram",
-        social_url: "https://www.instagram.com/amradw/",
+        social_url: "https://www.instagram.com/amradw",
       },
     ],
   },
