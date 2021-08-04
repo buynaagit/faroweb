@@ -29,7 +29,7 @@ export class MapContainer extends Component {
   render() {
     const mapStyles = {
       width: "100%",
-      height: "70%",
+      height: "80%",
     };
     return (
       <div className="contact_map" id="myAdress">

@@ -9,8 +9,8 @@ import AppGetstarted from "../components/AppGetstarted";
 import FooterTwo from "../components/Footer/FooterTwo";
 import ServiceData from "../components/Service/ServiceData";
 import FooterData from "../components/Footer/FooterData";
-import Map from "../components/Map";
 import FaroTeam from "../components/Team/FaroTeam";
+import FaroAdress from "../components/FaroAdress";
 
 const Landing = () => {
   return (
@@ -34,13 +34,12 @@ const Landing = () => {
       </ul>
       <AppBanner />
       <AppFeaturesTwo />
-      {/* <AppFeatures /> */}
+      <AppFeatures />
       <AppWork ServiceData={ServiceData} />
-      {/* <AppTestimonial /> */}
       <ScreenshowCase />
       <AppGetstarted />
       <FaroTeam />
-      <Map />
+      <FaroAdress />
       <FooterTwo FooterData={FooterData} />
     </div>
   );
