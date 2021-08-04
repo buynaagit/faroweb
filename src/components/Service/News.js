@@ -76,16 +76,18 @@ class News extends Component {
                         padding: "5px",
                         paddingLeft: 20,
                         paddingBottom: 50,
+                        alignSelf: "flex-end",
                       }}
                       href=".#"
                       className="learn_btn_two"
                     >
-                      Дэлгэрэнгүй{" "}
+                      Дэлгэрэнгүй
                       <i
                         className="ti-arrow-right"
                         style={{
                           padding: "5px",
                           paddingLeft: 20,
+                          alignSelf: "flex-end",
                         }}
                       ></i>
                     </a>
