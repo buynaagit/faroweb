@@ -3,15 +3,14 @@ import OnepageMenu from "../components/OnepageMenu";
 import AppBanner from "../components/Banner/AppBanner";
 import AppFeaturesTwo from "../components/Features/AppFeaturesTwo";
 import AppFeatures from "../components/Features/AppFeatures";
-import AppTestimonial from "../components/Testimonial/AppTestimonial";
 import AppWork from "../components/Service/AppWork";
 import ScreenshowCase from "../components/ScreenshowCase";
 import AppGetstarted from "../components/AppGetstarted";
-import AppTeam from "../components/Team/AppTeam";
 import FooterTwo from "../components/Footer/FooterTwo";
 import ServiceData from "../components/Service/ServiceData";
 import FooterData from "../components/Footer/FooterData";
-import Map from "../components/Map";
+import FaroTeam from "../components/Team/FaroTeam";
+import FaroAdress from "../components/FaroAdress";
 
 const Landing = () => {
   return (
@@ -35,13 +34,12 @@ const Landing = () => {
       </ul>
       <AppBanner />
       <AppFeaturesTwo />
-      {/* <AppFeatures /> */}
+      <AppFeatures />
       <AppWork ServiceData={ServiceData} />
-      {/* <AppTestimonial /> */}
       <ScreenshowCase />
       <AppGetstarted />
-      <AppTeam />
-      <Map />
+      <FaroTeam />
+      <FaroAdress />
       <FooterTwo FooterData={FooterData} />
     </div>
   );

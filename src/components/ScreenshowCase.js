@@ -1,6 +1,6 @@
 import React from "react";
-import Sectitle from "./Title/Sectitle";
 import Slider from "react-slick";
+import Sectitle from "./Title/Sectitle";
 
 const settings = {
   dots: true,
