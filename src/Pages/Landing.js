@@ -33,12 +33,12 @@ const Landing = () => {
         </li>
       </ul>
       <AppBanner />
-      <AppFeaturesTwo />
-      <AppFeatures />
-      <AppWork ServiceData={ServiceData} />
       <ScreenshowCase />
-      <AppGetstarted />
+      <AppFeaturesTwo />
+      <AppWork ServiceData={ServiceData} />
       <FaroTeam />
+      <AppGetstarted />
+      <AppFeatures />
       <FaroAdress />
       <FooterTwo FooterData={FooterData} />
     </div>
