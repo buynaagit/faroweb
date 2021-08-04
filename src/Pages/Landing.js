@@ -22,9 +22,20 @@ const Landing = () => {
         nClass="w_menu"
         hbtnClass="btn_get_radious menu_custfive"
       />
+      <ul
+        class="socialsidelinks animated fadeInLeft d-none d-md-block"
+        style={{ width: 30, height: 100 }}
+      >
+        <li>
+          <a
+            href="https://apps.apple.com/us/app/hippocards/id1474192233"
+            target="_blank"
+          ></a>
+        </li>
+      </ul>
       <AppBanner />
       <AppFeaturesTwo />
-      <AppFeatures />
+      {/* <AppFeatures /> */}
       <AppWork ServiceData={ServiceData} />
       <AppTestimonial />
       <ScreenshowCase />
