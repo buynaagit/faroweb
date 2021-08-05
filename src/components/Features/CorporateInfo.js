@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Plx from "react-plx";
 import Reveal from "react-reveal";
 
-class AppFeaturesTwo extends Component {
+class CorporateInfo extends Component {
   render() {
     const exampleParallaxData = [
       {
@@ -126,4 +126,4 @@ class AppFeaturesTwo extends Component {
     );
   }
 }
-export default AppFeaturesTwo;
+export default CorporateInfo;

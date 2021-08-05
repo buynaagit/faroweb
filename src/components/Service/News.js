@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Sectitle from "../Title/Sectitle";
 
-class AppWork extends Component {
+class News extends Component {
   state = {
     loading: true,
     person: null,
@@ -101,4 +101,4 @@ class AppWork extends Component {
     );
   }
 }
-export default AppWork;
+export default News;
