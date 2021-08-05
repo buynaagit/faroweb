@@ -107,30 +107,61 @@
 import React, { Component } from "react";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
+
 const options = ["Нягтлан", "Багш", "Мэнэжэр"];
 const defaultOption = options[0];
+const axios = require("axios").default;
 
 class Contacts extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       name: "",
       email: "",
       subject: "",
       message: "",
-      apply: false,
       chosenJob: "",
     };
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this._onSelect = this._onSelect.bind(this);
   }
 
-  handleChange(event) {
-    this.setState({ chosenJob: event.target.chosenJob });
+  handleChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  async _onSelect(option) {
+    await this.setState({ chosenJob: option.label });
+    console.log("chosen job =", this.state.chosenJob);
+  }
+
+  submitForm() {
+    console.log("apply");
+  }
+
+  componentDidMount() {
+    axios
+      .post("/api/login/", {
+        username: "admin",
+        password: "admin1234",
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   }
 
   handleSubmit(event) {
-    alert("A name was submitted: " + this.state.chosenJob);
+    alert("An essay was submitted: ");
+    console.log(
+      this.state.name,
+      this.state.email,
+      this.state.subject,
+      this.state.message,
+      this.state.chosenJob
+    );
     event.preventDefault();
   }
 
@@ -155,7 +186,6 @@ class Contacts extends Component {
                 onChange={this._onSelect}
                 value={defaultOption}
                 placeholder="Select an option"
-                onChange={this.handleChange}
               />
               <div
                 className="contact_info_item"
@@ -184,22 +214,31 @@ class Contacts extends Component {
                 Хувийн мэдээлэл
               </h2>
               <form
-                onSubmit={this.submitForm}
+                onSubmit={this.handleSubmit}
                 className="contact_form_box"
-                method="post"
                 id="contactForm"
               >
                 <div className="row">
                   <div className="col-lg-6">
                     <div className="form-group text_box">
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Your Name"
-                        onChange={this.handleChange}
-                        //disabled="true"
-                      />
+                      {this.state.chosenJob == "" ? (
+                        <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          placeholder="Your Name"
+                          onChange={this.handleChange}
+                        />
+                      ) : (
+                        <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          placeholder="Your Name"
+                          onChange={this.handleChange}
+                          // disabled="true"
+                        />
+                      )}
                     </div>
                   </div>
                   <div className="col-lg-6">
@@ -210,7 +249,7 @@ class Contacts extends Component {
                         id="email"
                         placeholder="Your Email"
                         onChange={this.handleChange}
-                        //disabled="true"
+                        // disabled="true"
                       />
                     </div>
                   </div>
@@ -222,7 +261,7 @@ class Contacts extends Component {
                         name="subject"
                         placeholder="Сонирхож буй ажлын байр"
                         onChange={this.handleChange}
-                        //disabled="true"
+                        // disabled="true"
                       />
                     </div>
                   </div>
@@ -235,13 +274,15 @@ class Contacts extends Component {
                         cols="30"
                         rows="10"
                         placeholder="Enter Your Message . . ."
-                        //disabled="true"
                       ></textarea>
                     </div>
                   </div>
                 </div>
-                <button type="submit" className="btn_three">
-                  Apply
+                <button
+                  className="btn_three"
+                  onClick={this.handleSubmit.bind(this)}
+                >
+                  Apply123
                 </button>
               </form>
               <div id="success">Your message succesfully sent!</div>
