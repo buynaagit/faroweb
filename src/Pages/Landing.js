@@ -2,7 +2,6 @@ import React from "react";
 import OnepageMenu from "../components/OnepageMenu";
 import AppBanner from "../components/Banner/AppBanner";
 import News from "../components/Service/News";
-import AppGetstarted from "../components/AppGetstarted";
 import FooterTwo from "../components/Footer/FooterTwo";
 import ServiceData from "../components/Service/ServiceData";
 import FooterData from "../components/Footer/FooterData";
@@ -11,6 +10,9 @@ import FaroAdress from "../components/FaroAdress";
 import FaroWebsites from "../components/FaroWebsites";
 import Career from "../components/Features/Career";
 import CorporateInfo from "../components/Features/CorporateInfo";
+import Quote from "../components/Testimonial/Quote";
+import SecurityFeatures from "../components/Features/SecurityFeatures";
+import DownloadHippo from "../components/AppGetstarted";
 
 const Landing = () => {
   return (
@@ -26,7 +28,8 @@ const Landing = () => {
       <CorporateInfo />
       <News ServiceData={ServiceData} />
       <FaroTeam />
-      <AppGetstarted />
+      <Quote />
+      <SecurityFeatures />
       <Career />
       <FaroAdress />
       <FooterTwo FooterData={FooterData} />

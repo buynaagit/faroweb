@@ -1,6 +1,6 @@
 import React from "react";
 import Reveal from "react-reveal";
-const AppGetstarted = () => {
+const DownloadHippo = () => {
   return (
     <section className="get_started_area">
       <div className="shap one"></div>
@@ -57,4 +57,4 @@ const AppGetstarted = () => {
     </section>
   );
 };
-export default AppGetstarted;
+export default DownloadHippo;
