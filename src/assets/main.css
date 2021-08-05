@@ -20552,7 +20552,7 @@ a .h_head:hover {
 }
 
 .erp_testimonial_area .row {
-  position: relative;
+  /* position: relative; */
 }
 
 .erp_testimonial_area .slider_nav .prev,

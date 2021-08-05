@@ -140,17 +140,17 @@ class Contacts extends Component {
   }
 
   componentDidMount() {
-    axios
-      .post("/api/login/", {
-        username: "admin",
-        password: "admin1234",
-      })
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    // axios
+    //   .post("/api/login/", {
+    //     username: "admin",
+    //     password: "admin1234",
+    //   })
+    //   .then(function (response) {
+    //     console.log(response);
+    //   })
+    //   .catch(function (error) {
+    //     console.log(error);
+    //   });
   }
 
   handleSubmit(event) {
