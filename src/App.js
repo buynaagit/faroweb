@@ -38,6 +38,7 @@ import SignUp from "./Pages/SignUp";
 import BlogGridPage from "./Pages/BlogGridPage";
 import NotFound from "./Pages/404";
 import Admin from "./Pages/Admin";
+import Admintest from "./Pages/Admintest";
 
 class App extends Component {
   componentDidMount() {
@@ -100,6 +101,8 @@ class App extends Component {
           <ScrollToTopRoute path="/SignIn" component={SignIn} />
           <ScrollToTopRoute path="/SignUp" component={SignUp} />
           <ScrollToTopRoute path="/Admin" component={Admin} />
+          <ScrollToTopRoute path="/Admintest" component={Admintest} />
+
           <ScrollToTopRoute component={NotFound} />
         </Switch>
       </Router>
