@@ -74,19 +74,6 @@ class OnepageMenu extends Component {
                     <Link
                       className="nav-link"
                       activeClass="active"
-                      to="app_featured_content"
-                      spy={true}
-                      smooth={true}
-                      offset={0}
-                      duration={1000}
-                    >
-                      Ажлын байр
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link
-                      className="nav-link"
-                      activeClass="active"
                       to="work"
                       spy={true}
                       smooth={true}
@@ -94,6 +81,19 @@ class OnepageMenu extends Component {
                       duration={1000}
                     >
                       Мэдээ
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link
+                      className="nav-link"
+                      activeClass="active"
+                      to="app_featured_area_two"
+                      spy={true}
+                      smooth={true}
+                      offset={0}
+                      duration={1000}
+                    >
+                      Ажлын байр
                     </Link>
                   </li>
                   <li className="nav-item">

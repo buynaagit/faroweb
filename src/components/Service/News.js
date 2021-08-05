@@ -30,7 +30,7 @@ class News extends Component {
           <div className="row app_service_info">
             {ServiceData.work.map((items) => {
               return (
-                <div className="col-lg-4" key={items.id}>
+                <div className="col-lg-4" id="news" key={items.id}>
                   <div
                     className="app_service_item wow fadeInUp"
                     data-wow-delay="0.2s"
