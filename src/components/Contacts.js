@@ -105,6 +105,10 @@
 // export default Contacts;
 
 import React, { Component } from "react";
+import Dropdown from "react-dropdown";
+import "react-dropdown/style.css";
+const options = ["Нягтлан", "Багш", "Мэнэжэр"];
+const defaultOption = options[0];
 
 class Contacts extends Component {
   constructor() {
@@ -114,13 +118,21 @@ class Contacts extends Component {
       email: "",
       subject: "",
       message: "",
+      apply: false,
+      chosenJob: "",
     };
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
+  handleChange(event) {
+    this.setState({ chosenJob: event.target.chosenJob });
+  }
+
+  handleSubmit(event) {
+    alert("A name was submitted: " + this.state.chosenJob);
+    event.preventDefault();
+  }
 
   render() {
     // const {name, email, subject, message, emailStatus} = this.state;
@@ -137,6 +149,18 @@ class Contacts extends Component {
                   Ulaanbaatar, Mongolia Regis palace 11th floor
                 </p>
               </div>
+              <p style={{ marginTop: "50px" }}>Нээлттэй ажлын байр</p>
+              <Dropdown
+                options={options}
+                onChange={this._onSelect}
+                value={defaultOption}
+                placeholder="Select an option"
+                onChange={this.handleChange}
+              />
+              <div
+                className="contact_info_item"
+                style={{ marginTop: "30px" }}
+              ></div>
               <div className="contact_info_item">
                 <h6 className="f_p f_size_20 t_color3 f_500 mb_20">
                   Contact Info
@@ -174,6 +198,7 @@ class Contacts extends Component {
                         name="name"
                         placeholder="Your Name"
                         onChange={this.handleChange}
+                        //disabled="true"
                       />
                     </div>
                   </div>
@@ -185,6 +210,7 @@ class Contacts extends Component {
                         id="email"
                         placeholder="Your Email"
                         onChange={this.handleChange}
+                        //disabled="true"
                       />
                     </div>
                   </div>
@@ -196,6 +222,7 @@ class Contacts extends Component {
                         name="subject"
                         placeholder="Сонирхож буй ажлын байр"
                         onChange={this.handleChange}
+                        //disabled="true"
                       />
                     </div>
                   </div>
@@ -208,6 +235,7 @@ class Contacts extends Component {
                         cols="30"
                         rows="10"
                         placeholder="Enter Your Message . . ."
+                        //disabled="true"
                       ></textarea>
                     </div>
                   </div>
@@ -216,7 +244,6 @@ class Contacts extends Component {
                   Apply
                 </button>
               </form>
-              {/* {emailStatus ? emailStatus : null} */}
               <div id="success">Your message succesfully sent!</div>
               <div id="error">
                 Opps! There is something wrong. Please try again
