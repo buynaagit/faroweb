@@ -39,6 +39,7 @@ import BlogGridPage from "./Pages/BlogGridPage";
 import NotFound from "./Pages/404";
 import Admin from "./Pages/Admin";
 import Admintest from "./Pages/Admintest";
+import ReadNews from "./Pages/ReadNews";
 
 class App extends Component {
   componentDidMount() {
@@ -102,7 +103,7 @@ class App extends Component {
           <ScrollToTopRoute path="/SignUp" component={SignUp} />
           <ScrollToTopRoute path="/Admin" component={Admin} />
           <ScrollToTopRoute path="/Admintest" component={Admintest} />
-
+          <ScrollToTopRoute path="/ReadNews" component={ReadNews} />
           <ScrollToTopRoute component={NotFound} />
         </Switch>
       </Router>

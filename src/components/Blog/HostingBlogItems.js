@@ -6,7 +6,7 @@ class HostingBlogItems extends Component {
     return (
       <div style={{ marginLeft: "100px", width: "500px" }}>
         <div className="h_blog_item">
-          <a href="/#">
+          <a href="../ReadNews">
             <img
               src={require("../../img/hosting/" + blogImage)}
               alt="blog"
@@ -14,7 +14,7 @@ class HostingBlogItems extends Component {
             />
           </a>
           <div className="h_blog_content">
-            <a href="/#" className="post_time">
+            <a href="../ReadNews" className="post_time">
               <i className="icon_clock_alt"></i>
               {pDate}
             </a>
@@ -22,8 +22,8 @@ class HostingBlogItems extends Component {
               <h3>{blogTitle}</h3>
             </a>
             <div className="post-info-bottom">
-              <a href="/#" className="learn_btn_two">
-                Read More <i className="arrow_right"></i>
+              <a href="../ReadNews" className="learn_btn_two">
+                <i className="arrow_right"></i>
               </a>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Sectitle from "../Title/Sectitle";
-
+import ReadNews from "../../Pages/ReadNews";
 import HostingBlogItems from "../Blog/HostingBlogItems";
 
 class News extends Component {
@@ -109,6 +109,7 @@ class News extends Component {
       //       })}
       //     </div>
       //   </div>
+
       // </section>
       <section className="h_blog_area sec_pad">
         <div>
