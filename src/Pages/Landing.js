@@ -12,10 +12,7 @@ import FaroWebsites from "../components/FaroWebsites";
 import Career from "../components/Features/Career";
 import CorporateInfo from "../components/Features/CorporateInfo";
 import Quote from "../components/Testimonial/Quote";
-import FaroService from "../components/Service/FaroService";
-import Erpanalytics from "../components/Erpanalytics";
-import SecurityFeatures from "../components/Features/SecurityFeatures";
-import ErpService from "../components/Service/ErpService";
+import Features from "../components/Features/SecurityFeatures";
 
 const Landing = () => {
   return (
@@ -31,10 +28,8 @@ const Landing = () => {
       <CorporateInfo />
       <News ServiceData={ServiceData} />
       <FaroTeam />
-      <SecurityFeatures />
       <Quote />
-
-      <ErpService />
+      <Features />
       <Career />
       <FaroAdress />
       <FooterTwo FooterData={FooterData} />
