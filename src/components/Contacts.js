@@ -152,7 +152,8 @@ class Contacts extends Component {
   //onFileChange
   onFileChange = (event) => {
     // Update the state
-    this.setState({ selectedFile: event.target.files[0] });
+    console.log("dqwddqwdwqdqw");
+    this.setState({ ...this.state, selectedFile: event.target.files[0] });
   };
 
   // On file upload (click the upload button)
@@ -161,18 +162,14 @@ class Contacts extends Component {
     const formData = new FormData();
 
     // Update the formData object
-    formData.append(
-      "myFile",
-      this.state.selectedFile,
-      this.state.selectedFile.name
-    );
+    formData.append("myFile", this.state.selectedFile);
 
     // Details of the uploaded file
     console.log(this.state.selectedFile);
 
     // Request made to the backend api
     // Send formData object
-    axios.post("api/uploadfile", formData);
+    // axios.post("api/uploadfile", formData);
   };
 
   handleChange = (e) => {
@@ -215,6 +212,33 @@ class Contacts extends Component {
       "\n"
     );
     alert("CV was submitted");
+    const config = {
+      headers: {
+        "Content-type": "application/json",
+      },
+    };
+    const formData = new FormData();
+    formData.append("name", this.state.name);
+    formData.append("email", this.state.email);
+    formData.append("career", this.state.chosenJob);
+    formData.append("phone", this.state.number);
+    formData.append("description", this.state.message);
+    formData.append("cv", this.state.selectedFile);
+    axios
+      .post(
+        //name, email, career, phone, description, cv
+        "http://192.168.0.119:8000/api/careers/upload/",
+        formData,
+        config
+      )
+      .then(function (response) {
+        console.log(`response`, response.data);
+        // localStorage.setItem("token", response.data.token);
+        // history.push("/NewsDashboard");
+      })
+      .catch(function (error) {
+        console.log(`error`, error.response);
+      });
   }
 
   checkApply(event) {
