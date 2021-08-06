@@ -12,7 +12,6 @@ export default function NewsPublish() {
   const [category, setCategory] = React.useState("");
   const [description, setDescription] = React.useState("");
   const [image, setImage] = React.useState("");
-  console.log(`image`, image[0]);
 
   const Publish = (e) => {
     e.preventDefault();
@@ -74,7 +73,6 @@ export default function NewsPublish() {
             "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
         }}
       />
-      <button onClick={log}>Log editor content</button>
       <div className="form-group text_box">
         <input
           type="text"
@@ -91,7 +89,9 @@ export default function NewsPublish() {
           onChange={(e) => setCategory(e.target.value)}
         />
       </div>
-      <button onClick={Publish}>Нийтлэх</button>
+      <button className="btn_three" onClick={Publish}>
+        Нийтлэх
+      </button>
       <ImageUploader
         withIcon={true}
         buttonText="Choose images"

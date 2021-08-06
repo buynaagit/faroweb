@@ -48,6 +48,10 @@ const getStockStatus = (stockCount) => {
 
 const categories = ["Cloths", "Bags", "Shoes", "Watches", "Devices"];
 
+const signOut = () => {
+  console.log("sign out button");
+};
+
 const ProductList = () => {
   let history = useHistory();
   const [selectedRows, setSelectedRows] = useState([]);
@@ -245,6 +249,9 @@ const ProductList = () => {
           }}
         />
       </div>
+      <button className="btn_three" onClick={signOut}>
+        Sign out
+      </button>
     </Card>
   );
 };

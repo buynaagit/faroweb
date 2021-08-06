@@ -282,7 +282,7 @@ class Contacts extends Component {
                   className="btn_three"
                   onClick={this.handleSubmit.bind(this)}
                 >
-                  Apply123
+                  Apply
                 </button>
               </form>
               <div id="success">Your message succesfully sent!</div>

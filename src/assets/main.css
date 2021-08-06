@@ -1244,6 +1244,10 @@ button:focus {
   justify-content: center;
 }
 
+.publish {
+  align-self: center;
+}
+
 .menu
   > .nav-item.submenu
   .dropdown-menu.mega_menu_three
