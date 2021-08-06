@@ -49,21 +49,33 @@ const FaroWebsites = () => {
           <Slider className="app_screenshot_slider" {...settings}>
             <div className="item">
               <div className="screenshot_img">
-                <a href="http://www.vrlab.mn/" className="image-link">
+                <a
+                  href="http://www.vrlab.mn/"
+                  target="_blank"
+                  className="image-link"
+                >
                   <img src={require("../img/websites/VRLab.png")} alt="" />
                 </a>
               </div>
             </div>
             <div className="item">
               <div className="screenshot_img">
-                <a href="http://www.ifdschool.edu.mn/" className="image-link">
+                <a
+                  href="http://www.ifdschool.edu.mn/"
+                  target="_blank"
+                  className="image-link"
+                >
                   <img src={require("../img/websites/IFD.png")} alt="" />
                 </a>
               </div>
             </div>
             <div className="item">
               <div className="screenshot_img">
-                <a href="http://faro.edu.mn/" className="image-link">
+                <a
+                  href="http://faro.edu.mn/"
+                  target="_blank"
+                  className="image-link"
+                >
                   <img src={require("../img/websites/FaroEDU.jpeg")} alt="" />
                 </a>
               </div>
@@ -71,6 +83,7 @@ const FaroWebsites = () => {
             <div className="item">
               <div className="screenshot_img">
                 <a
+                  target="_blank"
                   href="http://www.farofoundation.mn/mbilling/"
                   className="image-link"
                 >

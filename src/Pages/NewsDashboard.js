@@ -13,6 +13,8 @@ import Flex from "../components/Flex";
 import NumberFormat from "react-number-format";
 import { useHistory } from "react-router-dom";
 import utils from "../utils";
+import axios from "axios";
+import { URL } from "../utils/appConstant";
 
 const { Option } = Select;
 
@@ -48,9 +50,36 @@ const categories = ["Cloths", "Bags", "Shoes", "Watches", "Devices"];
 
 const ProductList = () => {
   let history = useHistory();
-  const [list, setList] = useState(ProductListData);
   const [selectedRows, setSelectedRows] = useState([]);
   const [selectedRowKeys, setSelectedRowKeys] = useState([]);
+  const [blogs, setBlogs] = useState([]);
+
+  const getBlogFromAPI = React.useCallback((e) => {
+    // e.preventDefault();
+    const config = {
+      headers: {
+        "Content-type": "application/json",
+      },
+    };
+    console.log(`button Pressed`);
+
+    axios
+      .get(`${URL}/api/blogs/`, config)
+      .then(function (response) {
+        console.log(`response`, response.data);
+        setBlogs(response.data);
+        localStorage.setItem("blogs", response.data);
+      })
+      .catch(function (error) {
+        console.log(`error`, error.response);
+      });
+  }, []);
+
+  React.useEffect(() => {
+    getBlogFromAPI();
+  }, [getBlogFromAPI]);
+
+  const [list, setList] = useState(blogs);
 
   const dropdownMenu = (row) => (
     <Menu>
@@ -102,15 +131,15 @@ const ProductList = () => {
       dataIndex: "id",
     },
     {
-      title: "Product",
-      dataIndex: "name",
+      title: "News list",
+      dataIndex: "title",
       render: (_, record) => (
         <div className="d-flex">
           <AvatarStatus
             size={60}
             type="square"
-            src={record.image}
-            name={record.name}
+            src={record.cover_image}
+            name={record.title}
           />
         </div>
       ),
@@ -121,34 +150,13 @@ const ProductList = () => {
       dataIndex: "category",
       sorter: (a, b) => utils.antdTableSorter(a, b, "category"),
     },
-    // {
-    //   title: "Price",
-    //   dataIndex: "price",
-    //   render: (price) => (
-    //     <div>
-    //       <NumberFormat
-    //         displayType={"text"}
-    //         value={(Math.round(price * 100) / 100).toFixed(2)}
-    //         prefix={"$"}
-    //         thousandSeparator={true}
-    //       />
-    //     </div>
-    //   ),
-    //   sorter: (a, b) => utils.antdTableSorter(a, b, "price"),
-    // },
+
     {
       title: "Date",
       dataIndex: "stock",
       sorter: (a, b) => utils.antdTableSorter(a, b, "stock"),
     },
-    // {
-    //   title: "Date",
-    //   dataIndex: "stock",
-    //   render: (stock) => (
-    //     <Flex alignItems="center">{getStockStatus(stock)}</Flex>
-    //   ),
-    //   sorter: (a, b) => utils.antdTableSorter(a, b, "stock"),
-    // },
+
     {
       title: "",
       dataIndex: "actions",
@@ -169,7 +177,7 @@ const ProductList = () => {
 
   const onSearch = (e) => {
     const value = e.currentTarget.value;
-    const searchArray = e.currentTarget.value ? list : ProductListData;
+    const searchArray = e.currentTarget.value ? blogs : blogs;
     const data = utils.wildCardSearch(searchArray, value);
     setList(data);
     setSelectedRowKeys([]);
@@ -178,10 +186,10 @@ const ProductList = () => {
   const handleShowCategory = (value) => {
     if (value !== "All") {
       const key = "category";
-      const data = utils.filterArray(ProductListData, key, value);
+      const data = utils.filterArray(blogs, key, value);
       setList(data);
     } else {
-      setList(ProductListData);
+      setList(blogs);
     }
   };
 
@@ -227,7 +235,7 @@ const ProductList = () => {
       <div className="table-responsive">
         <Table
           columns={tableColumns}
-          dataSource={list}
+          dataSource={blogs}
           rowKey="id"
           rowSelection={{
             selectedRowKeys: selectedRowKeys,

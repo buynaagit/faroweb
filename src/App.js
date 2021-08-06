@@ -38,13 +38,9 @@ import SignUp from "./Pages/SignUp";
 import BlogGridPage from "./Pages/BlogGridPage";
 import NotFound from "./Pages/404";
 import Admin from "./Pages/Admin";
-<<<<<<< HEAD
-import Admintest from "./Pages/Admintest";
 import ReadNews from "./Pages/ReadNews";
-=======
 import NewsDashboard from "./Pages/NewsDashboard";
 import NewsPublish from "./Pages/NewsPublish";
->>>>>>> d281edde3bd5138dd113a7ff78baee479063b2e6
 
 class App extends Component {
   componentDidMount() {
@@ -107,14 +103,10 @@ class App extends Component {
           <ScrollToTopRoute path="/SignIn" component={SignIn} />
           <ScrollToTopRoute path="/SignUp" component={SignUp} />
           <ScrollToTopRoute path="/Admin" component={Admin} />
-<<<<<<< HEAD
-          <ScrollToTopRoute path="/Admintest" component={Admintest} />
           <ScrollToTopRoute path="/ReadNews" component={ReadNews} />
-=======
           <ScrollToTopRoute path="/NewsDashboard" component={NewsDashboard} />
           <ScrollToTopRoute path="/NewsPublish" component={NewsPublish} />
 
->>>>>>> d281edde3bd5138dd113a7ff78baee479063b2e6
           <ScrollToTopRoute component={NotFound} />
         </Switch>
       </Router>

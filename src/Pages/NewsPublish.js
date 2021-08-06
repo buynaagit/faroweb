@@ -1,14 +1,18 @@
 import React, { useRef } from "react";
-import { Editor } from "@tinymce/tinymce-react";
-import { useHistory } from "react-router-dom";
-import axios from "axios";
 import { URL } from "../utils/appConstant";
+import { useHistory } from "react-router-dom";
+import { Editor } from "@tinymce/tinymce-react";
+import ImageUploader from "react-images-upload";
+import axios from "axios";
+// import { ImgUploader } from "../components/ImgUploader";
 
 export default function NewsPublish() {
   const history = useHistory();
   const [title, setTitle] = React.useState("");
   const [category, setCategory] = React.useState("");
   const [description, setDescription] = React.useState("");
+  const [image, setImage] = React.useState("");
+  console.log(`image`, image[0]);
 
   const Publish = (e) => {
     e.preventDefault();
@@ -23,20 +27,19 @@ export default function NewsPublish() {
       console.log(editorRef.current.getContent());
       setDescription(editorRef.current.getContent());
     }
-    axios
-      .post(
-        `${URL}/api/blogs/create/`,
-        {
-          title: title,
-          category: category,
-          description: editorRef.current.getContent(),
-        },
-        config
-      )
+
+    var data = new FormData();
+    data.append("title", title);
+    data.append("category", category);
+    data.append("description", editorRef.current.getContent());
+    data.append("image", image[0]);
+
+    return axios
+      .post(`${URL}/api/blogs/create/`, data, config)
       .then(function (response) {
         console.log(`response`, response.data);
         localStorage.setItem("token", response.data.token);
-        history.push("/Landing");
+        // history.push("/Landing");
       })
       .catch(function (error) {
         console.log(`error`, error.response);
@@ -89,7 +92,13 @@ export default function NewsPublish() {
         />
       </div>
       <button onClick={Publish}>Нийтлэх</button>
-      <button onClick={log}>Ковер зураг оруулах</button>
+      <ImageUploader
+        withIcon={true}
+        buttonText="Choose images"
+        onChange={setImage}
+        imgExtension={[".jpg", ".gif", ".png", ".gif"]}
+        maxFileSize={5242880}
+      />
     </>
   );
 }
