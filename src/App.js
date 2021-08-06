@@ -51,6 +51,7 @@ class App extends Component {
       <Router>
         <Switch>
           <ScrollToTopRoute exact={true} path={"/"} component={Home} />
+          <ScrollToTopRoute path="/Landing" component={Landing} />
           <ScrollToTopRoute
             path="/Digital-marketing"
             component={DigitalMarketing}
@@ -80,7 +81,6 @@ class App extends Component {
           <ScrollToTopRoute path="/BlogSingle" component={BlogSingle} />
           <ScrollToTopRoute path="/BlogGridPage" component={BlogGridPage} />
           <ScrollToTopRoute path="/Contact" component={Contact} />
-          <ScrollToTopRoute path="/Landing" component={Landing} />
           <ScrollToTopRoute path="/home-support" component={homesupport} />
           <ScrollToTopRoute path="/HomeHosting" component={homeHosting} />
           <ScrollToTopRoute path="/Home-ERP" component={homeERP} />
@@ -106,7 +106,6 @@ class App extends Component {
           <ScrollToTopRoute path="/ReadNews" component={ReadNews} />
           <ScrollToTopRoute path="/NewsDashboard" component={NewsDashboard} />
           <ScrollToTopRoute path="/NewsPublish" component={NewsPublish} />
-
           <ScrollToTopRoute component={NotFound} />
         </Switch>
       </Router>

@@ -31,8 +31,9 @@ const Landing = () => {
       <CorporateInfo />
       <News ServiceData={ServiceData} />
       <FaroTeam />
-      <Quote />
       <SecurityFeatures />
+      <Quote />
+
       <ErpService />
       <Career />
       <FaroAdress />

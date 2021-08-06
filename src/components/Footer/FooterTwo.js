@@ -3,6 +3,7 @@ import AboutWidget from "./FooterWidget/AboutWidget";
 import SolutionWidget from "./FooterWidget/SolutionWidget";
 import TeamWidget from "./FooterWidget/TeamWidget";
 import Reveal from "react-reveal/Reveal";
+
 class FooterTwo extends Component {
   render() {
     var { fClass } = this.props;

@@ -13278,6 +13278,7 @@ button:focus {
 }
 
 .text_box input[type="text"],
+.text_box input[type="number"],
 .text_box textarea,
 .text_box input[type="password"],
 .text_box input[type="email"] {
@@ -13295,12 +13296,14 @@ button:focus {
 
 .text_box input[type="text"].placeholder,
 .text_box textarea.placeholder,
+.text_box input[type="number"].placeholder,
 .text_box input[type="password"].placeholder,
 .text_box input[type="email"].placeholder {
   color: #9ca3b9;
 }
 
 .text_box input[type="text"]:-moz-placeholder,
+.text_box input[type="number"]:-moz-placeholder,
 .text_box textarea:-moz-placeholder,
 .text_box input[type="password"]:-moz-placeholder,
 .text_box input[type="email"]:-moz-placeholder {
@@ -13308,6 +13311,7 @@ button:focus {
 }
 
 .text_box input[type="text"]::-moz-placeholder,
+.text_box input[type="number"]::-moz-placeholder,
 .text_box textarea::-moz-placeholder,
 .text_box input[type="password"]::-moz-placeholder,
 .text_box input[type="email"]::-moz-placeholder {
@@ -13315,6 +13319,7 @@ button:focus {
 }
 
 .text_box input[type="text"]::-webkit-input-placeholder,
+.text_box input[type="number"]::-webkit-input-placeholder,
 .text_box textarea::-webkit-input-placeholder,
 .text_box input[type="password"]::-webkit-input-placeholder,
 .text_box input[type="email"]::-webkit-input-placeholder {
@@ -13322,6 +13327,7 @@ button:focus {
 }
 
 .text_box input[type="text"]:focus,
+.text_box input[type="number"]:focus,
 .text_box textarea:focus,
 .text_box input[type="password"]:focus,
 .text_box input[type="email"]:focus {
@@ -15904,7 +15910,7 @@ p span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: 13px;
   color: #424255;
   font-weight: 500;
@@ -19356,7 +19362,7 @@ a .h_head:hover {
   font-size: 14px;
   line-height: 16px;
   color: #7b7b93;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-weight: 500;
   position: relative;
 }
