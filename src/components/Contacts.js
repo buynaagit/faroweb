@@ -107,10 +107,10 @@
 import React, { Component } from "react";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
+import axios from "axios";
 
 const options = ["Нягтлан", "Багш", "Мэнэжэр"];
 const defaultOption = options[0];
-const axios = require("axios").default;
 
 class Contacts extends Component {
   constructor(props) {
@@ -118,13 +118,59 @@ class Contacts extends Component {
     this.state = {
       name: "",
       email: "",
-      subject: "",
       message: "",
       chosenJob: "",
+      number: "",
+      apply: false,
+      selectedFile: null,
     };
     this.handleChange = this.handleChange.bind(this);
     this._onSelect = this._onSelect.bind(this);
   }
+
+  // fileData = () => {
+  //   if (this.state.selectedFile) {
+  //     return (
+  //       <div>
+  //         <h8>File Details:</h8>
+
+  //         <h8>
+  //           File Name: {this.state.selectedFile.name} <br></br>
+  //         </h8>
+
+  //         <h8>File Type: {this.state.selectedFile.type}</h8>
+
+  //         <h8>
+  //           Last Modified:{" "}
+  //           {this.state.selectedFile.lastModifiedDate.toDateString()}
+  //         </h8>
+  //       </div>
+  //     );
+  //   }
+  // };
+
+  //onFileChange
+  onFileChange = (event) => {
+    // Update the state
+    console.log("dqwddqwdwqdqw");
+    this.setState({ ...this.state, selectedFile: event.target.files[0] });
+  };
+
+  // On file upload (click the upload button)
+  onFileUpload = () => {
+    // Create an object of formData
+    const formData = new FormData();
+
+    // Update the formData object
+    formData.append("myFile", this.state.selectedFile);
+
+    // Details of the uploaded file
+    console.log(this.state.selectedFile);
+
+    // Request made to the backend api
+    // Send formData object
+    // axios.post("api/uploadfile", formData);
+  };
 
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
@@ -132,11 +178,8 @@ class Contacts extends Component {
 
   async _onSelect(option) {
     await this.setState({ chosenJob: option.label });
+    await this.setState({ apply: true });
     console.log("chosen job =", this.state.chosenJob);
-  }
-
-  submitForm() {
-    console.log("apply");
   }
 
   componentDidMount() {
@@ -153,20 +196,69 @@ class Contacts extends Component {
     //   });
   }
 
-  handleSubmit(event) {
-    alert("An essay was submitted: ");
+  handleSubmit() {
     console.log(
       this.state.name,
+      "\n",
       this.state.email,
-      this.state.subject,
+      "\n",
+      this.state.number,
+      "\n",
+      this.state.selectedFile,
+      "\n",
       this.state.message,
-      this.state.chosenJob
+      "\n",
+      this.state.chosenJob,
+      "\n"
     );
+    alert("CV was submitted");
+    const config = {
+      headers: {
+        "Content-type": "application/json",
+      },
+    };
+    const formData = new FormData();
+    formData.append("name", this.state.name);
+    formData.append("email", this.state.email);
+    formData.append("career", this.state.chosenJob);
+    formData.append("phone", this.state.number);
+    formData.append("description", this.state.message);
+    formData.append("cv", this.state.selectedFile);
+    axios
+      .post(
+        //name, email, career, phone, description, cv
+        "http://192.168.0.119:8000/api/careers/upload/",
+        formData,
+        config
+      )
+      .then(function (response) {
+        console.log(`response`, response.data);
+        // localStorage.setItem("token", response.data.token);
+        // history.push("/NewsDashboard");
+      })
+      .catch(function (error) {
+        console.log(`error`, error.response);
+      });
+  }
+
+  checkApply(event) {
     event.preventDefault();
+    if (this.state.name == "") {
+      alert("Check your name");
+    } else if (this.state.email == "") {
+      alert("Check your email");
+    } else if (this.state.number == "") {
+      alert("Check your number");
+    } else if (this.state.selectedFile == null) {
+      alert("Check your file");
+    } else if (this.state.message == "") {
+      alert("Check your message");
+    } else {
+      this.handleSubmit();
+    }
   }
 
   render() {
-    // const {name, email, subject, message, emailStatus} = this.state;
     return (
       <section className="contact_info_area sec_pad bg_color">
         <div className="container">
@@ -214,31 +306,26 @@ class Contacts extends Component {
                 Хувийн мэдээлэл
               </h2>
               <form
-                onSubmit={this.handleSubmit}
+                onSubmit={this.checkApply.bind(this)}
                 className="contact_form_box"
                 id="contactForm"
               >
                 <div className="row">
                   <div className="col-lg-6">
                     <div className="form-group text_box">
-                      {this.state.chosenJob == "" ? (
-                        <input
-                          type="text"
-                          id="name"
-                          name="name"
-                          placeholder="Your Name"
-                          onChange={this.handleChange}
-                        />
-                      ) : (
-                        <input
-                          type="text"
-                          id="name"
-                          name="name"
-                          placeholder="Your Name"
-                          onChange={this.handleChange}
-                          // disabled="true"
-                        />
-                      )}
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Your Name"
+                        onChange={this.handleChange}
+                        disabled={!this.state.apply}
+                        style={
+                          this.state.apply == false
+                            ? { backgroundColor: "#cccccc" }
+                            : { backgroundColor: "white" }
+                        }
+                      />
                     </div>
                   </div>
                   <div className="col-lg-6">
@@ -249,22 +336,43 @@ class Contacts extends Component {
                         id="email"
                         placeholder="Your Email"
                         onChange={this.handleChange}
-                        // disabled="true"
+                        disabled={!this.state.apply}
+                        style={
+                          this.state.apply == false
+                            ? { backgroundColor: "#cccccc" }
+                            : { backgroundColor: "white" }
+                        }
                       />
                     </div>
                   </div>
-                  <div className="col-lg-12">
+
+                  <div className="col-lg-6">
                     <div className="form-group text_box">
                       <input
-                        type="text"
-                        id="subject"
-                        name="subject"
-                        placeholder="Сонирхож буй ажлын байр"
+                        type="number"
+                        name="number"
+                        id="tentacles"
+                        placeholder="Дугаар"
                         onChange={this.handleChange}
-                        // disabled="true"
-                      />
+                        disabled={!this.state.apply}
+                        style={
+                          this.state.apply == false
+                            ? { backgroundColor: "#cccccc" }
+                            : { backgroundColor: "white" }
+                        }
+                      ></input>
                     </div>
                   </div>
+                  <div className="col-lg-6">
+                    <input
+                      type="file"
+                      onChange={this.onFileChange}
+                      disabled={!this.state.apply}
+                    />
+                    {/* <button onClick={this.onFileUpload}>Upload!</button> */}
+                    {/* {this.fileData()} */}
+                  </div>
+
                   <div className="col-lg-12">
                     <div className="form-group text_box">
                       <textarea
@@ -274,13 +382,27 @@ class Contacts extends Component {
                         cols="30"
                         rows="10"
                         placeholder="Enter Your Message . . ."
+                        disabled={!this.state.apply}
+                        style={
+                          this.state.apply == false
+                            ? { backgroundColor: "#cccccc" }
+                            : { backgroundColor: "white" }
+                        }
                       ></textarea>
                     </div>
                   </div>
                 </div>
                 <button
                   className="btn_three"
-                  onClick={this.handleSubmit.bind(this)}
+                  disabled={
+                    this.state.name == ""
+                      ? true
+                      : this.state.email == ""
+                      ? this.state.number == ""
+                      : this.state.message == ""
+                      ? this.state.selectedFile == null
+                      : false
+                  }
                 >
                   Apply
                 </button>

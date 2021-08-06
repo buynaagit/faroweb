@@ -8,6 +8,9 @@ class News extends Component {
     loading: true,
     person: null,
     blog: ["", "", ""],
+    date0: "",
+    date1: "",
+    date2: "",
   };
 
   async componentDidMount() {
@@ -18,13 +21,22 @@ class News extends Component {
       // body: JSON.stringify({ username: "admin", password: "admin1234" }),
     };
     const response = await fetch(
-      "http://192.168.0.119:8000/api/blogs/",
+      "https://far0.herokuapp.com/api/blogs/",
       requestOptions
     );
     const data = await response.json();
     // console.log(">>>>>>>>", data);
     await this.setState({ blog: data });
     console.log(this.state.blog);
+    const d0 = new Date(this.state.blog[0].createdAt);
+    const d1 = new Date(this.state.blog[1].createdAt);
+    const d2 = new Date(this.state.blog[2].createdAt);
+    const date0 = `${d0.getDate()}/${d0.getMonth()}/${d0.getFullYear()}`;
+    const date1 = `${d1.getDate()}/${d1.getMonth()}/${d1.getFullYear()}`;
+    const date2 = `${d2.getDate()}/${d2.getMonth()}/${d2.getFullYear()}`;
+    this.setState({ date0: date0 });
+    this.setState({ date1: date1 });
+    this.setState({ date2: date2 });
   }
 
   render() {
@@ -122,17 +134,17 @@ class News extends Component {
             <HostingBlogItems
               blogImage="h_blog2.jpg"
               blogTitle={this.state.blog[0].title}
-              pDate={this.state.blog[0].createdAt}
+              pDate={this.state.date0}
             />
             <HostingBlogItems
               blogImage="h_blog2.jpg"
               blogTitle={this.state.blog[1].title}
-              pDate={this.state.blog[1].createdAt}
+              pDate={this.state.date1}
             />
             <HostingBlogItems
               blogImage="h_blog2.jpg"
               blogTitle={this.state.blog[2].title}
-              pDate={this.state.blog[2].createdAt}
+              pDate={this.state.date2}
             />
           </div>
         </div>

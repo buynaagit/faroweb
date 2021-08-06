@@ -22,7 +22,16 @@ class HostingBlogItems extends Component {
               <h3>{blogTitle}</h3>
             </a>
             <div className="post-info-bottom">
-              <a href="../ReadNews" className="learn_btn_two">
+              <a
+                href="../ReadNews"
+                style={{
+                  border: "2px solid grey",
+                  borderRadius: "20px",
+                  padding: "7px",
+                }}
+                className="learn_btn_two"
+              >
+                <h8 className="learn_btn_two">Дэлгэрэнгүй </h8>
                 <i className="arrow_right"></i>
               </a>
             </div>
