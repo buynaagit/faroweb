@@ -7,13 +7,18 @@ import { Editor } from "@tinymce/tinymce-react";
 import ImageUploader from "react-images-upload";
 // import { ImgUploader } from "../components/ImgUploader";
 
-export default function NewsPublish({}) {
+export default function NewsEdit({ match }) {
   const history = useHistory();
   const [title, setTitle] = React.useState("");
   const [category, setCategory] = React.useState("");
   const [description, setDescription] = React.useState("");
   const [image, setImage] = React.useState("");
   const [blogs, setBlogs] = React.useState([]);
+
+  console.log(`image[0]`, image[0]);
+  const blogID = match.params.id;
+
+  console.log(`blogID`, blogID);
 
   const Publish = (e) => {
     e.preventDefault();
@@ -36,37 +41,39 @@ export default function NewsPublish({}) {
     data.append("image", image[0]);
 
     return axios
-      .post(`${URL}/api/blogs/create/`, data, config)
+      .put(`${URL}/api/blogs/${blogID}/update/`, data, config)
       .then(function (response) {
         console.log(`response`, response.data);
-        localStorage.setItem("token", response.data.token);
-        history.push("/Landing");
+        history.push("/NewsDashboard");
       })
       .catch(function (error) {
         console.log(`error`, error.response);
       });
   };
 
-  const getBlogFromAPI = React.useCallback((e) => {
-    // e.preventDefault();
-    const config = {
-      headers: {
-        "Content-type": "application/json",
-      },
-    };
-    console.log(`button Pressed`);
+  const getBlogFromAPI = React.useCallback(
+    (e) => {
+      // e.preventDefault();
+      const config = {
+        headers: {
+          "Content-type": "application/json",
+        },
+      };
+      console.log(`button Pressed`);
 
-    axios
-      .get(`${URL}/api/blogs/<int:id>/`, config)
-      .then(function (response) {
-        console.log(`response`, response.data);
-        setBlogs(response.data);
-        localStorage.setItem("blogs", response.data);
-      })
-      .catch(function (error) {
-        console.log(`error`, error.response);
-      });
-  }, []);
+      axios
+        .get(`${URL}/api/blogs/${blogID}/`, config)
+        .then(function (response) {
+          console.log(`response`, response.data);
+          setBlogs(response.data);
+          localStorage.setItem("blogs", response.data);
+        })
+        .catch(function (error) {
+          console.log(`error`, error.response);
+        });
+    },
+    [blogID]
+  );
 
   const editorRef = useRef(null);
 
@@ -84,7 +91,7 @@ export default function NewsPublish({}) {
     <>
       <Editor
         onInit={(evt, editor) => (editorRef.current = editor)}
-        initialValue="<p>This is the initial content of the editor.</p>"
+        initialValue={blogs.description}
         init={{
           height: 500,
           menubar: false,
@@ -103,25 +110,34 @@ export default function NewsPublish({}) {
         }}
       />
       <div className="form-group text_box">
+        <p>Title</p>
         <input
           type="text"
           value={title}
-          placeholder="Enter a title"
+          placeholder={blogs.title}
           onChange={(e) => setTitle(e.target.value)}
         />
       </div>
       <div className="form-group text_box">
+        <p>Category</p>
         <input
           type="text"
           value={category}
-          placeholder="Enter category"
+          placeholder={blogs.category}
           onChange={(e) => setCategory(e.target.value)}
         />
       </div>
       <button className="btn_three" onClick={Publish}>
-        Нийтлэх
+        Шинэчлэх
       </button>
-      {image ? <p> Image uploaded </p> : <p> Upload Image...</p>}
+      {image ? (
+        <p> Image updated! </p>
+      ) : (
+        <p>
+          Cover image <br></br>
+          <img src={blogs.cover_image} alt="" />
+        </p>
+      )}
       <ImageUploader
         withIcon={true}
         buttonText="Choose images"

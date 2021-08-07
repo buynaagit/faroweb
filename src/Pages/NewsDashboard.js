@@ -3,6 +3,14 @@ import React, { useState } from "react";
 import { Card, Table, Select, Input, Button, Menu } from "antd";
 
 import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useParams,
+} from "react-router-dom";
+
+import {
   EyeOutlined,
   DeleteOutlined,
   SearchOutlined,
@@ -62,12 +70,14 @@ const ProductList = () => {
 
   const dropdownMenu = (row) => (
     <Menu>
-      <Menu.Item onClick={() => viewDetails(row)}>
-        <Flex alignItems="center">
-          <EyeOutlined />
-          <span className="ml-2">Edit news</span>
-        </Flex>
-      </Menu.Item>
+      <Link to={`/NewsEdit/${row.id}`}>
+        <Menu.Item>
+          <Flex alignItems="center">
+            <EyeOutlined />
+            <span className="ml-2">Edit news</span>
+          </Flex>
+        </Menu.Item>
+      </Link>
       <Menu.Item onClick={() => deleteRow(row)}>
         <Flex alignItems="center">
           <DeleteOutlined />
@@ -82,17 +92,24 @@ const ProductList = () => {
   );
 
   const addProduct = () => {
-    history.push(`/NewsPublish`);
-  };
-
-  const viewDetails = (id_) => {
-    history.push({
-      pathname: "/NewsEdit",
-      state: { id: blogs.id },
-    });
+    history.push("/NewsPublish/");
   };
 
   const deleteRow = (row) => {
+    const config = {
+      headers: {
+        "Content-type": "application/json",
+        Authorization: "Bearer " + localStorage.getItem("token"),
+      },
+    };
+    axios
+      .delete(`${URL}/api/blogs/${row.id}/delete/`, config)
+      .then(function (response) {
+        console.log(`response`, response.data);
+      })
+      .catch(function (error) {
+        console.log(`error`, error.response);
+      });
     const objKey = "id";
     let data = list;
     if (selectedRows.length > 1) {
