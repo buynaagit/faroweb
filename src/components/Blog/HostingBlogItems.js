@@ -4,25 +4,36 @@ class HostingBlogItems extends Component {
   render() {
     let { blogImage, blogTitle, pDate, comments } = this.props;
     return (
-      <div style={{ marginLeft: "100px", width: "500px" }}>
+      <div
+        style={{
+          marginLeft: "50px",
+          width: "500px",
+          marginTop: "50px",
+          marginRight: "50px",
+        }}
+      >
         <div className="h_blog_item">
           <a href="../ReadNews">
-            <img
-              src={require("../../img/hosting/" + blogImage)}
-              alt="blog"
-              style={{ width: "500", height: "200" }}
-            />
+            <img src={blogImage} alt="blog" width="300px" height="300px" />
           </a>
           <div className="h_blog_content">
             <a href="../ReadNews" className="post_time">
               <i className="icon_clock_alt"></i>
               {pDate}
             </a>
+
             <a href="/#">
-              <h3>{blogTitle}</h3>
+              <h3
+                className="newsTitle"
+                style={{ marginRight: "50px", width: "100%" }}
+              >
+                {blogTitle}
+              </h3>
             </a>
+
             <div className="post-info-bottom">
               <a
+                width=""
                 href="../ReadNews"
                 style={{
                   border: "2px solid grey",

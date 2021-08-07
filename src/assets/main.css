@@ -410,6 +410,11 @@ button:focus {
   padding: 120px 0px;
 }
 
+.faroWeb {
+  border-radius: 100px;
+  border-width: 0;
+}
+
 /*====================================================*/
 /*====================================================*/
 .btn_hover {
@@ -11910,10 +11915,8 @@ button:focus {
 }
 
 .app_screenshot_area .app_screenshot_slider .item .screenshot_img {
-  border: 1px solid #f4f4f9;
-  border-radius: 4px;
-  -webkit-box-shadow: 0px 6px 16px 0px rgba(12, 0, 46, 0.06);
-  box-shadow: 0px 6px 16px 0px rgba(12, 0, 46, 0.06);
+  border-radius: 50%;
+  /* -webkit-box-shadow: 0px 6px 16px 0px rgba(12, 0, 46, 0.06); */
 }
 
 .app_screenshot_area .app_screenshot_slider .item .screenshot_img img {
@@ -13304,6 +13307,13 @@ button:focus {
 .text_box input[type="password"].placeholder,
 .text_box input[type="email"].placeholder {
   color: #9ca3b9;
+}
+
+.newsTitle {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
 }
 
 .text_box input[type="text"]:-moz-placeholder,

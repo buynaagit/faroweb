@@ -45,16 +45,23 @@ const FaroWebsites = () => {
           tClass="t_color3 mb_20"
           TitleP="FARO салбарууд"
         />
-        <div className="app_screen_info">
+        <div className="app_screen_info ">
           <Slider className="app_screenshot_slider" {...settings}>
-            <div className="item">
-              <div className="screenshot_img">
+            <div className="item ">
+              <div className="screenshot_img ">
                 <a
                   href="http://www.vrlab.mn/"
                   target="_blank"
                   className="image-link"
                 >
-                  <img src={require("../img/websites/VRLab.png")} alt="" />
+                  <img
+                    src={require("../img/websites/VRLab.png")}
+                    alt=""
+                    // className="faroWeb"
+                    style={{
+                      borderRadius: "50%",
+                    }}
+                  />
                 </a>
               </div>
             </div>
@@ -65,7 +72,13 @@ const FaroWebsites = () => {
                   target="_blank"
                   className="image-link"
                 >
-                  <img src={require("../img/websites/IFD.png")} alt="" />
+                  <img
+                    src={require("../img/websites/IFD.png")}
+                    alt=""
+                    style={{
+                      borderRadius: "50%",
+                    }}
+                  />
                 </a>
               </div>
             </div>
@@ -76,7 +89,13 @@ const FaroWebsites = () => {
                   target="_blank"
                   className="image-link"
                 >
-                  <img src={require("../img/websites/FaroEDU.jpeg")} alt="" />
+                  <img
+                    src={require("../img/websites/FaroEDU.jpeg")}
+                    alt=""
+                    style={{
+                      borderRadius: "50%",
+                    }}
+                  />
                 </a>
               </div>
             </div>
@@ -90,6 +109,9 @@ const FaroWebsites = () => {
                   <img
                     src={require("../img/websites/FaroFoundation.jpeg")}
                     alt=""
+                    style={{
+                      borderRadius: "50%",
+                    }}
                   />
                 </a>
               </div>
