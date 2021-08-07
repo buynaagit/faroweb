@@ -1,56 +1,25 @@
 import React, { useState } from "react";
-import { Card, Table, Select, Input, Button, Badge, Menu } from "antd";
-import ProductListData from "../assets/data/product-list.data.json";
+
+import { Card, Table, Select, Input, Button, Menu } from "antd";
+
 import {
   EyeOutlined,
   DeleteOutlined,
   SearchOutlined,
   PlusCircleOutlined,
 } from "@ant-design/icons";
-import AvatarStatus from "../components/AvatarStatus";
-import EllipsisDropdown from "../components/EllipsisDropdown";
-import Flex from "../components/Flex";
-import NumberFormat from "react-number-format";
-import { useHistory } from "react-router-dom";
+
 import utils from "../utils";
 import axios from "axios";
+import Flex from "../components/Flex";
 import { URL } from "../utils/appConstant";
+import { useHistory } from "react-router-dom";
+import AvatarStatus from "../components/AvatarStatus";
+import EllipsisDropdown from "../components/EllipsisDropdown";
 
 const { Option } = Select;
 
-const getStockStatus = (stockCount) => {
-  if (stockCount >= 10) {
-    return (
-      <>
-        <Badge status="success" />
-        <span>In Stock</span>
-      </>
-    );
-  }
-  if (stockCount < 10 && stockCount > 0) {
-    return (
-      <>
-        <Badge status="warning" />
-        <span>Limited Stock</span>
-      </>
-    );
-  }
-  if (stockCount === 0) {
-    return (
-      <>
-        <Badge status="error" />
-        <span>Out of Stock</span>
-      </>
-    );
-  }
-  return null;
-};
-
 const categories = ["Cloths", "Bags", "Shoes", "Watches", "Devices"];
-
-const signOut = () => {
-  console.log("sign out button");
-};
 
 const ProductList = () => {
   let history = useHistory();
@@ -85,6 +54,12 @@ const ProductList = () => {
 
   const [list, setList] = useState(blogs);
 
+  const signOut = () => {
+    console.log("sign out button");
+    localStorage.removeItem("token");
+    history.push("/Landing");
+  };
+
   const dropdownMenu = (row) => (
     <Menu>
       <Menu.Item onClick={() => viewDetails(row)}>
@@ -110,8 +85,11 @@ const ProductList = () => {
     history.push(`/NewsPublish`);
   };
 
-  const viewDetails = (row) => {
-    history.push(`/app/apps/ecommerce/edit-product/${row.id}`);
+  const viewDetails = (id_) => {
+    history.push({
+      pathname: "/NewsEdit",
+      state: { id: blogs.id },
+    });
   };
 
   const deleteRow = (row) => {
@@ -157,8 +135,8 @@ const ProductList = () => {
 
     {
       title: "Date",
-      dataIndex: "stock",
-      sorter: (a, b) => utils.antdTableSorter(a, b, "stock"),
+      dataIndex: "createdAt",
+      sorter: (a, b) => utils.antdTableSorter(a, b, "createdAt"),
     },
 
     {

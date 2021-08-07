@@ -108,6 +108,7 @@ import React, { Component } from "react";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
 import axios from "axios";
+import { URL } from "../utils/appConstant";
 
 const options = ["Нягтлан", "Багш", "Мэнэжэр"];
 const defaultOption = options[0];
@@ -227,7 +228,7 @@ class Contacts extends Component {
     axios
       .post(
         //name, email, career, phone, description, cv
-        "http://192.168.0.119:8000/api/careers/upload/",
+        `${URL}/api/careers/upload/`,
         formData,
         config
       )

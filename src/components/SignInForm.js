@@ -1,11 +1,17 @@
 import React from "react";
+
 import axios from "axios";
+import { URL } from "../utils/appConstant";
 import { useHistory } from "react-router-dom";
 
 const SignInFrom = () => {
   const history = useHistory();
   const [Email, setEmail] = React.useState("");
   const [passwordAdmin, setPasswordAdmin] = React.useState("");
+
+  const backBtn = () => {
+    history.push("/Landing");
+  };
 
   const signIn = (e) => {
     e.preventDefault();
@@ -17,7 +23,7 @@ const SignInFrom = () => {
     console.log(`button Pressed`);
     axios
       .post(
-        "http://192.168.0.119:8000/api/login/",
+        `${URL}/api/login/`,
         {
           username: Email,
           password: passwordAdmin,
@@ -37,6 +43,11 @@ const SignInFrom = () => {
   return (
     <section className="sign_in_area bg_color sec_pad">
       <div className="container">
+        <div className="d-flex justify-content-between align-items-center">
+          <button onClick={backBtn} type="submit" className="btn_three">
+            Back to home
+          </button>
+        </div>
         <div className="sign_info">
           <div className="row">
             <div className="col-lg-7">

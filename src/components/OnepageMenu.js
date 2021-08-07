@@ -11,11 +11,8 @@ class OnepageMenu extends Component {
         <header className="header_area">
           <nav className={`navbar navbar-expand-lg menu_one ${mClass}`}>
             <div className={`container ${cClass}`}>
-              {/* <Link className={`navbar-brand ${slogo}`} to="/"> */}
-              <Link>
+              <Link to="home">
                 <img src={require("../img/faro.png")} alt="" />
-                {/* <img src={require("../img/logo2.png")} alt="" />
-                <img src={require("../img/logo.png")} alt="logo" /> */}
               </Link>
               <button
                 className="navbar-toggler collapsed"

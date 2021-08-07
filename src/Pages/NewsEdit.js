@@ -7,12 +7,13 @@ import { Editor } from "@tinymce/tinymce-react";
 import ImageUploader from "react-images-upload";
 // import { ImgUploader } from "../components/ImgUploader";
 
-export default function NewsPublish() {
+export default function NewsPublish({}) {
   const history = useHistory();
   const [title, setTitle] = React.useState("");
   const [category, setCategory] = React.useState("");
   const [description, setDescription] = React.useState("");
   const [image, setImage] = React.useState("");
+  const [blogs, setBlogs] = React.useState([]);
 
   const Publish = (e) => {
     e.preventDefault();
@@ -46,12 +47,39 @@ export default function NewsPublish() {
       });
   };
 
+  const getBlogFromAPI = React.useCallback((e) => {
+    // e.preventDefault();
+    const config = {
+      headers: {
+        "Content-type": "application/json",
+      },
+    };
+    console.log(`button Pressed`);
+
+    axios
+      .get(`${URL}/api/blogs/<int:id>/`, config)
+      .then(function (response) {
+        console.log(`response`, response.data);
+        setBlogs(response.data);
+        localStorage.setItem("blogs", response.data);
+      })
+      .catch(function (error) {
+        console.log(`error`, error.response);
+      });
+  }, []);
+
   const editorRef = useRef(null);
+
   const log = () => {
     if (editorRef.current) {
       console.log(editorRef.current.getContent());
     }
   };
+
+  React.useEffect(() => {
+    getBlogFromAPI();
+  }, [getBlogFromAPI]);
+
   return (
     <>
       <Editor
