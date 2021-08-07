@@ -28,7 +28,8 @@ class News extends Component {
     // console.log(">>>>>>>>", data);
     await this.setState({ blog: data });
     console.log(this.state.blog);
-    if (this.state.blog.length == 0) {
+    console.log(this.state.blog[0].cover_image);
+    if (this.state.blog.length < 3) {
       console.log("No data");
     } else {
       const d0 = new Date(this.state.blog[0].createdAt);
@@ -136,12 +137,12 @@ class News extends Component {
           <div className="row" style={{ justifyContent: "center" }}>
             <HostingBlogItems
               blogImage={
-                this.state.blog.length == 0
+                this.state.blog.length < 3
                   ? require("../../img/faro.png")
-                  : this.state.blog.length
+                  : this.state.blog[0].cover_image
               }
               blogTitle={
-                this.state.blog.length == 0 ? "test1" : this.state.blog[1].title
+                this.state.blog.length < 3 ? "test1" : this.state.blog[1].title
               }
               pDate={
                 this.state.date1 == undefined ? "12345678" : this.state.date0
@@ -150,12 +151,12 @@ class News extends Component {
             <HostingBlogItems
               // blogImage={this.state.blog[1].cover_image == '' ? }
               blogImage={
-                this.state.blog.length == 0
+                this.state.blog.length < 3
                   ? require("../../img/faro.png")
-                  : this.state.blog.length
+                  : this.state.blog[1].cover_image
               }
               blogTitle={
-                this.state.blog.length == 0 ? "test1" : this.state.blog[1].title
+                this.state.blog.length < 3 ? "test1" : this.state.blog[1].title
               }
               pDate={
                 this.state.date1 == undefined ? "12345678" : this.state.date1
@@ -164,12 +165,12 @@ class News extends Component {
             />
             <HostingBlogItems
               blogImage={
-                this.state.blog.length == 0
+                this.state.blog.length < 3
                   ? require("../../img/faro.png")
-                  : this.state.blog.length
+                  : this.state.blog[2].cover_image
               }
               blogTitle={
-                this.state.blog.length == 0 ? "test1" : this.state.blog[2].title
+                this.state.blog.length < 3 ? "test1" : this.state.blog[2].title
               }
               pDate={
                 this.state.date2 == undefined ? "12345678" : this.state.date2
