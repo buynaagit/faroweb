@@ -404,7 +404,7 @@ class Contacts extends Component {
                       : false
                   }
                 >
-                  Apply123
+                  Apply
                 </button>
               </form>
               <div id="success">Your message succesfully sent!</div>

@@ -28,20 +28,23 @@ class News extends Component {
     // console.log(">>>>>>>>", data);
     await this.setState({ blog: data });
     console.log(this.state.blog);
-    const d0 = new Date(this.state.blog[0].createdAt);
-    const d1 = new Date(this.state.blog[1].createdAt);
-    const d2 = new Date(this.state.blog[2].createdAt);
-    const date0 = `${d0.getDate()}/${d0.getMonth()}/${d0.getFullYear()}`;
-    const date1 = `${d1.getDate()}/${d1.getMonth()}/${d1.getFullYear()}`;
-    const date2 = `${d2.getDate()}/${d2.getMonth()}/${d2.getFullYear()}`;
-    this.setState({ date0: date0 });
-    this.setState({ date1: date1 });
-    this.setState({ date2: date2 });
+    if (this.state.blog.length == 0) {
+      console.log("No data");
+    } else {
+      const d0 = new Date(this.state.blog[0].createdAt);
+      const d1 = new Date(this.state.blog[1].createdAt);
+      const d2 = new Date(this.state.blog[2].createdAt);
+      const date0 = `${d0.getDate()}/${d0.getMonth()}/${d0.getFullYear()}`;
+      const date1 = `${d1.getDate()}/${d1.getMonth()}/${d1.getFullYear()}`;
+      const date2 = `${d2.getDate()}/${d2.getMonth()}/${d2.getFullYear()}`;
+      this.setState({ date0: date0 });
+      this.setState({ date1: date1 });
+      this.setState({ date2: date2 });
+    }
   }
 
   render() {
     console.log(">>>>>>", this.state.blog);
-    let ServiceData = this.props.ServiceData;
     return (
       // <section className="app_service_area" id="work">
       //   <div className="container">
@@ -124,27 +127,53 @@ class News extends Component {
 
       // </section>
       <section className="h_blog_area sec_pad">
-        <div>
+        <div style={{}}>
           <Sectitle
             Title="Our Latest News"
             TitleP="Шинэ мэдээ, мэдээлэл"
             sClass="hosting_title text-center"
           />
-          <div className="row">
+          <div className="row" style={{ justifyContent: "center" }}>
             <HostingBlogItems
-              blogImage="h_blog2.jpg"
-              blogTitle={this.state.blog[0].title}
-              pDate={this.state.date0}
+              blogImage={
+                this.state.blog.length == 0
+                  ? require("../../img/faro.png")
+                  : this.state.blog.length
+              }
+              blogTitle={
+                this.state.blog.length == 0 ? "test1" : this.state.blog[1].title
+              }
+              pDate={
+                this.state.date1 == undefined ? "12345678" : this.state.date0
+              }
             />
             <HostingBlogItems
-              blogImage="h_blog2.jpg"
-              blogTitle={this.state.blog[1].title}
-              pDate={this.state.date1}
+              // blogImage={this.state.blog[1].cover_image == '' ? }
+              blogImage={
+                this.state.blog.length == 0
+                  ? require("../../img/faro.png")
+                  : this.state.blog.length
+              }
+              blogTitle={
+                this.state.blog.length == 0 ? "test1" : this.state.blog[1].title
+              }
+              pDate={
+                this.state.date1 == undefined ? "12345678" : this.state.date1
+              }
+              x
             />
             <HostingBlogItems
-              blogImage="h_blog2.jpg"
-              blogTitle={this.state.blog[2].title}
-              pDate={this.state.date2}
+              blogImage={
+                this.state.blog.length == 0
+                  ? require("../../img/faro.png")
+                  : this.state.blog.length
+              }
+              blogTitle={
+                this.state.blog.length == 0 ? "test1" : this.state.blog[2].title
+              }
+              pDate={
+                this.state.date2 == undefined ? "12345678" : this.state.date2
+              }
             />
           </div>
         </div>
