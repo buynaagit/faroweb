@@ -24,12 +24,12 @@ const Landing = () => {
         hbtnClass="btn_get_radious menu_custfive"
       />
       <AppBanner />
+      <Features />
       <FaroWebsites />
-      <CorporateInfo />
+      {/* <CorporateInfo /> */}
+      <Quote />
       <News ServiceData={ServiceData} />
       <FaroTeam />
-      <Quote />
-      <Features />
       <Career />
       <FaroAdress />
       <FooterTwo FooterData={FooterData} />

@@ -26543,6 +26543,30 @@ a .h_head:hover {
   display: block !important;
 }
 
+/* @media (max-width: 600px) and (min-width: 0px) {
+  .faroNews {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 50px;
+  }
+}
+
+@media (max-width: 1300px) and (min-width: 601x) {
+  .faroNews {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+  }
+}*/
+
+@media (min-width: 1300px) {
+  .faroNews {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+  }
+}
+
 /*============= chat_clients_area css ===========*/
 
 /*====================================================*/

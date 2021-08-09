@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import Sectitle from "../Title/Sectitle";
 import ReadNews from "../../Pages/ReadNews";
-import HostingBlogItems from "../Blog/HostingBlogItems";
+import HostingBlogItems from "../../components/Blog/HostingBlogItems";
+import Blogrightsidebar from "../../components/Blog/Blogrightsidebar";
+import BlogGridItem from "../../components/Blog/BlogGridItem";
+import ServiceData from "../Service/ServiceData";
 
 class News extends Component {
   state = {
@@ -21,14 +24,12 @@ class News extends Component {
       // body: JSON.stringify({ username: "admin", password: "admin1234" }),
     };
     const response = await fetch(
-      "https://far0.herokuapp.com/api/blogs/",
+      "https://far0.herokuapp.com/api/latest-blogs/3/",
       requestOptions
     );
     const data = await response.json();
-    // console.log(">>>>>>>>", data);
     await this.setState({ blog: data });
     console.log(this.state.blog);
-    console.log(this.state.blog[0].cover_image);
     if (this.state.blog.length < 3) {
       console.log("No data");
     } else {
@@ -45,139 +46,152 @@ class News extends Component {
   }
 
   render() {
-    console.log(">>>>>>", this.state.blog);
     return (
-      // <section className="app_service_area" id="work">
-      //   <div className="container">
-      //     <Sectitle
-      //       sClass="sec_title text-center mb_70"
-      //       Title="Мэдээ, мэдээллүүд"
-      //       tClass="t_color3"
-      //       TitleP="Шинэ мэдээ, мэдээллүүд"
-      //     />
-      //     <div className="row app_service_info">
-      //       {ServiceData.work.map((items) => {
-      //         return (
-      //           <div className="col-lg-4" key={items.id}>
-      //             <div
-      //               className="app_service_item wow fadeInUp"
-      //               data-wow-delay="0.2s"
-      //             >
-      //               {/* <i className={`app_icon ${items.icon}`}></i> */}
-      //               <img
-      //                 src={require(`../../img/${items.image}`)}
-      //                 alt=""
-      //                 style={{
-      //                   paddingLeft: 0,
-      //                   paddingRight: 0,
-      //                   width: "100%",
-      //                   height: "200px",
-      //                 }}
-      //               />
-
-      //               <h5
-      //                 className="f_p f_size_18 f_600 t_color3 mt_40 mb-30"
-      //                 style={{ padding: "5px", paddingLeft: 20 }}
-      //               >
-      //                 {items.title}
-      //               </h5>
-
-      //               {items.p.length < 20 ? (
-      //                 <p
-      //                   className="f_400 f_size_15 mb-30"
-      //                   style={{ padding: "5px", paddingLeft: 20 }}
-      //                 >
-      //                   {items.p}{" "}
-      //                 </p>
-      //               ) : (
-      //                 <p
-      //                   className="f_400 f_size_15 mb-30"
-      //                   style={{ padding: "5px", paddingLeft: 20 }}
-      //                 >
-      //                   {items.p.slice(0, 150)}
-      //                   {" ..."}
-      //                 </p>
-      //               )}
-
-      //               <a
-      //                 style={{
-      //                   padding: "5px",
-      //                   paddingLeft: 20,
-      //                   paddingBottom: 50,
-      //                   alignSelf: "flex-end",
-      //                 }}
-      //                 href=".#"
-      //                 className="learn_btn_two"
-      //               >
-      //                 Дэлгэрэнгүй
-      //                 <i
-      //                   className="ti-arrow-right"
-      //                   style={{
-      //                     padding: "5px",
-      //                     paddingLeft: 20,
-      //                     alignSelf: "flex-end",
-      //                   }}
-      //                 ></i>
-      //               </a>
-      //             </div>
-      //           </div>
-      //         );
-      //       })}
-      //     </div>
-      //   </div>
-
-      // </section>
       <section className="h_blog_area sec_pad">
-        <div style={{}}>
-          <Sectitle
-            Title="Our Latest News"
-            TitleP="Шинэ мэдээ, мэдээлэл"
-            sClass="hosting_title text-center"
+        {/* <Sectitle
+          Title="Our Latest News"
+          TitleP="Шинэ мэдээ, мэдээлэл"
+          sClass="hosting_title text-center"
+        />
+        <div className="row" style={{ justifyContent: "center" }}>
+          <HostingBlogItems
+            blogImage={
+              this.state.blog.length < 3
+                ? require("../../img/faro.png")
+                : this.state.blog[0].cover_image
+            }
+            blogTitle={
+              this.state.blog.length < 3 ? "test1" : this.state.blog[1].title
+            }
+            pDate={
+              this.state.date1 == undefined ? "12345678" : this.state.date0
+            }
           />
-          <div className="row" style={{ justifyContent: "center" }}>
-            <HostingBlogItems
-              blogImage={
-                this.state.blog.length < 3
-                  ? require("../../img/faro.png")
-                  : this.state.blog[0].cover_image
-              }
-              blogTitle={
-                this.state.blog.length < 3 ? "test1" : this.state.blog[1].title
-              }
-              pDate={
-                this.state.date1 == undefined ? "12345678" : this.state.date0
-              }
-            />
-            <HostingBlogItems
-              // blogImage={this.state.blog[1].cover_image == '' ? }
-              blogImage={
-                this.state.blog.length < 3
-                  ? require("../../img/faro.png")
-                  : this.state.blog[1].cover_image
-              }
-              blogTitle={
-                this.state.blog.length < 3 ? "test1" : this.state.blog[1].title
-              }
-              pDate={
-                this.state.date1 == undefined ? "12345678" : this.state.date1
-              }
-              x
-            />
-            <HostingBlogItems
-              blogImage={
-                this.state.blog.length < 3
-                  ? require("../../img/faro.png")
-                  : this.state.blog[2].cover_image
-              }
-              blogTitle={
-                this.state.blog.length < 3 ? "test1" : this.state.blog[2].title
-              }
-              pDate={
-                this.state.date2 == undefined ? "12345678" : this.state.date2
-              }
-            />
+          <HostingBlogItems
+            // blogImage={this.state.blog[1].cover_image == '' ? }
+            blogImage={
+              this.state.blog.length < 3
+                ? require("../../img/faro.png")
+                : this.state.blog[1].cover_image
+            }
+            blogTitle={
+              this.state.blog.length < 3 ? "test1" : this.state.blog[1].title
+            }
+            pDate={
+              this.state.date1 == undefined ? "12345678" : this.state.date1
+            }
+            x
+          />
+          <HostingBlogItems
+            blogImage={
+              this.state.blog.length < 3
+                ? require("../../img/faro.png")
+                : this.state.blog[2].cover_image
+            }
+            blogTitle={
+              this.state.blog.length < 3 ? "test1" : this.state.blog[2].title
+            }
+            pDate={
+              this.state.date2 == undefined ? "12345678" : this.state.date2
+            }
+          />
+        </div> */}
+        <section className="blog_area_two sec_pad">
+          <div className="container">
+            <div className="row">
+              <div
+                className="col-lg-8 blog_grid_info"
+                style={{ flex: "100%", maxWidth: "100%" }}
+              >
+                <div className="row faroNews">
+                  <BlogGridItem
+                    date="14"
+                    month="jan"
+                    image={
+                      this.state.blog.length < 3
+                        ? require("../../img/faro.png")
+                        : this.state.blog[0].cover_image
+                    }
+                    Title={
+                      this.state.blog.length < 3
+                        ? "test1"
+                        : this.state.blog[0].title
+                    }
+                    description={
+                      this.state.blog.length < 3
+                        ? require("../../img/faro.png")
+                        : this.state.blog[0].description
+                    }
+                    btn="Read More"
+                    comment="3"
+                  />
+                  <BlogGridItem
+                    date="15"
+                    month="Apr"
+                    image={
+                      this.state.blog.length < 3
+                        ? require("../../img/faro.png")
+                        : this.state.blog[1].cover_image
+                    }
+                    Title={
+                      this.state.blog.length < 3
+                        ? "test1"
+                        : this.state.blog[1].title
+                    }
+                    description={
+                      this.state.blog.length < 3
+                        ? require("../../img/faro.png")
+                        : this.state.blog[1].description
+                    }
+                    btn="Read More"
+                    comment="2"
+                  />
+                  <BlogGridItem
+                    date="10"
+                    month="jan"
+                    image={
+                      this.state.blog.length < 3
+                        ? require("../../img/faro.png")
+                        : this.state.blog[2].cover_image
+                    }
+                    Title={
+                      this.state.blog.length < 3
+                        ? "test1"
+                        : this.state.blog[2].title
+                    }
+                    description={
+                      this.state.blog.length < 3
+                        ? require("../../img/faro.png")
+                        : this.state.blog[2].description
+                    }
+                    btn="Read More"
+                    comment="3"
+                  />
+                </div>
+                {/* <ul className="list-unstyled page-numbers shop_page_number text-left mt_30">
+                  <li>
+                    <span aria-current="page" className="page-numbers current">
+                      1
+                    </span>
+                  </li>
+                  <li>
+                    <a className="page-numbers" href=".#">
+                      2
+                    </a>
+                  </li>
+                  <li>
+                    <a className="next page-numbers" href=".#">
+                      <i className="ti-arrow-right"></i>
+                    </a>
+                  </li>
+                </ul> */}
+              </div>
+              {/* <div className="col-lg-4">
+                <Blogrightsidebar ServiceData={ServiceData} />
+              </div> */}
+            </div>
           </div>
-        </div>
+        </section>
       </section>
     );
   }
