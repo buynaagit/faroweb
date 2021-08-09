@@ -76,6 +76,7 @@ class News extends Component {
                     btn="Read More"
                     comment="3"
                   />
+
                   <BlogGridItem
                     date="15"
                     month="Apr"

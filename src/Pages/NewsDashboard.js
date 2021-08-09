@@ -2,13 +2,7 @@ import React, { useState } from "react";
 
 import { Card, Table, Select, Input, Button, Menu } from "antd";
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useParams,
-} from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 import {
   EyeOutlined,
