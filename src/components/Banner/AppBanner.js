@@ -25,13 +25,6 @@ const AppBanner = () => {
                   размеров и форм шрифтов, используя Lorem Ipsum для распечатки
                   образцов.
                 </p>
-                {/* <a
-                  href=".#"
-                  className="btn_hover mt_30 app_btn wow fadeInLeft"
-                  data-wow-delay="0.5s"
-                >
-                  Get Started
-                </a> */}
               </div>
             </Reveal>
           </div>

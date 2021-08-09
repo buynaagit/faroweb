@@ -27,84 +27,16 @@ class Blogrightsidebar extends Component {
             );
           })}
         </div>
-        <div className="widget sidebar_widget widget_categorie mt_60">
-          <div className="widget_title">
-            <h3 className="f_p f_size_20 t_color3">Categories</h3>
-            <div className="border_bottom"></div>
-          </div>
-          <ul className="list-unstyled">
-            <li>
-              {" "}
-              <a href=".#">
-                <span>Fashion</span>
-                <em>(54)</em>
-              </a>{" "}
-            </li>
-            <li>
-              {" "}
-              <a href=".#">
-                <span>Food for thought</span>
-                <em>(83)</em>
-              </a>{" "}
-            </li>
-            <li>
-              {" "}
-              <a href=".#">
-                <span>Gaming</span>
-                <em>(96)</em>
-              </a>{" "}
-            </li>
-            <li>
-              {" "}
-              <a href=".#">
-                <span>Music</span>
-                <em>(38)</em>
-              </a>{" "}
-            </li>
-            <li>
-              {" "}
-              <a href=".#">
-                <span>Uncategorized</span>
-                <em>(44)</em>
-              </a>{" "}
-            </li>
-            <li>
-              {" "}
-              <a href=".#">
-                <span>SaasLand</span>
-                <em>(44)</em>
-              </a>{" "}
-            </li>
-            <li>
-              {" "}
-              <a href=".#">
-                <span>Project Management</span>
-                <em>(44)</em>
-              </a>{" "}
-            </li>
-            <li>
-              {" "}
-              <a href=".#">
-                <span>Wireframing</span>
-                <em>(44)</em>
-              </a>{" "}
-            </li>
-          </ul>
-        </div>
         <div className="widget sidebar_widget widget_tag_cloud mt_60">
           <div className="widget_title">
             <h3 className="f_p f_size_20 t_color3">Tags</h3>
             <div className="border_bottom"></div>
           </div>
           <div className="post-tags">
-            <a href=".#">SaasLand</a>
-            <a href=".#">Web Design</a>
-            <a href=".#">Saas</a>
-            <a href=".#">Cooling System</a>
-            <a href=".#">Corporate</a>
-            <a href=".#">Software</a>
-            <a href=".#">Landing</a>
-            <a href=".#">Wheels</a>
+            <a href=".#">Faro education</a>
+            <a href=".#">Faro foundation</a>
+            <a href=".#">VR Lab</a>
+            <a href=".#">IFD</a>
           </div>
         </div>
       </div>
