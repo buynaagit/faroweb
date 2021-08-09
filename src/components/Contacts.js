@@ -146,6 +146,7 @@ class Contacts extends Component {
                 </p>
               </div>
             </div>
+
             <div className="contact_form col-lg-9">
               <h2 className="f_p f_size_22 t_color3 f_600 l_height28 mb_40">
                 Хувийн мэдээлэл

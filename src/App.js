@@ -104,7 +104,7 @@ class App extends Component {
           <ScrollToTopRoute path="/SignIn" component={SignIn} />
           <ScrollToTopRoute path="/SignUp" component={SignUp} />
           <ScrollToTopRoute path="/Admin" component={Admin} />
-          <ScrollToTopRoute path="/ReadNews" component={ReadNews} />
+          <ScrollToTopRoute path="/ReadNews/:id" component={ReadNews} />
           <ScrollToTopRoute path="/NewsDashboard" component={NewsDashboard} />
           <ScrollToTopRoute path="/NewsPublish" component={NewsPublish} />
           <ScrollToTopRoute path="/NewsEdit/:id" component={NewsEdit} />
