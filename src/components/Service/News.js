@@ -11,9 +11,23 @@ class News extends Component {
     loading: true,
     person: null,
     blog: ["", "", ""],
-    date0: "",
-    date1: "",
-    date2: "",
+    date0: ["", ""],
+    date1: ["", ""],
+    date2: ["", ""],
+    month: [
+      ["Jan", "1р сар"],
+      ["Feb", "2р сар"],
+      ["Mar", "3р сар"],
+      ["Apr", "4р сар"],
+      ["May", "5р сар"],
+      ["June", "6р сар"],
+      ["July", "7р сар"],
+      ["Aug", "8р сар"],
+      ["Sep", "9р сар"],
+      ["Oct", "10р сар"],
+      ["Nov", "11р сар"],
+      ["Dec", "12р сар"],
+    ],
   };
 
   async componentDidMount() {
@@ -35,9 +49,9 @@ class News extends Component {
       const d0 = new Date(this.state.blog[0].createdAt);
       const d1 = new Date(this.state.blog[1].createdAt);
       const d2 = new Date(this.state.blog[2].createdAt);
-      const date0 = `${d0.getDate()}/${d0.getMonth()}/${d0.getFullYear()}`;
-      const date1 = `${d1.getDate()}/${d1.getMonth()}/${d1.getFullYear()}`;
-      const date2 = `${d2.getDate()}/${d2.getMonth()}/${d2.getFullYear()}`;
+      const date0 = [`${d0.getDate()}`, `${d0.getMonth()}`];
+      const date1 = [`${d1.getDate()}`, `${d1.getMonth()}`];
+      const date2 = [`${d2.getDate()}`, `${d2.getMonth()}`];
       this.setState({ date0: date0 });
       this.setState({ date1: date1 });
       this.setState({ date2: date2 });
@@ -45,6 +59,7 @@ class News extends Component {
   }
 
   render() {
+    console.log(this.state.date0[0]);
     return (
       <section className="h_blog_area sec_pad">
         <section className="blog_area_two sec_pad">
@@ -57,7 +72,11 @@ class News extends Component {
                 <div className="row faroNews">
                   <BlogGridItem
                     date="14"
-                    month="jan"
+                    month={
+                      this.state.date0[0] == ""
+                        ? "0"
+                        : this.state.month[this.state.date0[1]][0]
+                    }
                     image={
                       this.state.blog.length < 3
                         ? require("../../img/faro.png")
@@ -75,10 +94,19 @@ class News extends Component {
                     }
                     btn="Read More"
                     comment="3"
+                    id={
+                      this.state.blog.length < 3
+                        ? require("../../img/faro.png")
+                        : this.state.blog[0].id
+                    }
                   />
                   <BlogGridItem
                     date="15"
-                    month="Apr"
+                    month={
+                      this.state.date1[0] == ""
+                        ? "0"
+                        : this.state.month[this.state.date1[1]][0]
+                    }
                     image={
                       this.state.blog.length < 3
                         ? require("../../img/faro.png")
@@ -96,10 +124,19 @@ class News extends Component {
                     }
                     btn="Read More"
                     comment="2"
+                    id={
+                      this.state.blog.length < 3
+                        ? require("../../img/faro.png")
+                        : this.state.blog[0].id
+                    }
                   />
                   <BlogGridItem
                     date="10"
-                    month="jan"
+                    month={
+                      this.state.date2[0] == ""
+                        ? "0"
+                        : this.state.month[this.state.date2[1]][0]
+                    }
                     image={
                       this.state.blog.length < 3
                         ? require("../../img/faro.png")

@@ -5,7 +5,9 @@ import AppBanner from "../components/Banner/AppBanner";
 import Blogrightsidebar from "../components/Blog/Blogrightsidebar";
 import ServiceData from "../components/Service/ServiceData";
 import { URL } from "../utils/appConstant";
+import FooterData from "../components/Footer/FooterData";
 import { useEffect } from "react/cjs/react.production.min";
+import FooterTwo from "../components/Footer/FooterTwo";
 
 class ReadNews extends Component {
   state = {
@@ -82,83 +84,6 @@ class ReadNews extends Component {
                       ></div>
                     </div>
                   </div>
-                  <div className="blog_post">
-                    <div className="widget_title">
-                      <h3 className="f_p f_size_20 t_color3">Related Post</h3>
-                      <div className="border_bottom"></div>
-                    </div>
-                    <div className="row">
-                      <div className="col-lg-4 col-sm-6">
-                        <div className="blog_post_item">
-                          <div className="blog_img">
-                            <img
-                              src={require("../../src/img/blog-grid/blog_list1.jpg")}
-                              alt=""
-                            />
-                          </div>
-                          <div className="blog_content">
-                            <div className="entry_post_info">
-                              <a href=".#">March 14, 2018</a>
-                            </div>
-                            <a href=".#">
-                              <h5 className="f_p f_size_16 f_500 t_color">
-                                Why I say old chap that.
-                              </h5>
-                            </a>
-                            <p className="f_400 mb-0">
-                              Harry bits and bleeding crikey argy-bargy...
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-4 col-sm-6">
-                        <div className="blog_post_item">
-                          <div className="blog_img">
-                            <img
-                              src={require("../../src/img/blog-grid/blog_list1.jpg")}
-                              alt=""
-                            />
-                          </div>
-                          <div className="blog_content">
-                            <div className="entry_post_info">
-                              <a href=".#">April 14, 2017</a>
-                            </div>
-                            <a href=".#">
-                              <h5 className="f_p f_size_16 f_500 t_color">
-                                Bloke cracking goal the.
-                              </h5>
-                            </a>
-                            <p className="f_400 mb-0">
-                              Harry bits and bleeding crikey argy-bargy...
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-4 col-sm-6">
-                        <div className="blog_post_item">
-                          <div className="blog_img">
-                            <img
-                              src={require("../../src/img/blog-grid/blog_list1.jpg")}
-                              alt=""
-                            />
-                          </div>
-                          <div className="blog_content">
-                            <div className="entry_post_info">
-                              <a href=".#">March 15, 2016</a>
-                            </div>
-                            <a href=".#">
-                              <h5 className="f_p f_size_16 f_500 t_color">
-                                Oxford james bond.
-                              </h5>
-                            </a>
-                            <p className="f_400 mb-0">
-                              Harry bits and bleeding crikey argy-bargy...
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
                 <div className="col-lg-4">
                   <Blogrightsidebar ServiceData={ServiceData} />
@@ -167,6 +92,7 @@ class ReadNews extends Component {
             </div>
           </section>
         </div>
+        <FooterTwo FooterData={FooterData}></FooterTwo>
       </div>
     );
   }
