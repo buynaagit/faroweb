@@ -61,7 +61,7 @@ class ReadNews extends Component {
                   <div className="blog_single mb_50">
                     <img
                       className="img-fluid"
-                      src={require("../../src/img/blog-grid/blog_list1.jpg")}
+                      src={this.state.blog[1].cover_image}
                       alt=""
                     />
                     <div className="blog_content">
@@ -71,65 +71,15 @@ class ReadNews extends Component {
                         </h2>
                       </div>
 
-                      <a href=".#">
-                        <h5 className="f_p f_size_20 f_500 t_color mb-30">
-                          Bloke cracking goal the full monty get stuffed mate
-                          posh.
-                        </h5>
-                      </a>
-                      <p
-                        className="f_400 mb-30"
+                      <h5 className="f_p f_size_20 f_500 t_color mb-30">
+                        ${this.state.blog[2].title}
+                      </h5>
+
+                      <div
                         dangerouslySetInnerHTML={{
-                          __html: this.state.blog[0].description,
+                          __html: this.state.blog[2].description,
                         }}
-                        style={{
-                          lineHeight: "1.5rem",
-                          height: "3rem",
-                          overflow: "hidden",
-                        }}
-                      ></p>
-                      <p className="f_400 mb_40">
-                        Cras mush pardon you knees up he lost his bottle it's
-                        all gone to pot faff about porkies arse, barney
-                        argy-bargy cracking goal loo cheers spend a penny bugger
-                        all mate in my flat, hunky-dory well get stuffed mate
-                        David morish bender lavatory. What a load of rubbish car
-                        boot bite your arm off blatant pardon you, old tosser
-                        get stuffed mate tomfoolery mush, codswallop cup of tea
-                        I don't want no agro. Off his nut show off show off pick
-                        your nose and blow.!
-                      </p>
-                      <blockquote className="blockquote mb_40">
-                        <h6 className="mb-0 f_size_18 l_height30 f_p f_400">
-                          Elizabeth ummm I'm telling bodge spend a penny say
-                          wellies say James Bond, bubble and squeak a such a
-                          fibber you mug quaint cack what.!
-                        </h6>
-                      </blockquote>
-                      <p className="f_400 mb-30">
-                        Bloke cracking goal the full monty get stuffed mate posh
-                        wellies fantastic knackered tickety-boo Harry porkies,
-                        mush excuse my French bender down the pub Oxford bum bag
-                        gutted mate car boot pukka loo it's your round, cor
-                        blimey guvnor is on your bike mate cup of char some
-                        dodgy chav blag happy days nancy boy hotpot.
-                      </p>
-                      <p className="f_400 mb-30">
-                        Cras chinwag brown bread Eaton cracking goal so I said a
-                        load of old tosh baking cakes, geeza arse it's your
-                        round grub sloshed burke, my good sir chancer he legged
-                        it he lost his bottle pear shaped bugger all mate.
-                        Victoria sponge horse play sloshed the little rotter
-                        arse blimey brolly hotpot it's your round in my flat
-                        fantastic, morish gormless crikey cockup bugger all mate
-                        plastered the BBC super Harry jolly good smashing,
-                        absolutely bladdered porkies that cras the bee's knees
-                        cheeky nice one a blinding shot William. Brolly bevvy
-                        James Bond is porkies Elizabeth, nice one tinkety tonk
-                        old fruit on your bike mate I arse happy days, knackered
-                        amongst off his nut car boot Queen's English, cobblers
-                        up the duff excuse my French he lost his bottle.
-                      </p>
+                      ></div>
                     </div>
                   </div>
                   <div className="blog_post">
