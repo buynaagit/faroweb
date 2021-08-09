@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
 
 class BlogGridItem extends Component {
   render() {
@@ -12,14 +11,14 @@ class BlogGridItem extends Component {
               {date} <span>{month}</span>
             </h2>
           </a>
-          <Link to={`/ReadNews/${id}`}>
+          <a href="./ReadNews">
             <img
               className="img-fluid"
               src={image}
               alt=""
               style={{ width: "370px", height: "300px" }}
             />
-          </Link>
+          </a>
           <div className="blog_content">
             <a href="./ReadNews">
               <h5

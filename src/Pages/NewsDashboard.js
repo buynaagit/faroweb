@@ -9,6 +9,7 @@ import {
   DeleteOutlined,
   SearchOutlined,
   PlusCircleOutlined,
+  WindowsFilled,
 } from "@ant-design/icons";
 
 import utils from "../utils";
@@ -25,13 +26,13 @@ const categories = ["Cloths", "Bags", "Shoes", "Watches", "Devices"];
 
 const ProductList = () => {
   let history = useHistory();
-  const [list, setList] = useState();
+  const [list, setList] = useState([]);
   const [selectedRows, setSelectedRows] = useState([]);
   const [selectedRowKeys, setSelectedRowKeys] = useState([]);
   const [blogs, setBlogs] = useState([]);
+  const [filter, setFilter] = useState("");
 
-  const getBlogFromAPI = React.useCallback((e) => {
-    // e.preventDefault();
+  const getBlogFromAPI = React.useCallback(() => {
     const config = {
       headers: {
         "Content-type": "application/json",
@@ -44,7 +45,6 @@ const ProductList = () => {
       .then(function (response) {
         console.log(`response`, response.data);
         setBlogs(response.data);
-        setList(response.data);
         localStorage.setItem("blogs", response.data);
       })
       .catch(function (error) {
@@ -103,22 +103,23 @@ const ProductList = () => {
       .delete(`${URL}/api/blogs/${row.id}/delete/`, config)
       .then(function (response) {
         console.log(`response`, response.data);
+        // const objKey = "id";
+        // let data = list;
+        // if (selectedRows.length > 1) {
+        //   selectedRows.forEach((elm) => {
+        //     data = utils.deleteArrayRow(data, objKey, elm.id);
+        //     setList(data);
+        //     setSelectedRows([]);
+        //   });
+        // } else {
+        //   data = utils.deleteArrayRow(data, objKey, row.id);
+        //   setList(data);
+        // }
+        window.location.reload();
       })
       .catch(function (error) {
         console.log(`error`, error.response);
       });
-    const objKey = "id";
-    let data = list;
-    if (selectedRows.length > 1) {
-      selectedRows.forEach((elm) => {
-        data = utils.deleteArrayRow(data, objKey, elm.id);
-        setList(data);
-        setSelectedRows([]);
-      });
-    } else {
-      data = utils.deleteArrayRow(data, objKey, row.id);
-      setList(data);
-    }
   };
 
   const tableColumns = [
@@ -175,7 +176,7 @@ const ProductList = () => {
     const value = e.currentTarget.value;
     const searchArray = e.currentTarget.value ? blogs : blogs;
     const data = utils.wildCardSearch(searchArray, value);
-    setList(data);
+    setBlogs(data);
     setSelectedRowKeys([]);
   };
 
@@ -183,9 +184,9 @@ const ProductList = () => {
     if (value !== "All") {
       const key = "category";
       const data = utils.filterArray(blogs, key, value);
-      setList(data);
+      setBlogs(data);
     } else {
-      setList(blogs);
+      setBlogs(blogs);
     }
   };
 
