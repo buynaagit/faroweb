@@ -29,7 +29,6 @@ class News extends Component {
     );
     const data = await response.json();
     await this.setState({ blog: data });
-    console.log(this.state.blog);
     if (this.state.blog.length < 3) {
       console.log("No data");
     } else {

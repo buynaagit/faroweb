@@ -107,7 +107,7 @@ class App extends Component {
           <ScrollToTopRoute path="/ReadNews" component={ReadNews} />
           <ScrollToTopRoute path="/NewsDashboard" component={NewsDashboard} />
           <ScrollToTopRoute path="/NewsPublish" component={NewsPublish} />
-          <ScrollToTopRoute path="/NewsEdit" component={NewsEdit} />
+          <ScrollToTopRoute path="/NewsEdit/:id" component={NewsEdit} />
           <ScrollToTopRoute component={NotFound} />
         </Switch>
       </Router>

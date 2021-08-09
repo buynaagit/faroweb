@@ -38,8 +38,7 @@ export default function NewsPublish() {
       .post(`${URL}/api/blogs/create/`, data, config)
       .then(function (response) {
         console.log(`response`, response.data);
-        localStorage.setItem("token", response.data.token);
-        history.push("/Landing");
+        history.push("/NewsDashboard");
       })
       .catch(function (error) {
         console.log(`error`, error.response);
