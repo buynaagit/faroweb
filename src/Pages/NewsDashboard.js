@@ -31,6 +31,7 @@ const categories = ["Cloths", "Bags", "Shoes", "Watches", "Devices"];
 
 const ProductList = () => {
   let history = useHistory();
+  const [list, setList] = useState();
   const [selectedRows, setSelectedRows] = useState([]);
   const [selectedRowKeys, setSelectedRowKeys] = useState([]);
   const [blogs, setBlogs] = useState([]);
@@ -49,6 +50,7 @@ const ProductList = () => {
       .then(function (response) {
         console.log(`response`, response.data);
         setBlogs(response.data);
+        setList(response.data);
         localStorage.setItem("blogs", response.data);
       })
       .catch(function (error) {
@@ -60,11 +62,12 @@ const ProductList = () => {
     getBlogFromAPI();
   }, [getBlogFromAPI]);
 
-  const [list, setList] = useState(blogs);
-
   const signOut = () => {
-    console.log("sign out button");
     localStorage.removeItem("token");
+    history.push("/Landing");
+  };
+
+  const jumpHome = () => {
     history.push("/Landing");
   };
 
@@ -244,7 +247,10 @@ const ProductList = () => {
           }}
         />
       </div>
-      <button className="btn_three" onClick={signOut}>
+      <button className="btn_four" onClick={jumpHome}>
+        Home
+      </button>
+      <button className="btn_four" onClick={signOut}>
         Sign out
       </button>
     </Card>
