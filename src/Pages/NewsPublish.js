@@ -6,7 +6,7 @@ import { useHistory } from "react-router-dom";
 import { Editor } from "@tinymce/tinymce-react";
 import ImageUploader from "react-images-upload";
 import SpinLoader from "../components/Loader";
-// import { ImgUploader } from "../components/ImgUploader";
+import DropDownCategory from "../components/dropdownCategory";
 
 export default function NewsPublish() {
   const history = useHistory();
@@ -85,14 +85,7 @@ export default function NewsPublish() {
           onChange={(e) => setTitle(e.target.value)}
         />
       </div>
-      <div className="form-group text_box">
-        <input
-          type="text"
-          value={category}
-          placeholder="Enter category"
-          onChange={(e) => setCategory(e.target.value)}
-        />
-      </div>
+      <DropDownCategory setCategory={setCategory} />
       {isLoading ? (
         <SpinLoader />
       ) : (
