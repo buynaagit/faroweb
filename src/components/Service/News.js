@@ -47,54 +47,6 @@ class News extends Component {
   render() {
     return (
       <section className="h_blog_area sec_pad">
-        {/* <Sectitle
-          Title="Our Latest News"
-          TitleP="Шинэ мэдээ, мэдээлэл"
-          sClass="hosting_title text-center"
-        />
-        <div className="row" style={{ justifyContent: "center" }}>
-          <HostingBlogItems
-            blogImage={
-              this.state.blog.length < 3
-                ? require("../../img/faro.png")
-                : this.state.blog[0].cover_image
-            }
-            blogTitle={
-              this.state.blog.length < 3 ? "test1" : this.state.blog[1].title
-            }
-            pDate={
-              this.state.date1 == undefined ? "12345678" : this.state.date0
-            }
-          />
-          <HostingBlogItems
-            // blogImage={this.state.blog[1].cover_image == '' ? }
-            blogImage={
-              this.state.blog.length < 3
-                ? require("../../img/faro.png")
-                : this.state.blog[1].cover_image
-            }
-            blogTitle={
-              this.state.blog.length < 3 ? "test1" : this.state.blog[1].title
-            }
-            pDate={
-              this.state.date1 == undefined ? "12345678" : this.state.date1
-            }
-            x
-          />
-          <HostingBlogItems
-            blogImage={
-              this.state.blog.length < 3
-                ? require("../../img/faro.png")
-                : this.state.blog[2].cover_image
-            }
-            blogTitle={
-              this.state.blog.length < 3 ? "test1" : this.state.blog[2].title
-            }
-            pDate={
-              this.state.date2 == undefined ? "12345678" : this.state.date2
-            }
-          />
-        </div> */}
         <section className="blog_area_two sec_pad">
           <div className="container">
             <div className="row">
@@ -167,27 +119,7 @@ class News extends Component {
                     comment="3"
                   />
                 </div>
-                {/* <ul className="list-unstyled page-numbers shop_page_number text-left mt_30">
-                  <li>
-                    <span aria-current="page" className="page-numbers current">
-                      1
-                    </span>
-                  </li>
-                  <li>
-                    <a className="page-numbers" href=".#">
-                      2
-                    </a>
-                  </li>
-                  <li>
-                    <a className="next page-numbers" href=".#">
-                      <i className="ti-arrow-right"></i>
-                    </a>
-                  </li>
-                </ul> */}
               </div>
-              {/* <div className="col-lg-4">
-                <Blogrightsidebar ServiceData={ServiceData} />
-              </div> */}
             </div>
           </div>
         </section>
