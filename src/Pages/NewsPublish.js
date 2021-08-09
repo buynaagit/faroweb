@@ -5,16 +5,19 @@ import { URL } from "../utils/appConstant";
 import { useHistory } from "react-router-dom";
 import { Editor } from "@tinymce/tinymce-react";
 import ImageUploader from "react-images-upload";
+import SpinLoader from "../components/Loader";
 // import { ImgUploader } from "../components/ImgUploader";
 
 export default function NewsPublish() {
   const history = useHistory();
   const [title, setTitle] = React.useState("");
   const [category, setCategory] = React.useState("");
+  const [isLoading, setLoading] = React.useState(false);
   const [description, setDescription] = React.useState("");
   const [image, setImage] = React.useState("");
 
   const Publish = (e) => {
+    setLoading(true);
     e.preventDefault();
     const config = {
       headers: {
@@ -39,6 +42,7 @@ export default function NewsPublish() {
       .then(function (response) {
         console.log(`response`, response.data);
         history.push("/NewsDashboard");
+        setLoading(false);
       })
       .catch(function (error) {
         console.log(`error`, error.response);
@@ -89,9 +93,13 @@ export default function NewsPublish() {
           onChange={(e) => setCategory(e.target.value)}
         />
       </div>
-      <button className="btn_three" onClick={Publish}>
-        Нийтлэх
-      </button>
+      {isLoading ? (
+        <SpinLoader />
+      ) : (
+        <button disabled={isLoading} className="btn_three" onClick={Publish}>
+          Нийтлэх
+        </button>
+      )}
       {image ? <p> Image uploaded </p> : <p> Upload Image...</p>}
       <ImageUploader
         withIcon={true}

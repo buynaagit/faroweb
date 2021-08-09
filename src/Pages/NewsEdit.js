@@ -5,12 +5,14 @@ import { URL } from "../utils/appConstant";
 import { useHistory } from "react-router-dom";
 import { Editor } from "@tinymce/tinymce-react";
 import ImageUploader from "react-images-upload";
+import SpinLoader from "../components/Loader";
 // import { ImgUploader } from "../components/ImgUploader";
 
 export default function NewsEdit({ match }) {
   const history = useHistory();
   const [title, setTitle] = React.useState("");
   const [category, setCategory] = React.useState("");
+  const [isLoading, setLoading] = React.useState(false);
   const [description, setDescription] = React.useState("");
   const [image, setImage] = React.useState("");
   const [blogs, setBlogs] = React.useState([]);
@@ -21,6 +23,7 @@ export default function NewsEdit({ match }) {
   console.log(`blogID`, blogID);
 
   const Publish = (e) => {
+    setLoading(true);
     e.preventDefault();
     const config = {
       headers: {
@@ -45,6 +48,7 @@ export default function NewsEdit({ match }) {
       .then(function (response) {
         console.log(`response`, response.data);
         history.push("/NewsDashboard");
+        setLoading(false);
       })
       .catch(function (error) {
         console.log(`error`, error.response);
@@ -127,9 +131,13 @@ export default function NewsEdit({ match }) {
           onChange={(e) => setCategory(e.target.value)}
         />
       </div>
-      <button className="btn_three" onClick={Publish}>
-        Шинэчлэх
-      </button>
+      {isLoading ? (
+        <SpinLoader />
+      ) : (
+        <button disabled={isLoading} className="btn_three" onClick={Publish}>
+          Шинэчлэх
+        </button>
+      )}
       {image ? (
         <p> Image updated! </p>
       ) : (
