@@ -45,6 +45,7 @@ class ReadNews extends Component {
     }
   }
   render() {
+    //console.log(this.props.location);
     return (
       <div>
         <div className="body_wrapper" style={{ color: "black" }}>
