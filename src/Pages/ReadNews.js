@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import SignInForm from "../components/SignInForm";
-import OnepageMenu from "../components/OnepageMenu";
 import AppBanner from "../components/Banner/AppBanner";
 import Blogrightsidebar from "../components/Blog/Blogrightsidebar";
 import ServiceData from "../components/Service/ServiceData";
@@ -8,6 +7,7 @@ import { URL } from "../utils/appConstant";
 import FooterData from "../components/Footer/FooterData";
 import { useEffect } from "react/cjs/react.production.min";
 import FooterTwo from "../components/Footer/FooterTwo";
+import OnepageMenuNews from "../components/OnePageMenuNews";
 
 class ReadNews extends Component {
   state = {
@@ -48,8 +48,8 @@ class ReadNews extends Component {
     //console.log(this.props.location);
     return (
       <div>
-        <div className="body_wrapper" style={{ color: "black" }}>
-          <OnepageMenu
+        <div style={{ color: "black" }}>
+          <OnepageMenuNews
             slogo="sticky_logo"
             mClass="menu_four"
             nClass="w_menu"
