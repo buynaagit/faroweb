@@ -21,8 +21,6 @@ import EllipsisDropdown from "../components/EllipsisDropdown";
 
 const { Option } = Select;
 
-const categories = ["Cloths", "Bags", "Shoes", "Watches", "Devices"];
-
 const ProductList = () => {
   let history = useHistory();
   const [list, setList] = useState([]);
@@ -162,9 +160,9 @@ const ProductList = () => {
 
   const onSearch = (e) => {
     const value = e.currentTarget.value;
-    const searchArray = e.currentTarget.value ? blogs : blogs;
+    const searchArray = e.currentTarget.value ? list : blogs;
     const data = utils.wildCardSearch(searchArray, value);
-    setBlogs(data);
+    setList(data);
     setSelectedRowKeys([]);
   };
 
