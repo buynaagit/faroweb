@@ -5,6 +5,8 @@ import HostingBlogItems from "../../components/Blog/HostingBlogItems";
 import Blogrightsidebar from "../../components/Blog/Blogrightsidebar";
 import BlogGridItem from "../../components/Blog/BlogGridItem";
 import ServiceData from "../Service/ServiceData";
+import { WindowsFilled } from "@ant-design/icons";
+import { scrollToTop } from "react-scroll/modules/mixins/animate-scroll";
 
 class News extends Component {
   state = {
@@ -56,6 +58,10 @@ class News extends Component {
       this.setState({ date1: date1 });
       this.setState({ date2: date2 });
     }
+
+    // React.useEffect(() => {
+    //   window.scrollTo(0, 0);
+    // });
   }
 
   render() {

@@ -10,17 +10,16 @@ class Blogrightsidebar extends Component {
             <h3 className="f_p f_size_20 t_color3">Recent posts</h3>
             <div className="border_bottom"></div>
           </div>
-          {ServiceData.rpost.map((post) => {
+          {ServiceData.map((post) => {
             return (
               <div className="media post_item" key={post.id}>
-                <img src={require("../../img/" + post.image)} alt="" />
+                <img src={post.cover_image} alt="" width="90px" height="80px" />
                 <div className="media-body">
                   <a href=".#">
-                    <h3 className="f_size_16 f_p f_400">{post.ptitle}</h3>
+                    <h3 className="f_size_16 f_p f_400">{post.title}</h3>
                   </a>
                   <div className="entry_post_info">
-                    By: <a href=".#">{post.admin}</a>
-                    <a href=".#">{post.date}</a>
+                    <a href=".#">2021-07-09</a>
                   </div>
                 </div>
               </div>

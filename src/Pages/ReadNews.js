@@ -17,6 +17,7 @@ class ReadNews extends Component {
     date0: "",
     date1: "",
     date2: "",
+    recentPost: ["", "", "", ""],
   };
 
   async componentDidMount() {
@@ -24,28 +25,28 @@ class ReadNews extends Component {
     const requestOptions = {
       method: "GET",
       headers: { "Content-Type": "application/json" },
-      // body: JSON.stringify({ username: "admin", password: "admin1234" }),
     };
-    const response = await fetch(`${URL}/api/latest-blogs/3/`, requestOptions);
+    const response = await fetch(
+      `${URL}/api/blogs/${this.props.match.params.id}/`,
+      requestOptions
+    );
+    const response2 = await fetch(
+      `${URL}/api/recent-blogs/?exc_id=${this.props.match.params.id}`,
+      requestOptions
+    );
+    const data2 = await response2.json();
     const data = await response.json();
-    await this.setState({ blog: data });
-    if (this.state.blog.length < 3) {
-      console.log("No data");
+    await this.setState({ blog: data, recentPost: data2 });
+    if (this.state.blog.length < 1) {
+      console.log(`No Data`);
     } else {
-      const d0 = new Date(this.state.blog[0].createdAt);
-      const d1 = new Date(this.state.blog[1].createdAt);
-      const d2 = new Date(this.state.blog[2].createdAt);
+      const d0 = new Date(this.state.blog.createdAt);
       const date0 = `${d0.getDate()}/${d0.getMonth()}/${d0.getFullYear()}`;
-      const date1 = `${d1.getDate()}/${d1.getMonth()}/${d1.getFullYear()}`;
-      const date2 = `${d2.getDate()}/${d2.getMonth()}/${d2.getFullYear()}`;
       this.setState({ date0: date0 });
-      this.setState({ date1: date1 });
-      this.setState({ date2: date2 });
       console.log(this.state.blog);
     }
   }
   render() {
-    //console.log(this.props.location);
     return (
       <div>
         <div style={{ color: "black" }}>
@@ -64,7 +65,7 @@ class ReadNews extends Component {
                   <div className="blog_single mb_50">
                     <img
                       className="img-fluid"
-                      src={this.state.blog[1].cover_image}
+                      src={this.state.blog.cover_image}
                       alt=""
                     />
                     <div className="blog_content">
@@ -75,25 +76,26 @@ class ReadNews extends Component {
                       </div>
 
                       <h5 className="f_p f_size_20 f_500 t_color mb-30">
-                        ${this.state.blog[2].title}
+                        ${this.state.blog.title}
                       </h5>
 
                       <div
                         dangerouslySetInnerHTML={{
-                          __html: this.state.blog[2].description,
+                          __html: this.state.blog.description,
                         }}
                       ></div>
                     </div>
                   </div>
                 </div>
                 <div className="col-lg-4">
-                  <Blogrightsidebar ServiceData={ServiceData} />
+                  <Blogrightsidebar ServiceData={this.state.recentPost} />
                 </div>
               </div>
             </div>
           </section>
         </div>
         <FooterTwo FooterData={FooterData}></FooterTwo>
+        {/* <div style={{ height: "1000vh" }}></div> */}
       </div>
     );
   }
