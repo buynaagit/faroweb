@@ -58,7 +58,7 @@ class OnepageMenu extends Component {
                     <Link
                       className="nav-link"
                       activeClass="active"
-                      to="features"
+                      to="h_security_area"
                       spy={true}
                       smooth={true}
                       offset={0}
@@ -71,7 +71,7 @@ class OnepageMenu extends Component {
                     <Link
                       className="nav-link"
                       activeClass="active"
-                      to="work"
+                      to="row faroNews"
                       spy={true}
                       smooth={true}
                       offset={-90}

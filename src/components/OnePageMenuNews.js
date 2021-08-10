@@ -1,7 +1,8 @@
 import { data } from "jquery";
 import React, { Component } from "react";
-import { Link } from "react-scroll";
+// import { Link } from "react-scroll";
 import Sticky from "react-stickynode";
+import { Link } from "react-router-dom";
 
 class OnepageMenuNews extends Component {
   render() {
@@ -45,7 +46,7 @@ class OnepageMenuNews extends Component {
                     <Link
                       className="nav-link"
                       activeClass="active"
-                      to="home"
+                      to="/Landing"
                       spy={true}
                       smooth={true}
                       offset={0}
@@ -58,7 +59,7 @@ class OnepageMenuNews extends Component {
                     <Link
                       className="nav-link"
                       activeClass="active"
-                      to="features"
+                      to="/Landing"
                       spy={true}
                       smooth={true}
                       offset={0}
@@ -71,7 +72,7 @@ class OnepageMenuNews extends Component {
                     <Link
                       className="nav-link"
                       activeClass="active"
-                      to="work"
+                      to="/Landing"
                       spy={true}
                       smooth={true}
                       offset={-90}
@@ -84,7 +85,7 @@ class OnepageMenuNews extends Component {
                     <Link
                       className="nav-link"
                       activeClass="active"
-                      to="app_featured_area_two"
+                      to="/Landing"
                       spy={true}
                       smooth={true}
                       offset={0}
@@ -97,7 +98,7 @@ class OnepageMenuNews extends Component {
                     <Link
                       className="nav-link"
                       activeClass="active"
-                      to="footer_top"
+                      to="/Landing"
                       spy={true}
                       smooth={true}
                       offset={0}
@@ -110,7 +111,7 @@ class OnepageMenuNews extends Component {
                     <Link
                       className="nav-link"
                       activeClass="active"
-                      to="myAdress"
+                      to="/Landing"
                       spy={true}
                       smooth={true}
                       offset={-90}
