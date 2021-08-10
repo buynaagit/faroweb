@@ -4,13 +4,11 @@ import "react-dropdown/style.css";
 import axios from "axios";
 import { URL } from "../utils/appConstant";
 
-const options = ["Нягтлан", "Багш", "Мэнэжэр"];
-const defaultOption = options[0];
-
 class Contacts extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      options: [],
       name: "",
       email: "",
       message: "",
@@ -30,7 +28,6 @@ class Contacts extends Component {
 
   onFileUpload = () => {
     const formData = new FormData();
-
     formData.append("myFile", this.state.selectedFile);
 
     console.log(this.state.selectedFile);
@@ -41,15 +38,52 @@ class Contacts extends Component {
   };
 
   async _onSelect(option) {
-    await this.setState({ chosenJob: option.label });
+    await this.setState({ chosenJob: option.value });
     await this.setState({ apply: true });
     console.log("chosen job =", this.state.chosenJob);
   }
 
-  componentDidMount() {}
+  async componentDidMount() {
+    const requestOptions = {
+      method: "GET",
+      headers: { "Content-Type": "application/json" },
+    };
+    const response = await fetch(
+      `${URL}/api/careers/category/`,
+      requestOptions
+    );
+    const data = await response.json();
+    console.log(data);
+    for (let i = 0; i < data.length; i++) {
+      if (data[i].is_visible === true) {
+        this.setState({
+          options: [
+            ...this.state.options,
+            {
+              value: data[i].id,
+              label: data[i].category_name,
+              key: data[i].id + "dwdqqdwdqwdwq",
+            },
+          ],
+        });
+      }
+    }
+    console.log(this.state.options);
+    // await this.setState({ options: data });
+    // if (this.state.blog.length < 1) {
+    //   console.log(`No Data`);
+    // } else {
+    //   const d0 = new Date(this.state.blog.createdAt);
+    //   const date0 = `${d0.getDate()}/${d0.getMonth()}/${d0.getFullYear()}`;
+    //   this.setState({ date0: date0 });
+    //   console.log(this.state.blog);
+    // }
+  }
 
-  handleSubmit() {
+  async handleSubmit() {
     console.log(
+      this.state.chosenJob,
+      "\n",
       this.state.name,
       "\n",
       this.state.email,
@@ -70,7 +104,7 @@ class Contacts extends Component {
       },
     };
     const formData = new FormData();
-    formData.append("name", this.state.name);
+    await formData.append("name", this.state.name);
     formData.append("email", this.state.email);
     formData.append("career", this.state.chosenJob);
     formData.append("phone", this.state.number);
@@ -104,6 +138,7 @@ class Contacts extends Component {
   }
 
   render() {
+    console.log();
     return (
       <section className="contact_info_area sec_pad bg_color">
         <div className="container">
@@ -119,9 +154,8 @@ class Contacts extends Component {
               </div>
               <p style={{ marginTop: "50px" }}>Нээлттэй ажлын байр</p>
               <Dropdown
-                options={options}
+                options={this.state.options}
                 onChange={this._onSelect}
-                value={defaultOption}
                 placeholder="Select an option"
               />
               <div
@@ -165,12 +199,7 @@ class Contacts extends Component {
                         name="name"
                         placeholder="Your Name"
                         onChange={this.handleChange}
-                        disabled={!this.state.apply}
-                        style={
-                          this.state.apply == false
-                            ? { backgroundColor: "#cccccc" }
-                            : { backgroundColor: "white" }
-                        }
+                        style={{ backgroundColor: "white" }}
                       />
                     </div>
                   </div>
@@ -182,12 +211,7 @@ class Contacts extends Component {
                         id="email"
                         placeholder="Your Email"
                         onChange={this.handleChange}
-                        disabled={!this.state.apply}
-                        style={
-                          this.state.apply == false
-                            ? { backgroundColor: "#cccccc" }
-                            : { backgroundColor: "white" }
-                        }
+                        style={{ backgroundColor: "white" }}
                       />
                     </div>
                   </div>
@@ -200,20 +224,17 @@ class Contacts extends Component {
                         id="tentacles"
                         placeholder="Дугаар"
                         onChange={this.handleChange}
-                        disabled={!this.state.apply}
-                        style={
-                          this.state.apply == false
-                            ? { backgroundColor: "#cccccc" }
-                            : { backgroundColor: "white" }
-                        }
+                        style={{ backgroundColor: "white" }}
                       ></input>
                     </div>
                   </div>
                   <div className="col-lg-6">
+                    <label for="cvFile">Upload CV file</label>
                     <input
                       type="file"
+                      id="cvFile"
                       onChange={this.onFileChange}
-                      disabled={!this.state.apply}
+                      style={{ opacity: "0", pointerEvents: "none" }}
                     />
                   </div>
 
@@ -226,30 +247,12 @@ class Contacts extends Component {
                         cols="30"
                         rows="10"
                         placeholder="Enter Your Message . . ."
-                        disabled={!this.state.apply}
-                        style={
-                          this.state.apply == false
-                            ? { backgroundColor: "#cccccc" }
-                            : { backgroundColor: "white" }
-                        }
+                        style={{ backgroundColor: "white" }}
                       ></textarea>
                     </div>
                   </div>
                 </div>
-                <button
-                  className="btn_three"
-                  disabled={
-                    this.state.name == ""
-                      ? true
-                      : this.state.email == ""
-                      ? this.state.number == ""
-                      : this.state.message == ""
-                      ? this.state.selectedFile == null
-                      : false
-                  }
-                >
-                  Apply
-                </button>
+                <button className="btn_three">Apply</button>
               </form>
               <div id="success">Your message succesfully sent!</div>
               <div id="error">

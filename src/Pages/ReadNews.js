@@ -21,6 +21,8 @@ class ReadNews extends Component {
   };
 
   async componentDidMount() {
+    window.scrollTo(0, 0);
+
     // POST request using fetch with async/await
     const requestOptions = {
       method: "GET",
