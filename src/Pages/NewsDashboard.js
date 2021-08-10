@@ -2,14 +2,13 @@ import React, { useState } from "react";
 
 import { Card, Table, Select, Input, Button, Menu } from "antd";
 
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 
 import {
   EyeOutlined,
   DeleteOutlined,
   SearchOutlined,
   PlusCircleOutlined,
-  WindowsFilled,
 } from "@ant-design/icons";
 
 import utils from "../utils";
@@ -21,8 +20,6 @@ import AvatarStatus from "../components/AvatarStatus";
 import EllipsisDropdown from "../components/EllipsisDropdown";
 
 const { Option } = Select;
-
-const categories = ["Cloths", "Bags", "Shoes", "Watches", "Devices"];
 
 const ProductList = () => {
   let history = useHistory();
@@ -45,6 +42,7 @@ const ProductList = () => {
       .then(function (response) {
         console.log(`response`, response.data);
         setBlogs(response.data);
+        setList(response.data);
         localStorage.setItem("blogs", response.data);
       })
       .catch(function (error) {
@@ -58,7 +56,7 @@ const ProductList = () => {
 
   const signOut = () => {
     localStorage.removeItem("token");
-    history.push("/Landing");
+    history.push("/Admin");
   };
 
   const jumpHome = () => {
@@ -103,18 +101,6 @@ const ProductList = () => {
       .delete(`${URL}/api/blogs/${row.id}/delete/`, config)
       .then(function (response) {
         console.log(`response`, response.data);
-        // const objKey = "id";
-        // let data = list;
-        // if (selectedRows.length > 1) {
-        //   selectedRows.forEach((elm) => {
-        //     data = utils.deleteArrayRow(data, objKey, elm.id);
-        //     setList(data);
-        //     setSelectedRows([]);
-        //   });
-        // } else {
-        //   data = utils.deleteArrayRow(data, objKey, row.id);
-        //   setList(data);
-        // }
         window.location.reload();
       })
       .catch(function (error) {
@@ -174,19 +160,34 @@ const ProductList = () => {
 
   const onSearch = (e) => {
     const value = e.currentTarget.value;
-    const searchArray = e.currentTarget.value ? blogs : blogs;
+    const searchArray = e.currentTarget.value ? list : blogs;
     const data = utils.wildCardSearch(searchArray, value);
-    setBlogs(data);
+    setList(data);
     setSelectedRowKeys([]);
   };
 
   const handleShowCategory = (value) => {
+    // const config = {
+    //   headers: {
+    //     "Content-type": "application/json",
+    //   },
+    // };
+    // console.log(`button Pressed`);
+    // axios
+    //   .get(`${URL}/api/blogs/?category=${value}/`, config)
+    //   .then(function (response) {
+    //     console.log(`response`, response.data);
+    //     setBlogs(response.data);
+    //   })
+    //   .catch(function (error) {
+    //     console.log(`error`, error.response);
+    //   });
     if (value !== "All") {
       const key = "category";
       const data = utils.filterArray(blogs, key, value);
-      setBlogs(data);
+      setList(data);
     } else {
-      setBlogs(blogs);
+      setList(blogs);
     }
   };
 
@@ -210,9 +211,9 @@ const ProductList = () => {
               placeholder="Category"
             >
               <Option value="All">All</Option>
-              {categories.map((elm) => (
-                <Option key={elm} value={elm}>
-                  {elm}
+              {blogs.map((elm) => (
+                <Option key={elm.category} value={elm.category}>
+                  {elm.category}
                 </Option>
               ))}
             </Select>
@@ -232,7 +233,7 @@ const ProductList = () => {
       <div className="table-responsive">
         <Table
           columns={tableColumns}
-          dataSource={blogs}
+          dataSource={list}
           rowKey="id"
           rowSelection={{
             selectedRowKeys: selectedRowKeys,

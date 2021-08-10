@@ -42,6 +42,7 @@ import ReadNews from "./Pages/ReadNews";
 import NewsDashboard from "./Pages/NewsDashboard";
 import NewsPublish from "./Pages/NewsPublish";
 import NewsEdit from "./Pages/NewsEdit";
+import AdminRegister from "./Pages/AdminRegister";
 
 class App extends Component {
   componentDidMount() {
@@ -108,6 +109,7 @@ class App extends Component {
           <ScrollToTopRoute path="/NewsDashboard" component={NewsDashboard} />
           <ScrollToTopRoute path="/NewsPublish" component={NewsPublish} />
           <ScrollToTopRoute path="/NewsEdit/:id" component={NewsEdit} />
+          <ScrollToTopRoute path="/AdminRegister" component={AdminRegister} />
           <ScrollToTopRoute component={NotFound} />
         </Switch>
       </Router>

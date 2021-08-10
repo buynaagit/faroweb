@@ -2,11 +2,11 @@ import React from "react";
 
 import axios from "axios";
 import { URL } from "../utils/appConstant";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 
 const SignInFrom = () => {
   const history = useHistory();
-  const [Email, setEmail] = React.useState("");
+  const [username, setUsername] = React.useState("");
   const [passwordAdmin, setPasswordAdmin] = React.useState("");
 
   const backBtn = () => {
@@ -25,7 +25,7 @@ const SignInFrom = () => {
       .post(
         `${URL}/api/login/`,
         {
-          username: Email,
+          username: username,
           password: passwordAdmin,
         },
         config
@@ -55,12 +55,12 @@ const SignInFrom = () => {
                 <h2 className="f_p f_600 f_size_24 t_color3 mb_40">Sign In</h2>
                 <form className="login-form sign-in-form">
                   <div className="form-group text_box">
-                    <label className="f_p text_c f_400">Email</label>
+                    <label className="f_p text_c f_400">Username</label>
                     <input
                       type="text"
-                      value={Email}
-                      placeholder="Email Adress"
-                      onChange={(e) => setEmail(e.target.value)}
+                      value={username}
+                      placeholder="Username"
+                      onChange={(e) => setUsername(e.target.value)}
                     />
                   </div>
                   <div className="form-group text_box">
@@ -80,6 +80,7 @@ const SignInFrom = () => {
                     >
                       Sign in
                     </button>
+                    <Link to="/AdminRegister">Register</Link>
                   </div>
                 </form>
               </div>

@@ -8,6 +8,10 @@ import ImageUploader from "react-images-upload";
 import SpinLoader from "../components/Loader";
 import DropDownCategory from "../components/dropdownCategory";
 
+import { ToastContainer, toast } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
+
 export default function NewsPublish() {
   const history = useHistory();
   const [title, setTitle] = React.useState("");
@@ -17,36 +21,44 @@ export default function NewsPublish() {
   const [image, setImage] = React.useState("");
 
   const Publish = (e) => {
-    setLoading(true);
-    e.preventDefault();
-    const config = {
-      headers: {
-        "Content-type": "application/json",
-        Authorization: "Bearer " + localStorage.getItem("token"),
-      },
-    };
-    console.log(`button Pressed`);
-    if (editorRef.current) {
-      console.log(editorRef.current.getContent());
-      setDescription(editorRef.current.getContent());
+    if (category == "Select Category" || category == "") {
+      alert("Mэдээний төрөлөө сонгоно уу.");
+      console.log(`Please choose category`);
     }
+    if (title == "") {
+      alert("Mэдээний гариг сонгон уу.");
+      console.log(`Please enter a title`);
+    } else {
+      setLoading(true);
+      e.preventDefault();
+      const config = {
+        headers: {
+          "Content-type": "application/json",
+          Authorization: "Bearer " + localStorage.getItem("token"),
+        },
+      };
+      console.log(`button Pressed`);
+      if (editorRef.current) {
+        console.log(editorRef.current.getContent());
+        setDescription(editorRef.current.getContent());
+      }
 
-    var data = new FormData();
-    data.append("title", title);
-    data.append("category", category);
-    data.append("description", editorRef.current.getContent());
-    data.append("image", image[0]);
-
-    return axios
-      .post(`${URL}/api/blogs/create/`, data, config)
-      .then(function (response) {
-        console.log(`response`, response.data);
-        history.push("/NewsDashboard");
-        setLoading(false);
-      })
-      .catch(function (error) {
-        console.log(`error`, error.response);
-      });
+      var data = new FormData();
+      data.append("title", title);
+      data.append("category", category);
+      data.append("description", editorRef.current.getContent());
+      data.append("image", image[0]);
+      return axios
+        .post(`${URL}/api/blogs/create/`, data, config)
+        .then(function (response) {
+          history.push("/NewsDashboard");
+          console.log(`response`, response.data);
+          setLoading(false);
+        })
+        .catch(function (error) {
+          console.log(`error`, error.response);
+        });
+    }
   };
 
   const editorRef = useRef(null);
@@ -96,7 +108,7 @@ export default function NewsPublish() {
       {image ? <p> Image uploaded </p> : <p> Upload Image...</p>}
       <ImageUploader
         withIcon={true}
-        buttonText="Choose images"
+        buttonText="Зураг ороуулах"
         onChange={setImage}
         imgExtension={[".jpg", ".gif", ".png", ".gif"]}
         maxFileSize={5242880}
