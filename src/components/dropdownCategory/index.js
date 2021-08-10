@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
 
-const options = ["FARO", "IFD", "VRLAB", "FOUNDATION"];
+const options = ["Select Cateory", "FARO", "IFD", "VRLAB", "FOUNDATION"];
 const defaultOption = options[0];
 
 const DropDownCategory = ({ category, setCategory }) => {

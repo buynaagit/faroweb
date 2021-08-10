@@ -40,8 +40,8 @@ export default function NewsPublish() {
     return axios
       .post(`${URL}/api/blogs/create/`, data, config)
       .then(function (response) {
-        console.log(`response`, response.data);
         history.push("/NewsDashboard");
+        console.log(`response`, response.data);
         setLoading(false);
       })
       .catch(function (error) {

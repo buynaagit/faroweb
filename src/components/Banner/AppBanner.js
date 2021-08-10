@@ -15,15 +15,19 @@ const AppBanner = () => {
                 >
                   Faro Limited Group
                   <br />
-                  Line 2
                 </h2>
                 <p
                   className="f_400 f_size_18 l_height30 w_color wow fadeInLeft"
                   data-wow-delay="0.3s"
                 >
-                  В то время некий безымянный печатник создал большую коллекцию
-                  размеров и форм шрифтов, используя Lorem Ipsum для распечатки
-                  образцов.
+                  Faro limited group. Lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                  exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate
+                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                  sint occaecat cupidatat non proident, sunt in culpa qui
+                  officia deserunt mollit anim id est laborum.
                 </p>
               </div>
             </Reveal>
