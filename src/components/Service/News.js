@@ -59,7 +59,6 @@ class News extends Component {
   }
 
   render() {
-    console.log(this.state.date0[0]);
     return (
       <section className="h_blog_area sec_pad">
         <section className="blog_area_two sec_pad">
@@ -71,7 +70,7 @@ class News extends Component {
               >
                 <div className="row faroNews">
                   <BlogGridItem
-                    date="14"
+                    date={this.state.date0[0] == "" ? "0" : this.state.date0[0]}
                     month={
                       this.state.date0[0] == ""
                         ? "0"
@@ -101,7 +100,7 @@ class News extends Component {
                     }
                   />
                   <BlogGridItem
-                    date="15"
+                    date={this.state.date1[0] == "" ? "0" : this.state.date1[0]}
                     month={
                       this.state.date1[0] == ""
                         ? "0"
@@ -127,11 +126,11 @@ class News extends Component {
                     id={
                       this.state.blog.length < 3
                         ? require("../../img/faro.png")
-                        : this.state.blog[0].id
+                        : this.state.blog[1].id
                     }
                   />
                   <BlogGridItem
-                    date="10"
+                    date={this.state.date2[0] == "" ? "0" : this.state.date2[0]}
                     month={
                       this.state.date2[0] == ""
                         ? "0"
@@ -154,6 +153,11 @@ class News extends Component {
                     }
                     btn="Read More"
                     comment="3"
+                    id={
+                      this.state.blog.length < 3
+                        ? require("../../img/faro.png")
+                        : this.state.blog[2].id
+                    }
                   />
                 </div>
               </div>

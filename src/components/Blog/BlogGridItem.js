@@ -7,13 +7,12 @@ class BlogGridItem extends Component {
       this.props;
     return (
       <div className="col-lg-6" style={{ maxWidth: "100%" }}>
-        <Link to={`/ReadNews/${id}`}></Link>
         <div className="blog_list_item blog_list_item_two">
-          <a href="./ReadNews" className="post_date">
+          <Link to={`/ReadNews/${id}`} className="post_date">
             <h2>
               {date} <span>{month}</span>
             </h2>
-          </a>
+          </Link>
           <Link to={`/ReadNews/${id}`}>
             <img
               className="img-fluid"
@@ -23,7 +22,7 @@ class BlogGridItem extends Component {
             />
           </Link>
           <div className="blog_content">
-            <a href="./ReadNews">
+            <Link to={`/ReadNews/${id}`}>
               <h5
                 className="blog_title"
                 style={{
@@ -34,7 +33,7 @@ class BlogGridItem extends Component {
               >
                 {Title}
               </h5>
-            </a>
+            </Link>
             <div
               dangerouslySetInnerHTML={{ __html: description }}
               style={{
@@ -44,9 +43,9 @@ class BlogGridItem extends Component {
               }}
             ></div>
             <div className="post-info-bottom">
-              <a href="./ReadNews" className="learn_btn_two">
+              <Link to={`/ReadNews/${id}`} className="learn_btn_two">
                 {btn} <i className="arrow_right"></i>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
