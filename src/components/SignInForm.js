@@ -33,7 +33,7 @@ const SignInFrom = () => {
       .then(function (response) {
         console.log(`response`, response.data);
         localStorage.setItem("token", response.data.token);
-        history.push("/NewsDashboard");
+        history.push("/Dashboard");
       })
       .catch(function (error) {
         console.log(`error`, error.response);

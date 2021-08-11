@@ -687,7 +687,7 @@ button:focus {
 
 .btn_five {
   border: 1px solid #fff;
-  color: #fff;
+  color: rgb(65, 38, 139);
   border-radius: 3px;
   padding: 12px 28px;
 }
@@ -11920,6 +11920,11 @@ button:focus {
   margin-right: -20px;
   margin-top: -10px;
   flex-direction: row;
+}
+
+.newsdash {
+  position: absolute;
+  right: 0px;
 }
 
 .app_screenshot_area .app_screenshot_slider .item {

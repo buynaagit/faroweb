@@ -61,6 +61,10 @@ export default function NewsPublish() {
     }
   };
 
+  const BackBtn = () => {
+    history.push("/NewsDashBoard");
+  };
+
   const editorRef = useRef(null);
   const log = () => {
     if (editorRef.current) {
@@ -101,9 +105,14 @@ export default function NewsPublish() {
       {isLoading ? (
         <SpinLoader />
       ) : (
-        <button disabled={isLoading} className="btn_three" onClick={Publish}>
-          Нийтлэх
-        </button>
+        <div>
+          <button disabled={isLoading} className="btn_five" onClick={Publish}>
+            Нийтлэх
+          </button>
+          <button disabled={isLoading} className="btn_five" onClick={BackBtn}>
+            Буцах
+          </button>
+        </div>
       )}
       {image ? <p> Image uploaded </p> : <p> Upload Image...</p>}
       <ImageUploader

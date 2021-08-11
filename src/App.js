@@ -43,6 +43,8 @@ import NewsDashboard from "./Pages/NewsDashboard";
 import NewsPublish from "./Pages/NewsPublish";
 import NewsEdit from "./Pages/NewsEdit";
 import AdminRegister from "./Pages/AdminRegister";
+import Dashboard from "./Pages/Dashboard";
+import JobDashboard from "./Pages/JobDashboard";
 
 class App extends Component {
   componentDidMount() {
@@ -106,6 +108,8 @@ class App extends Component {
           <ScrollToTopRoute path="/SignUp" component={SignUp} />
           <ScrollToTopRoute path="/Admin" component={Admin} />
           <ScrollToTopRoute path="/ReadNews/:id" component={ReadNews} />
+          <ScrollToTopRoute path="/Dashboard" component={Dashboard} />
+          <ScrollToTopRoute path="/JobDashboard" component={JobDashboard} />
           <ScrollToTopRoute path="/NewsDashboard" component={NewsDashboard} />
           <ScrollToTopRoute path="/NewsPublish" component={NewsPublish} />
           <ScrollToTopRoute path="/NewsEdit/:id" component={NewsEdit} />
