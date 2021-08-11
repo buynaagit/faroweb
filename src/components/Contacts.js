@@ -23,16 +23,11 @@ class Contacts extends Component {
   }
 
   onFileChange = async (event) => {
-    console.log("file change");
-    await this.setState({
-      ...this.state,
-      selectedFile: event.target.files[0],
-    });
-    if (this.state.selectedFile.size / 1024 / 1024 > 5) {
+    if (event.target.files[0].size / 1024 / 1024 > 5) {
       const args = {
         message: "Файлын хэмжээ хэтэрлээ",
         description: "5MB доош хэмжээтэй файл оруулна уу",
-        duration: 0,
+        duration: 5,
         top: 100,
       };
       notification.open(args);
@@ -42,8 +37,10 @@ class Contacts extends Component {
       });
       console.log(this.state.selectedFile);
     } else {
-      const size = this.state.selectedFile.size;
-      console.log(size / 1024 / 1024);
+      this.setState({
+        ...this.state,
+        selectedFile: event.target.files[0],
+      });
     }
   };
 

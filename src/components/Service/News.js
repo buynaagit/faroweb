@@ -8,6 +8,7 @@ import ServiceData from "../Service/ServiceData";
 import { WindowsFilled } from "@ant-design/icons";
 import { scrollToTop } from "react-scroll/modules/mixins/animate-scroll";
 
+
 class News extends Component {
   state = {
     loading: true,
@@ -30,6 +31,7 @@ class News extends Component {
       ["Nov", "11р сар"],
       ["Dec", "12р сар"],
     ],
+    language: ["MN", "EN"],
   };
 
   async componentDidMount() {

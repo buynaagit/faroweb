@@ -3,6 +3,7 @@ import AboutWidget from "./FooterWidget/AboutWidget";
 import SolutionWidget from "./FooterWidget/SolutionWidget";
 import TeamWidget from "./FooterWidget/TeamWidget";
 import Reveal from "react-reveal/Reveal";
+import { Link } from "react-router-dom";
 
 class FooterTwo extends Component {
   render() {
@@ -84,7 +85,7 @@ class FooterTwo extends Component {
                     <a href=".#">Privacy Policy</a>
                   </li>
                   <li>
-                    <a href="./Admin">Admin</a>
+                    <Link to="./Admin">Admin</Link>
                   </li>
                 </ul>
               </div>
