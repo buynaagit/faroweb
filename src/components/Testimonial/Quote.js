@@ -28,7 +28,7 @@ const Quote = () => {
             <div className="col-lg-5">
               <div className="testimonial_img">
                 <img
-                  src={require("../../img/home9/testimonial_img.png")}
+                  src={require("../../img/home9/iderod.png")}
                   alt=""
                 />
               </div>

@@ -3921,8 +3921,29 @@ button:focus {
 }
 
 /*============= app_banner_area css ===========*/
+
+.light-house{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.light-house-back{
+  background-color:#ffffff;
+  border-radius: 400px;
+  width: 400px;
+  height: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -3vw;
+
+  position: absolute;
+  z-index: -1;
+}
+
+
 .app_banner_area {
-  background: url(../img/home7/banner.png) no-repeat scroll center 100%;
+  background: url(../img/home7/banner2.png) no-repeat scroll center 100%;
   padding-top: 230px;
   padding-bottom: 210px;
   overflow: hidden;
@@ -25588,7 +25609,7 @@ a .h_head:hover {
   z-index: 1;
   margin-bottom: 25px;
   border-radius: 6px;
-  background-image: linear-gradient(60deg, #fd475d 0%, #0e044b 100%);
+  background-image: linear-gradient(60deg, #3087E9 0%, #4DD6DC 100%);
   overflow: hidden;
 }
 

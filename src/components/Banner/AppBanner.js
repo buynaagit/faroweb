@@ -6,7 +6,7 @@ const AppBanner = () => {
     <section className="app_banner_area" id="home">
       <div className="container">
         <div className="row">
-          <div className="col-lg-7">
+          <div className="col-lg-6">
             <Reveal bottom cascade>
               <div className="app_banner_contentmt mt_40">
                 <h2
@@ -32,14 +32,16 @@ const AppBanner = () => {
               </div>
             </Reveal>
           </div>
-          <div className="col-lg-5">
+          <div className="col-lg-6 light-house" >
+            {/* <center> */}
+
             <div className="app_img">
-              <img
+              {/* <img
                 className="app_screen one wow fadeInDown"
-                src={require("../../img/home7/01.png")}
+                src={require("../../img/home7/light-tower.png")}
                 alt=""
-              />
-              <img
+              /> 
+               <img
                 className="app_screen two wow fadeInDown"
                 src={require("../../img/home7/03.png")}
                 alt=""
@@ -48,13 +50,16 @@ const AppBanner = () => {
                 className="app_screen three wow fadeInDown"
                 src={require("../../img/home7/02.png")}
                 alt=""
-              />
+              /> */}
+              <div className="light-house-back"/>
               <img
-                className="mobile"
-                src={require("../../img/home7/app.png")}
+                className="light-house"
+                src={require("../../img/home7/light-tower.png")}
                 alt=""
               />
             </div>
+            {/* </center> */}
+
           </div>
         </div>
       </div>
