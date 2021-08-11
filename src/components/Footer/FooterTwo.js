@@ -9,7 +9,10 @@ class FooterTwo extends Component {
     var { fClass } = this.props;
     let FooterData = this.props.FooterData;
     return (
-      <footer className={`footer_area footer_area_four f_bg ${fClass}`}>
+      <footer
+        className={`footer_area footer_area_four f_bg ${fClass}`}
+        style={{ marginTop: "200px" }}
+      >
         <div className="footer_top">
           <div className="container">
             <div className="row">
@@ -42,28 +45,15 @@ class FooterTwo extends Component {
                           action="#"
                           className="f_subscribe mailchimp"
                           method="post"
-                        >
-                          <input
-                            type="text"
-                            name="EMAIL"
-                            className="form-control memail"
-                            placeholder="Email"
-                          />
-                          <button className="btn btn-submit" type="submit">
-                            <i className="ti-arrow-right"></i>
-                          </button>
-                        </form>
+                        ></form>
                       </div>
                     </div>
                   </Reveal>
                 );
               })}
-              <AboutWidget ftitle="About Us" FooterData={FooterData} />
-              <SolutionWidget
-                ftitle="Workflow Solutions"
-                FooterData={FooterData}
-              />
-              <TeamWidget ftitle="Team Solutions" FooterData={FooterData} />
+              <AboutWidget ftitle="Бидний тухай" FooterData={FooterData} />
+              <SolutionWidget ftitle="Салбарууд" FooterData={FooterData} />
+              {/* <TeamWidget ftitle="Team Solutions" FooterData={FooterData} /> */}
             </div>
           </div>
         </div>

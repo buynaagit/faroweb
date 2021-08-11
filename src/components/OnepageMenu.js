@@ -12,7 +12,12 @@ class OnepageMenu extends Component {
           <nav className={`navbar navbar-expand-lg menu_one ${mClass}`}>
             <div className={`container ${cClass}`}>
               <Link to="home">
-                <img src={require("../img/faro.png")} alt="" />
+                <img
+                  src={require("../img/farologo.png")}
+                  width="90.9px"
+                  height="36px"
+                  alt=""
+                />
               </Link>
               <button
                 className="navbar-toggler collapsed"

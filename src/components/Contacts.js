@@ -229,7 +229,10 @@ class Contacts extends Component {
                     </div>
                   </div>
                   <div className="col-lg-6">
-                    <label for="cvFile">Upload CV file</label>
+                    <button>
+                      <label for="cvFile">Upload CV file</label>
+                    </button>
+
                     <input
                       type="file"
                       id="cvFile"

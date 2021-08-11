@@ -15464,9 +15464,9 @@ p span {
 }
 
 .blog-sidebar .widget.widget_tag_cloud .post-tags a:hover {
-  background: #5e2ced;
-  border-color: #5e2ced;
-  color: #fff;
+  /* background: #5e2ced;
+  border-color: #5e2ced; */
+  /* color: #fff; */
 }
 
 .blog-sidebar .widget.search_widget_two .search-form .form-control {
@@ -15606,8 +15606,8 @@ p span {
 }
 
 .blog-sidebar .widget.tag_widget_two .post-tags a:hover {
-  background: #5e2ced;
-  color: #fff;
+  /* background: #5e2ced; */
+  /* color: #fff; */
 }
 
 .blog-sidebar .widget.instagram_widget ul {
