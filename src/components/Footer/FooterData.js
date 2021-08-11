@@ -254,64 +254,54 @@ const FooterData = {
     {
       id: 1,
       url: "#",
-      text: "Company",
+      text: "Нүүр",
     },
     {
       id: 2,
       url: "#",
-      text: "Leadership",
+      text: "Бидний тухай",
     },
     {
       id: 3,
       url: "#",
-      text: "Diversity",
+      text: "Мэдээ",
     },
     {
       id: 4,
       url: "#",
-      text: "Jobs",
+      text: "Ажлын байр",
     },
     {
       id: 5,
       url: "#",
-      text: "Press",
+      text: "Холбоо барих",
     },
     {
       id: 6,
       url: "#",
-      text: "Wavelength",
+      text: "Хаяг",
     },
   ],
   Solution: [
     {
       id: 1,
       url: "#",
-      text: "Project Management",
+      text: "Faro Education",
     },
     {
       id: 2,
       url: "#",
-      text: "Agile",
+      text: "Faro Foundation",
     },
     {
       id: 3,
       url: "#",
-      text: "Task Management",
+      text: "IFD School",
     },
     {
       id: 4,
       url: "#",
-      text: "Reporting",
-    },
-    {
-      id: 5,
-      url: "#",
-      text: "Work Tracking",
-    },
-    {
-      id: 6,
-      url: "#",
-      text: "See All Uses",
+      text: "VR Lab",
     },
   ],
   teamSolution: [

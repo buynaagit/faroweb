@@ -6,7 +6,10 @@ class BlogGridItem extends Component {
     let { date, month, Title, description, btn, comment, image, id } =
       this.props;
     return (
-      <div className="col-lg-6" style={{ maxWidth: "100%" }}>
+      <div
+        className="col-lg-6"
+        style={{ maxWidth: "100%", borderWidth: "1px", borderColor: "grey" }}
+      >
         <div className="blog_list_item blog_list_item_two">
           <Link to={`/ReadNews/${id}`} className="post_date">
             <h2>

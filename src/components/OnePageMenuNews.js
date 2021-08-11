@@ -12,9 +12,14 @@ class OnepageMenuNews extends Component {
         <header className="header_area">
           <nav className={`navbar navbar-expand-lg menu_one ${mClass}`}>
             <div className={`container ${cClass}`}>
-              <a href="/Landing">
-                <img src={require("../img/faro.png")} alt="" />
-              </a>
+              <Link to="/Landing">
+                <img
+                  src={require("../img/farologo.png")}
+                  width="90.9px"
+                  height="36px"
+                  alt=""
+                />
+              </Link>
               <button
                 className="navbar-toggler collapsed"
                 type="button"
