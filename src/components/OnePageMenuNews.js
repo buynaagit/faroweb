@@ -8,7 +8,7 @@ class OnepageMenuNews extends Component {
   render() {
     var { mClass, nClass, cClass, slogo, hbtnClass } = this.props;
     return (
-      <Sticky top={0} innerZ={9999} activeClass="navbar_fixed">
+      <Sticky top={0} innerZ={9999} className="navbar_fixed">
         <header className="header_area">
           <nav className={`navbar navbar-expand-lg menu_one ${mClass}`}>
             <div className={`container ${cClass}`}>

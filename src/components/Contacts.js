@@ -3,6 +3,7 @@ import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
 import axios from "axios";
 import { URL } from "../utils/appConstant";
+import { message, notification } from "antd";
 
 class Contacts extends Component {
   constructor(props) {
@@ -21,17 +22,36 @@ class Contacts extends Component {
     this._onSelect = this._onSelect.bind(this);
   }
 
-  onFileChange = (event) => {
-    console.log("dqwddqwdwqdqw");
-    this.setState({ ...this.state, selectedFile: event.target.files[0] });
+  onFileChange = async (event) => {
+    console.log("file change");
+    await this.setState({
+      ...this.state,
+      selectedFile: event.target.files[0],
+    });
+    if (this.state.selectedFile.size / 1024 / 1024 > 5) {
+      const args = {
+        message: "Файлын хэмжээ хэтэрлээ",
+        description: "5MB доош хэмжээтэй файл оруулна уу",
+        duration: 0,
+        top: 100,
+      };
+      notification.open(args);
+      this.setState({
+        ...this.state,
+        selectedFile: null,
+      });
+      console.log(this.state.selectedFile);
+    } else {
+      const size = this.state.selectedFile.size;
+      console.log(size / 1024 / 1024);
+    }
   };
 
-  onFileUpload = () => {
-    const formData = new FormData();
-    formData.append("myFile", this.state.selectedFile);
-
-    console.log(this.state.selectedFile);
-  };
+  // onFileUpload = () => {
+  //   const formData = new FormData();
+  //   formData.append("myFile", this.state.selectedFile);
+  //   console.log(this.state.selectedFile);
+  // };
 
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
@@ -53,7 +73,6 @@ class Contacts extends Component {
       requestOptions
     );
     const data = await response.json();
-    console.log(data);
     for (let i = 0; i < data.length; i++) {
       if (data[i].is_visible === true) {
         this.setState({
@@ -68,7 +87,6 @@ class Contacts extends Component {
         });
       }
     }
-    console.log(this.state.options);
     // await this.setState({ options: data });
     // if (this.state.blog.length < 1) {
     //   console.log(`No Data`);
@@ -97,7 +115,6 @@ class Contacts extends Component {
       this.state.chosenJob,
       "\n"
     );
-    alert("CV was submitted");
     const config = {
       headers: {
         "Content-type": "application/json",
@@ -110,10 +127,19 @@ class Contacts extends Component {
     formData.append("phone", this.state.number);
     formData.append("description", this.state.message);
     formData.append("cv", this.state.selectedFile);
+
     axios
       .post(`${URL}/api/careers/upload/`, formData, config)
       .then(function (response) {
         console.log(`response`, response.data);
+        const args = {
+          message: "Амжилттай",
+          description:
+            "Таны CV амжилттай илгээлээ. Бид удахгүй холбогдох болно оо.",
+          duration: 0,
+          top: 100,
+        };
+        notification.open(args);
       })
       .catch(function (error) {
         console.log(`error`, error.response);
@@ -122,7 +148,10 @@ class Contacts extends Component {
 
   checkApply(event) {
     event.preventDefault();
-    if (this.state.name == "") {
+    console.log(this.state.selectedFile);
+    if (this.state.chosenJob == "") {
+      alert("Please choose your job");
+    } else if (this.state.name == "") {
       alert("Check your name");
     } else if (this.state.email == "") {
       alert("Check your email");
@@ -229,8 +258,19 @@ class Contacts extends Component {
                     </div>
                   </div>
                   <div className="col-lg-6">
-                    <button>
-                      <label for="cvFile">Upload CV file</label>
+                    <button
+                      type="button"
+                      style={{ height: "60px", width: "50%" }}
+                    >
+                      <label for="cvFile">
+                        {this.state.selectedFile == null ? (
+                          <p>
+                            Upload CV file. <br></br>Max Size: 5MB
+                          </p>
+                        ) : (
+                          this.state.selectedFile.name
+                        )}
+                      </label>
                     </button>
 
                     <input
