@@ -18,6 +18,7 @@ class FaroTeam extends Component {
     return (
       <section className="event_team_area sec_pad">
         <div className="container">
+          
           <div className="hosting_title security_title text-center">
             <h2 className="wow fadeInUp" data-wow-delay="0.2s">
               <span>Management</span>

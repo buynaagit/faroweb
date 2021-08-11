@@ -94,6 +94,7 @@ class ReadNews extends Component {
                     <ImgWithLoader
                       imgUrl={this.state.blog.cover_image}
                       className="readnews-cover-img"
+                      loaderStyle={{ padding: 20 }}
                     />
                     <div className="blog_content">
                       <div className="post_date">
