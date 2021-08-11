@@ -1,5 +1,7 @@
 import React from "react";
 import Reveal from "react-reveal";
+import light from "../../img/home9/light.png";
+
 
 const AppBanner = () => {
   return (
@@ -36,6 +38,7 @@ const AppBanner = () => {
             {/* <center> */}
 
             <div className="app_img">
+                
               {/* <img
                 className="app_screen one wow fadeInDown"
                 src={require("../../img/home7/light-tower.png")}
@@ -62,7 +65,11 @@ const AppBanner = () => {
 
           </div>
         </div>
+        
       </div>
+      <div className="box">
+                  <img src={light} className="light" />
+                </div>
     </section>
   );
 };

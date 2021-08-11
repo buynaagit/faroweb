@@ -102,19 +102,6 @@ class OnepageMenu extends Component {
                     <Link
                       className="nav-link"
                       activeClass="active"
-                      to="footer_top"
-                      spy={true}
-                      smooth={true}
-                      offset={0}
-                      duration={1000}
-                    >
-                      Холбоо барих
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link
-                      className="nav-link"
-                      activeClass="active"
                       to="myAdress"
                       spy={true}
                       smooth={true}
@@ -124,6 +111,20 @@ class OnepageMenu extends Component {
                       Хаяг
                     </Link>
                   </li>
+                  <li className="nav-item">
+                    <Link
+                      className="nav-link"
+                      activeClass="active"
+                      to="footer_top"
+                      spy={true}
+                      smooth={true}
+                      offset={0}
+                      duration={1000}
+                    >
+                      Холбоо барих
+                    </Link>
+                  </li>
+                  
                 </ul>
                 {/* <a className={`btn_get btn_hover ${hbtnClass}`} href="#get-app">
                   Get Started

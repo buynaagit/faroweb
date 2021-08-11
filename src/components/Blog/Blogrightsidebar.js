@@ -49,8 +49,8 @@ class Blogrightsidebar extends Component {
             <a
               name="faro1"
               style={{
-                backgroundColor: "#5e2ced",
-                borderColor: "#5e2ced",
+                backgroundColor: "#3087e9",
+                borderColor: "#3087e9",
                 color: "#fff",
               }}
             >

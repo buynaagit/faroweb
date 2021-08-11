@@ -257,22 +257,30 @@ class Contacts extends Component {
                       ></input>
                     </div>
                   </div>
-                  <div className="col-lg-6">
+                  <div className="col-lg-6 uploadcv">
                     <button
                       type="button"
-                      style={{ height: "60px", width: "50%" }}
+                      className="uploadcv-button"
+                      
                     >
-                      <label for="cvFile">
+                      <label for="cvFile" className="uploadcv-label">
                         {this.state.selectedFile == null ? (
-                          <p>
-                            Upload CV file. <br></br>Max Size: 5MB
+                          <>
+                          <img src={require("../img/upload.png")} width="30px" height="auto" />
+                          <p className="max-size">
+                            Upload CV file.
                           </p>
+                          </>
                         ) : (
                           this.state.selectedFile.name
                         )}
                       </label>
                     </button>
-
+                    <div className="max-size-container">
+                      <p className="max-size">
+                        Max Size: 5MB
+                      </p>
+                    </div>
                     <input
                       type="file"
                       id="cvFile"
