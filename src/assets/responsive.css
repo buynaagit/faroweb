@@ -2761,6 +2761,9 @@
 
 @media (max-width:768px){
     .light-house{display: none;}
+    .app_banner_area{
+        height: 550px;
+    }
     .sec_title br,.prototype_service_info h2 br,.hosting_title h2 br{
         display: none;
     }
