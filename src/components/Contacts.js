@@ -29,7 +29,7 @@ class Contacts extends Component {
         message: "Файлын хэмжээ хэтэрлээ",
         description: "5MB доош хэмжээтэй файл оруулна уу",
         duration: 5,
-        top: 100,
+        top: 150,
       };
       notification.open(args);
       this.setState({
@@ -259,13 +259,14 @@ class Contacts extends Component {
                     <button
                       type="button"
                       className="uploadcv-button"
+                      style={{border:"none"}}
                     >
                       <label for="cvFile" className="uploadcv-label">
                         {this.state.selectedFile == null ? (
                           <>
                           <img src={require("../img/upload.png")} width="30px" height="auto" />
                           <p className="max-size">
-                            { getLocale("Contacts.Form1") }
+                            { getLocale("Contacts.Form4") }
                           </p>
                           </>
                         ) : (
@@ -275,7 +276,7 @@ class Contacts extends Component {
                     </button>
                     <div className="max-size-container">
                       <p className="max-size">
-                        Max Size: 5MB
+                        { getLocale("Contacts.Form5") }
                       </p>
                     </div>
                     <input

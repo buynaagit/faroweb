@@ -78,12 +78,7 @@ class FooterTwo extends Component {
               </div>
               <div className="col-lg-4 col-md-4 col-sm-12">
                 <ul className="list-unstyled f_menu text-right">
-                  <li>
-                    <a href=".#">Terms of Use</a>
-                  </li>
-                  <li>
-                    <a href=".#">Privacy Policy</a>
-                  </li>
+                  
                   <li>
                     <Link to="./Admin">Admin</Link>
                   </li>

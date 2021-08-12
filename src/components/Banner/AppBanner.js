@@ -14,8 +14,9 @@ const AppBanner = () => {
             <Reveal bottom cascade>
               <div className="app_banner_contentmt mt_40">
                 <h2
-                  className="f_p f_900 f_size_70 w_color mb_20 wow fadeInLeft"
+                  className="f_p f_size_70 w_color mb_20 wow fadeInLeft"
                   data-wow-delay="0.2s"
+                  
                 >
                    { getLocale("AppBanner1.1") } <br/>{ getLocale("AppBanner1.2") }<br/> { getLocale("AppBanner1.3") }
                   <br />
