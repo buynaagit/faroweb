@@ -1,11 +1,8 @@
 import React from "react";
 import Reveal from "react-reveal";
-<<<<<<< HEAD
 import { getLocale } from "../../locales";
-=======
 import light from "../../img/home9/light.png";
 
->>>>>>> 480e796b157f05e62369ad7d7a62f6285ae7f9e9
 
 const AppBanner = () => {
   
@@ -20,7 +17,7 @@ const AppBanner = () => {
                   className="f_p f_900 f_size_70 w_color mb_20 wow fadeInLeft"
                   data-wow-delay="0.2s"
                 >
-                   { getLocale("AppBanner1") } <br/>Limited<br/> Group
+                   { getLocale("AppBanner1.1") } <br/>{ getLocale("AppBanner1.2") }<br/> { getLocale("AppBanner1.3") }
                   <br />
                 </h2>
                 <p

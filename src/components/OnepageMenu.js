@@ -80,6 +80,7 @@ class OnepageMenu extends Component {
                       smooth={true}
                       offset={0}
                       duration={500}
+                      style={{marginTop:"10px"}}
                     >
                       { getLocale("Header1") }
                     </Link>
@@ -93,6 +94,7 @@ class OnepageMenu extends Component {
                       smooth={true}
                       offset={0}
                       duration={1000}
+                      style={{marginTop:"10px"}}
                     >
                       { getLocale("Header2") }
                     </Link>
@@ -106,6 +108,7 @@ class OnepageMenu extends Component {
                       smooth={true}
                       offset={-90}
                       duration={1000}
+                      style={{marginTop:"10px"}}
                     >
                       { getLocale("Header3") }
                     </Link>
@@ -119,6 +122,7 @@ class OnepageMenu extends Component {
                       smooth={true}
                       offset={0}
                       duration={1000}
+                      style={{marginTop:"10px"}}
                     >
                       { getLocale("Header4") }
                     </Link>
@@ -132,6 +136,7 @@ class OnepageMenu extends Component {
                       smooth={true}
                       offset={-90}
                       duration={1000}
+                      style={{marginTop:"10px"}}
                     >
                       { getLocale("Header5") }
                     </Link>
@@ -145,9 +150,15 @@ class OnepageMenu extends Component {
                       smooth={true}
                       offset={0}
                       duration={1000}
+                      style={{marginTop:"10px"}}
                     >
                         { getLocale("Header6") }
                     </Link>
+                  </li>
+                  <li className="nav-item">
+                    <div className="nav-link" >
+                      <Button onClick={this.changeLanguage} href="./Landing" style={{background:"none", border: "none",boxShadow:"none", color:"white"}}>{localStorage.getItem("language")}</Button>
+                    </div>
                   </li>
                   
                 </ul>
