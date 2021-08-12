@@ -4,7 +4,7 @@ const FaroAdress = () => {
   return (
     <section className="event_location_area">
       <Map />
-      <div className="container">
+      {/* <div className="container">
         <div className="event_location">
           <div className="contact_info_item">
             <h6>
@@ -28,7 +28,7 @@ const FaroAdress = () => {
             </a>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

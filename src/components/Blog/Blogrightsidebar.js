@@ -48,17 +48,29 @@ class Blogrightsidebar extends Component {
           <div className="post-tags">
             <a
               name="faro1"
-              style={{
+              style={this.props.tag=="FARO"? {
                 backgroundColor: "#3087e9",
                 borderColor: "#3087e9",
                 color: "#fff",
-              }}
+              }: null}
             >
               Faro education
             </a>
-            <a name="faro2">Faro foundation</a>
-            <a name="faro3">VR Lab</a>
-            <a name="faro4">IFD</a>
+            <a name="faro2" style={this.props.tag=="IFD"? {
+                backgroundColor: "#3087e9",
+                borderColor: "#3087e9",
+                color: "#fff",
+              }: null}>Faro foundation</a>
+            <a name="faro3" style={this.props.tag=="VRLAB"? {
+                backgroundColor: "#3087e9",
+                borderColor: "#3087e9",
+                color: "#fff",
+              }: null}>VR Lab</a>
+            <a name="faro4" style={this.props.tag=="FOUNDATION"? {
+                backgroundColor: "#3087e9",
+                borderColor: "#3087e9",
+                color: "#fff",
+              }: null}>IFD</a>
           </div>
         </div>
       </div>

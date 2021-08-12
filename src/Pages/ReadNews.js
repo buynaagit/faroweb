@@ -74,7 +74,6 @@ class ReadNews extends Component {
   }
 
   render() {
-    console.log(this.state.imgLoading);
     return (
       <div>
         <div style={{ color: "black" }}>
@@ -123,7 +122,7 @@ class ReadNews extends Component {
                   </div>
                 </div>
                 <div className="col-lg-4">
-                  <Blogrightsidebar ServiceData={this.state.recentPost} />
+                  <Blogrightsidebar ServiceData={this.state.recentPost} tag={ this.state.blog.category } />
                 </div>
               </div>
             </div>

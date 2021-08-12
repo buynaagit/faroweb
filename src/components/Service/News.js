@@ -8,6 +8,7 @@ import ServiceData from "../Service/ServiceData";
 import { WindowsFilled } from "@ant-design/icons";
 import { scrollToTop } from "react-scroll/modules/mixins/animate-scroll";
 import { getLocale } from "../../locales/index";
+import { URL } from "../../utils/appConstant";
 
 class News extends Component {
   state = {
@@ -42,7 +43,7 @@ class News extends Component {
       // body: JSON.stringify({ username: "admin", password: "admin1234" }),
     };
     const response = await fetch(
-      "https://far0.herokuapp.com/api/latest-blogs/3/",
+      `${URL}/api/latest-blogs/3/`,
       requestOptions
     );
     const data = await response.json();

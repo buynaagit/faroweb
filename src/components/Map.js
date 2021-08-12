@@ -39,6 +39,7 @@ export class MapContainer extends Component {
           initialCenter={{ lat: 47.900238, lng: 106.909943 }}
           style={mapStyles}
         >
+          <Marker />
           {this.displayMarkers()}
         </Map>
       </div>

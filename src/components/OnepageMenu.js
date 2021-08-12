@@ -5,19 +5,7 @@ import Sticky from "react-stickynode";
 import { Menu, Dropdown, Icon ,Button} from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 import { getLocale } from "../locales/index";
-
-const menu = (
-  <Menu>
-    <Menu.Item key="0">
-      <a href="http://www.alipay.com/">1st menu item</a>
-    </Menu.Item>
-    <Menu.Item key="1">
-      <a href="http://www.taobao.com/">2nd menu item</a>
-    </Menu.Item>
-    <Menu.Divider />
-    <Menu.Item key="3">3rd menu item</Menu.Item>
-  </Menu>
-);
+import { GlobalOutlined } from '@ant-design/icons';
 
 
 class OnepageMenu extends Component {
@@ -157,7 +145,7 @@ class OnepageMenu extends Component {
                   </li>
                   <li className="nav-item">
                     <div className="nav-link" >
-                      <Button onClick={this.changeLanguage} href="./Landing" style={{background:"none", border: "none",boxShadow:"none", color:"white"}}>{localStorage.getItem("language")}</Button>
+                      <Button icon={<GlobalOutlined />} onClick={this.changeLanguage} href="./Landing" style={{background:"none", border: "none",boxShadow:"none"}}>{localStorage.getItem("language")}</Button>
                     </div>
                   </li>
                   

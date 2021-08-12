@@ -400,23 +400,6 @@ export const newData = [
       },
     ],
   },
-  {
-    name: "Amartungalag T",
-    image: "team_04.jpg",
-    desc: "CEO of Hippocards",
-    socialLinks: [
-      {
-        social_name: "insta",
-        icon: "ti-facebook",
-        social_url: "https://www.facebook.com/amradw",
-      },
-      {
-        social_name: "fb",
-        icon: "ti-instagram",
-        social_url: "https://www.instagram.com/amradw",
-      },
-    ],
-  },
 ];
 
 export default FooterData;
