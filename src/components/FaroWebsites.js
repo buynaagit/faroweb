@@ -47,7 +47,7 @@ const FaroWebsites = () => {
         />
         <div className="app_screen_info ">
           <Slider className="app_screenshot_slider" {...settings}>
-            <div className="item ">
+            <div className="item hovicon effect-3 sub-b ">
               <div className="screenshot_img ">
                 <a
                   href="http://www.vrlab.mn/"
@@ -65,7 +65,7 @@ const FaroWebsites = () => {
                 </a>
               </div>
             </div>
-            <div className="item">
+            <div className="item hovicon effect-3 sub-b">
               <div className="screenshot_img">
                 <a
                   href="http://www.ifdschool.edu.mn/"
@@ -82,7 +82,7 @@ const FaroWebsites = () => {
                 </a>
               </div>
             </div>
-            <div className="item">
+            <div className="item hovicon effect-3 sub-b">
               <div className="screenshot_img">
                 <a
                   href="http://faro.edu.mn/"
@@ -99,7 +99,7 @@ const FaroWebsites = () => {
                 </a>
               </div>
             </div>
-            <div className="item">
+            <div className="item hovicon effect-3 sub-b">
               <div className="screenshot_img">
                 <a
                   target="_blank"
