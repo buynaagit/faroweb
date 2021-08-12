@@ -1,7 +1,9 @@
 import React from "react";
 import Reveal from "react-reveal";
+import { getLocale } from "../../locales";
 
 const AppBanner = () => {
+  
   return (
     <section className="app_banner_area" id="home">
       <div className="container">
@@ -13,21 +15,14 @@ const AppBanner = () => {
                   className="f_p f_700 f_size_50 w_color mb_20 wow fadeInLeft"
                   data-wow-delay="0.2s"
                 >
-                  Faro Limited Group
+                 { getLocale("AppBanner1") }
                   <br />
                 </h2>
                 <p
                   className="f_400 f_size_18 l_height30 w_color wow fadeInLeft"
                   data-wow-delay="0.3s"
                 >
-                  Faro limited group. Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                  sint occaecat cupidatat non proident, sunt in culpa qui
-                  officia deserunt mollit anim id est laborum.
+                  { getLocale("AppBanner2") }
                 </p>
               </div>
             </Reveal>

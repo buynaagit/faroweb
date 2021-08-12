@@ -4,6 +4,7 @@ import "react-dropdown/style.css";
 import axios from "axios";
 import { URL } from "../utils/appConstant";
 import { message, notification } from "antd";
+import { getLocale } from "../locales";
 
 class Contacts extends Component {
   constructor(props) {
@@ -172,13 +173,13 @@ class Contacts extends Component {
             <div className="col-lg-3">
               <div className="contact_info_item">
                 <h6 className="f_p f_size_20 t_color3 f_500 mb_20">
-                  Office Address
+                  { getLocale("Contacts1") }
                 </h6>
                 <p className="f_400 f_size_15">
-                  Ulaanbaatar, Mongolia Regis palace 11th floor
+                  { getLocale("Contacts2") }
                 </p>
               </div>
-              <p style={{ marginTop: "50px" }}>Нээлттэй ажлын байр</p>
+              <p style={{ marginTop: "50px" }}>{ getLocale("Contacts3") }</p>
               <Dropdown
                 options={this.state.options}
                 onChange={this._onSelect}
@@ -190,26 +191,26 @@ class Contacts extends Component {
               ></div>
               <div className="contact_info_item">
                 <h6 className="f_p f_size_20 t_color3 f_500 mb_20">
-                  Contact Info
+                  { getLocale("Contacts4") }
                 </h6>
                 <p className="f_400 f_size_15">
-                  <span className="f_400 t_color3">Phone:</span>{" "}
-                  <a href="tel:3024437488">(+976) 99887766</a>
+                  <span className="f_400 t_color3">{ getLocale("Contacts5") }</span>{" "}
+                  <a href="tel:3024437488">{ getLocale("Contacts6") }</a>
                 </p>
                 <p className="f_400 f_size_15">
-                  <span className="f_400 t_color3">Fax:</span>{" "}
-                  <a href="tel:3024437488">(+976) 11223344</a>
+                  <span className="f_400 t_color3">{ getLocale("Contacts7") }</span>{" "}
+                  <a href="tel:3024437488">{ getLocale("Contacts8") }</a>
                 </p>
                 <p className="f_400 f_size_15">
-                  <span className="f_400 t_color3">Email:</span>{" "}
-                  <a href="mailto:saasland@gmail.com">faro@mail.com</a>
+                  <span className="f_400 t_color3">{ getLocale("Contacts9") }</span>{" "}
+                  <a href="mailto:saasland@gmail.com">{ getLocale("Contacts10") }</a>
                 </p>
               </div>
             </div>
 
             <div className="contact_form col-lg-9">
               <h2 className="f_p f_size_22 t_color3 f_600 l_height28 mb_40">
-                Хувийн мэдээлэл
+                { getLocale("Contacts11") }
               </h2>
               <form
                 onSubmit={this.checkApply.bind(this)}
@@ -223,7 +224,7 @@ class Contacts extends Component {
                         type="text"
                         id="name"
                         name="name"
-                        placeholder="Your Name"
+                        placeholder= { getLocale("Contacts.Form1") }
                         onChange={this.handleChange}
                         style={{ backgroundColor: "white" }}
                       />
@@ -235,7 +236,7 @@ class Contacts extends Component {
                         type="text"
                         name="email"
                         id="email"
-                        placeholder="Your Email"
+                              placeholder= { getLocale("Contacts.Form2") }
                         onChange={this.handleChange}
                         style={{ backgroundColor: "white" }}
                       />
@@ -248,7 +249,7 @@ class Contacts extends Component {
                         type="number"
                         name="number"
                         id="tentacles"
-                        placeholder="Дугаар"
+                        placeholder={ getLocale("Contacts.Form3") }
                         onChange={this.handleChange}
                         style={{ backgroundColor: "white" }}
                       ></input>
@@ -262,7 +263,7 @@ class Contacts extends Component {
                       <label for="cvFile">
                         {this.state.selectedFile == null ? (
                           <p>
-                            Upload CV file. <br></br>Max Size: 5MB
+                            { getLocale("Contacts.Form4") } <br></br>{ getLocale("Contacts.Form5") }
                           </p>
                         ) : (
                           this.state.selectedFile.name
@@ -286,17 +287,17 @@ class Contacts extends Component {
                         id="message"
                         cols="30"
                         rows="10"
-                        placeholder="Enter Your Message . . ."
+                        placeholder={ getLocale("Contacts.Form9") }
                         style={{ backgroundColor: "white" }}
                       ></textarea>
                     </div>
                   </div>
                 </div>
-                <button className="btn_three">Apply</button>
+                <button className="btn_three">{ getLocale("Contacts.Form6") }</button>
               </form>
-              <div id="success">Your message succesfully sent!</div>
+              <div id="success">{ getLocale("Contacts.Form7") }</div>
               <div id="error">
-                Opps! There is something wrong. Please try again
+                { getLocale("Contacts.Form8") }
               </div>
             </div>
           </div>

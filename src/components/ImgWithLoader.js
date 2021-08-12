@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Spin } from "antd";
 import { LoadingOutlined } from "@ant-design/icons";
 
-const ImgWithLoader = ({ imgUrl, ...restProps }) => {
+const ImgWithLoader = ({ imgUrl, loaderStyle, imgStyle={}, ...restProps }) => {
   const [imgLoading, setImageLoading] = useState(true);
 
   const handleImageLoading = () => {
@@ -17,6 +17,7 @@ const ImgWithLoader = ({ imgUrl, ...restProps }) => {
         src={imgUrl}
         {...restProps}
         style={{
+          ...imgStyle,
           objectFit: "cover",
           opacity: imgLoading ? 0 : 1,
           transition: "opacity 0.5s ease-in-out",
@@ -27,6 +28,7 @@ const ImgWithLoader = ({ imgUrl, ...restProps }) => {
         <div
           {...restProps}
           style={{
+            ...loaderStyle,
             position: "absolute",
             top: 0,
             left: 0,

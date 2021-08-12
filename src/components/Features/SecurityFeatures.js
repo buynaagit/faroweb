@@ -1,39 +1,39 @@
 import React from "react";
 import SecurityFeaturesItem from "./SecurityFeaturesItem";
-
+import { getLocale } from "../../locales";
 const Features = () => {
   return (
     <section className="h_security_area">
       <div className="container">
         <div className="hosting_title security_title text-center">
           <h2 className="wow fadeInUp" data-wow-delay="0.2s">
-            <span>Биднийг сонгох шалтгаан</span>
+            <span>{ getLocale("SecurityFeatures1") }</span>
           </h2>
         </div>
         <div className="row">
           <SecurityFeaturesItem
             itemClass="pr_70"
             image="security_1.png"
-            Title="Шүүмжлэлт сэтгэлгээ"
-            pText="Виртуал Реалити технологи болон тухайн хүрээлэн буй орчинг зохион бүтээхэд тулгарах бэрхшээл, асуудлуудыг шийдвэрлэх замаар оюутан залуус болон мэргэжилтнүүд шүүмжлэлт сэтгэлгээгээ хөгжүүлэх юм."
+            Title={getLocale("SecurityFeatures1.1")}
+            pText={getLocale("SecurityFeatures1.2")}
           />
           <SecurityFeaturesItem
             itemClass="pl_70"
             image="security_2.png"
-            Title="Асуудал шийдвэрлэх"
-            pText="Оюутнууд болон мэргэжилтнүүд асуудлыг өөр өөр өнцгөөс дүгнэж шийдвэрлэх ба нэг ижил асуудал, даалгаврыг шийдвэрлэх олон төрлийн арга зам болон шийдлүүдэд хүрэх юм."
+            Title={getLocale("SecurityFeatures2.1")}
+            pText={getLocale("SecurityFeatures2.2")}
           />
           <SecurityFeaturesItem
             itemClass="pr_70"
             image="security_3.png"
-            Title="Бүтээлч байдал"
-            pText="Виртуал бодит орчинг зохион бүтээх нь оюутан залуус болон мэргэжилтнүүдэд өөрсдийн санаа бодол, урам зоригийг чөлөөтэй илэрхийлэх чадварыг олгон бүтээлч байдлыг нэмэгдүүлнэ."
+            Title={getLocale("SecurityFeatures3.1")}
+            pText={getLocale("SecurityFeatures3.2")}
           />
           <SecurityFeaturesItem
             itemClass="pl_70"
             image="security_4.png"
-            Title="Хамтын ажиллагаа"
-            pText="Виртуал бодит орчинг шинээр бий болгоход бүхэл бүтэн баг инженерүүдийн хөдөлмөр, хүчин чармайлтыг шаарддаг. Тиймээс Виртуал бодит байдлыг сурч хөгжүүлэхэд багийн хамтын ажиллагаа нэн чухал."
+            Title={getLocale("SecurityFeatures4.1")}
+            pText={getLocale("SecurityFeatures4.2")}
           />
         </div>
       </div>

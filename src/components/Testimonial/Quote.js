@@ -1,6 +1,6 @@
 import React from "react";
 import Reveal from "react-reveal/Reveal";
-
+import { getLocale } from "../../locales";
 const Quote = () => {
   return (
     <React.Fragment>
@@ -11,17 +11,13 @@ const Quote = () => {
               <div className="testimonial_content">
                 <div className="icon">,,</div>
                 <p className="f_p f_size_20">
-                  “Ийм хүмүүсийн карьер сайн явдаг:‬ Хэлснээс илүүг хийдэг‬.
-                  ‪Асуухаасаа өмнө өөрөө нухдаг.‬ Түрүүлж залгадаг‬,Ойлгомжтой,
-                  товч ярьж чаддаг‬. Хоцорсон ч, суугаад дуусгадаг‬. Ядаж ганц
-                  үндсэн чадвартай‬. Шийдэл олдог, гацаад хаядаггүй‬. Цалингаас
-                  цаадахад итгэл үнэмшилтэй‬”
+                { getLocale("Quote1") }
                 </p>
                 <div className="author f_600 f_p t_color f_size_20">
-                  Ider-Od Bat-Erdene
+                  { getLocale("Quote2") }
                 </div>
                 <div className="author_description f_p f_size_15">
-                  CEO and Founder
+                  { getLocale("Quote3") }
                 </div>
               </div>
             </div>

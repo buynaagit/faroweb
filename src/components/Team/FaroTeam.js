@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import FaroTeamItem from "./FaroTeamItem";
 import Slider from "react-slick";
 import { newData } from "../Footer/FooterData";
+import { getLocale } from "../../locales";
 
 class FaroTeam extends Component {
   render() {
@@ -21,7 +22,7 @@ class FaroTeam extends Component {
           
           <div className="hosting_title security_title text-center">
             <h2 className="wow fadeInUp" data-wow-delay="0.2s">
-              <span>Management</span>
+              <span>{ getLocale("FaroTeam1") }</span>
             </h2>
           </div>
 

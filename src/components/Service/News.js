@@ -7,7 +7,7 @@ import BlogGridItem from "../../components/Blog/BlogGridItem";
 import ServiceData from "../Service/ServiceData";
 import { WindowsFilled } from "@ant-design/icons";
 import { scrollToTop } from "react-scroll/modules/mixins/animate-scroll";
-
+import { getLocale } from "../../locales/index";
 
 class News extends Component {
   state = {
@@ -99,7 +99,7 @@ class News extends Component {
                         ? require("../../img/faro.png")
                         : this.state.blog[0].description
                     }
-                    btn="Read More"
+                    btn={ getLocale("News1") }
                     comment="3"
                     id={
                       this.state.blog.length < 3
@@ -129,7 +129,7 @@ class News extends Component {
                         ? require("../../img/faro.png")
                         : this.state.blog[1].description
                     }
-                    btn="Read More"
+                    btn={ getLocale("News1") }
                     comment="2"
                     id={
                       this.state.blog.length < 3
@@ -159,7 +159,7 @@ class News extends Component {
                         ? require("../../img/faro.png")
                         : this.state.blog[2].description
                     }
-                    btn="Read More"
+                    btn={ getLocale("News1") }
                     comment="3"
                     id={
                       this.state.blog.length < 3
