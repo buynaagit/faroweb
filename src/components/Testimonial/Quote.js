@@ -7,6 +7,14 @@ const Quote = () => {
       <section className="payment_testimonial_area">
         <div className="container">
           <div className="row payment_testimonial_info flex-row-reverse">
+               <div className="col-lg-5">
+              <div className="testimonial_img">
+                <img
+                  src={require("../../img/home9/iderod.png")}
+                  alt=""
+                />
+              </div>
+            </div>
             <div className="col-lg-7 d-flex align-items-center">
               <div className="testimonial_content">
                 <div className="icon">,,</div>
@@ -21,14 +29,7 @@ const Quote = () => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-5">
-              <div className="testimonial_img">
-                <img
-                  src={require("../../img/home9/iderod.png")}
-                  alt=""
-                />
-              </div>
-            </div>
+         
           </div>
         </div>
       </section>

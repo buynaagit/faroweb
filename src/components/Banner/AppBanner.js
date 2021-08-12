@@ -14,9 +14,9 @@ const AppBanner = () => {
             <Reveal bottom cascade>
               <div className="app_banner_contentmt mt_40">
                 <h2
-                  className="f_p f_size_70 w_color mb_20 wow fadeInLeft"
+                  className="f_p w_color mb_20 wow fadeInLeft"
                   data-wow-delay="0.2s"
-                  
+                  style={{fontSize:"80px"}}
                 >
                    { getLocale("AppBanner1.1") } <br/>{ getLocale("AppBanner1.2") }<br/> { getLocale("AppBanner1.3") }
                   <br />
@@ -25,7 +25,7 @@ const AppBanner = () => {
                   className="f_400 f_size_18 l_height30 w_color wow fadeInLeft"
                   data-wow-delay="0.3s"
                 >
-                  THE LIGHT TOWER FOR THE FUTURE
+                  the light tower for the future
                 </p>
               </div>
             </Reveal>
