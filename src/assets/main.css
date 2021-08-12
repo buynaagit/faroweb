@@ -33,7 +33,7 @@ Table of Content:
 15/ faq
 16/ portfolio
 17/ contact
-18/ error
+18/ errork
 19/ shop
 20/ blog
 21/ footer
@@ -41,11 +41,45 @@ Table of Content:
 =====================================================================*/
 /*====================================================*/
 /*=== fonts ====*/
-@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,500,600,700,900");
-@import url("https://fonts.googleapis.com/css2?family=Nunito:300,400,500,600,700,900");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:300,400,500,600,700,900");
 /*===== color =====*/
 /*====================================================*/
 /*====================================================*/
+
+
+/*=====  CUSTOM CSS  =====*/
+
+.light-house .app_img{
+  /* border: red solid 2px; */
+    display: flex;
+    justify-content: center;
+}
+
+.uploadcv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.uploadcv-button{
+  height: 60px;
+    width: 50%;
+    border-radius: 4px;
+}
+.uploadcv-label{
+      display: flex;
+    margin-bottom: 0px;
+    align-items: center;
+    justify-content: space-around;
+}
+.max-size{
+  margin-bottom: 0px;
+}
+
+
+/*=====  CUSTOM CSS  =====*/
+
 a {
   text-decoration: none !important;
 }
@@ -71,7 +105,7 @@ body {
   font-size: 15px;
   font-weight: 300;
   line-height: 28px;
-  font-family: "Nunito", sans-serif;
+  font-family: "Montserrat", sans-serif;
   letter-spacing: 0px;
   color: #677294;
   padding: 0px;
@@ -149,6 +183,19 @@ button:focus {
   max-width: 1520px;
 }
 
+.f-logo{
+  width: 5vw;
+  height: auto;
+}
+
+.f_size_70 {
+  font-size: 70px;
+}
+
+.f_size_60 {
+  font-size: 60px;
+}
+
 .f_size_50 {
   font-size: 50px;
 }
@@ -218,7 +265,7 @@ button:focus {
 }
 
 .f_p {
-  font-family: "Nunito", sans-serif;
+  font-family:"Montserrat", sans-serif;
 }
 
 /*=========== font-weight ==============*/
@@ -422,7 +469,6 @@ button:focus {
   display: inline-block;
   font-weight: 500;
   font-size: 14px;
-  font-family: "Nunito", sans-serif;
   z-index: 1;
   cursor: pointer;
   -webkit-transition: all 0.3s linear;
@@ -435,8 +481,8 @@ button:focus {
 }
 
 .btn_get {
-  font: 500 14px/47px "Nunito", sans-serif;
-  color: #6754e2;
+  font: 500 14px/47px "Montserrat", sans-serif;
+  color: #4DD6DC;
   border: 2px solid #ccc5fa;
   border-radius: 4px;
   -webkit-box-shadow: 0px 20px 24px 0px rgba(0, 11, 40, 0.1);
@@ -454,8 +500,8 @@ button:focus {
   text-align: center;
 }
 .btn_get.new_btn {
-  background: #5e2ced;
-  border-color: #5e2ced;
+  background: #3087E9;
+  border-color: #3087E9;
   color: #fff;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -463,8 +509,8 @@ button:focus {
 
 .btn_get:hover {
   color: #fff;
-  background: #5e2ced;
-  border-color: #5e2ced;
+  background: #3087E9;
+  border-color: #3087E9;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -474,19 +520,19 @@ button:focus {
 .btn_get_two {
   -webkit-box-shadow: none;
   box-shadow: none;
-  background: #5e2ced;
-  border-color: #5e2ced;
+  background: #3087E9;
+  border-color: #3087E9;
   color: #fff;
 }
 
 .btn_get_two:hover {
   background: transparent;
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .price_btn {
-  font: 500 15px/53px "Nunito", sans-serif;
-  color: #6754e2;
+  font: 500 15px/53px "Montserrat", sans-serif;
+  color: #4DD6DC;
   border-width: 1px;
   border-style: solid;
   border-radius: 4px;
@@ -502,7 +548,7 @@ button:focus {
 }
 
 .slider_btn {
-  font: 500 14px/20px "Nunito", sans-serif;
+  font: 500 14px/20px "Montserrat", sans-serif;
   border-radius: 45px;
   padding: 15px 35px;
   background: #fff;
@@ -513,7 +559,7 @@ button:focus {
 }
 
 .btn_three {
-  font: 500 14px "Nunito", sans-serif;
+  font: 500 14px "Montserrat", sans-serif;
   color: #fff;
   background: #7444fd;
   border-radius: 3px;
@@ -533,14 +579,14 @@ button:focus {
 }
 
 .agency_banner_btn {
-  font: 500 14px "Nunito", sans-serif;
+  font: 500 14px "Montserrat", sans-serif;
   color: #fff;
-  background: #5e2ced;
+  background: #3087E9;
   -webkit-box-shadow: 0px 20px 30px 0px rgba(12, 0, 46, 0.1);
   box-shadow: 0px 20px 30px 0px rgba(12, 0, 46, 0.1);
   border-radius: 3px;
   padding: 16px 38px;
-  border: 1px solid #5e2ced;
+  border: 1px solid #3087E9;
   -webkit-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
@@ -548,14 +594,14 @@ button:focus {
 }
 
 .agency_banner_btn:hover {
-  color: #5e2ced;
+  color: #3087E9;
   -webkit-box-shadow: none;
   box-shadow: none;
   background: transparent;
 }
 
 .agency_banner_btn_two {
-  font: 500 14px "Nunito", sans-serif;
+  font: 500 14px "Montserrat", sans-serif;
   color: #222d39;
   position: relative;
   margin-left: 50px;
@@ -578,15 +624,15 @@ button:focus {
 }
 
 .agency_banner_btn_two:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .agency_banner_btn_two:hover:before {
-  background: #5e2ced;
+  background: #3087E9;
 }
 
 .software_banner_btn {
-  font: 500 14px "Nunito", sans-serif;
+  font: 500 14px "Montserrat", sans-serif;
   color: #fff;
   background: #3d64f4;
   -webkit-box-shadow: 0px 20px 30px 0px rgba(12, 0, 46, 0.1);
@@ -606,7 +652,7 @@ button:focus {
 }
 
 .video_btn {
-  font: 500 14px "Nunito", sans-serif;
+  font: 500 14px "Montserrat", sans-serif;
   color: #fff;
   margin-left: 30px;
   cursor: pointer;
@@ -647,7 +693,7 @@ button:focus {
 }
 
 .btn_four {
-  font: 500 14px "Nunito", sans-serif;
+  font: 500 14px "Montserrat", sans-serif;
   padding: 16px 40px;
   border-radius: 45px;
   color: #fff;
@@ -657,7 +703,7 @@ button:focus {
 }
 
 .btn_fourAdmin {
-  font: 500 14px "Nunito", sans-serif;
+  font: 500 14px "Montserrat", sans-serif;
   padding: 16px 40px;
   border-radius: 45px;
   color: #fff;
@@ -716,7 +762,7 @@ button:focus {
 }
 
 .gr_btn {
-  font: 500 14px "Nunito", sans-serif;
+  font: 500 14px "Montserrat", sans-serif;
   color: #23b1fe;
   display: inline-block;
   padding: 15px 31px;
@@ -817,12 +863,12 @@ button:focus {
 }
 
 .seo_btn_one {
-  color: #5e2ced;
+  color: #3087E9;
   background: #e8e1fc;
 }
 
 .seo_btn_one:hover {
-  background: #5e2ced;
+  background: #3087E9;
   color: #fff;
 }
 
@@ -938,7 +984,7 @@ button:focus {
     width: 8em;
   }
   .ctn-preloader .animation-preloader .txt-loading {
-    font: bold 3.5em "Nunito", sans-serif;
+    font: bold 3.5em "Montserrat", sans-serif;
   }
 }
 
@@ -948,7 +994,7 @@ button:focus {
     width: 7em;
   }
   .ctn-preloader .animation-preloader .txt-loading {
-    font: bold 2em "Nunito", sans-serif;
+    font: bold 2em "Montserrat", sans-serif;
   }
 }
 
@@ -998,7 +1044,7 @@ button:focus {
 }
 
 .menu > .nav-item > .nav-link {
-  font: 500 15px "Nunito", sans-serif;
+  font: 500 15px "Montserrat", sans-serif;
   color: #051441;
   padding: 0px;
   -webkit-transition: color 0.3s ease 0s;
@@ -1011,8 +1057,8 @@ button:focus {
 .menu > .nav-item > .nav-link:before {
   content: "";
   width: 0;
-  height: 1px;
-  background: #6754e2;
+  height: 2.5px;
+  background: #4DD6DC;
   position: absolute;
   bottom: 0;
   left: auto;
@@ -1064,7 +1110,7 @@ button:focus {
 .menu > .nav-item.submenu .dropdown-menu .nav-item .nav-link {
   padding: 0px;
   white-space: nowrap;
-  font: 400 14px/34px "Nunito", sans-serif;
+  font: 400 14px/34px "Montserrat", sans-serif;
   color: #051441;
   -webkit-transition: color 0.2s linear;
   -o-transition: color 0.2s linear;
@@ -1213,7 +1259,7 @@ button:focus {
   .navdropdown_link
   .navdropdown_content
   h5 {
-  font: 500 16px "Nunito", sans-serif;
+  font: 500 16px "Montserrat", sans-serif;
   color: #13112d;
   margin-bottom: 0px;
 }
@@ -1365,7 +1411,7 @@ button:focus {
   > .dropdown-menu
   > .nav-item
   > .nav-link {
-  font: 500 18px "Nunito", sans-serif;
+  font: 500 18px "Montserrat", sans-serif;
   color: #13112d;
 }
 
@@ -1543,7 +1589,7 @@ button:focus {
   .nav-item
   .item
   .rebon_tap {
-  font: 500 12px "Nunito", sans-serif;
+  font: 500 12px "Montserrat", sans-serif;
   color: #fff;
   background: #f91f43;
   display: block;
@@ -1622,7 +1668,7 @@ button:focus {
   .nav-item
   .item
   .text {
-  font: 500 16px/22px "Nunito", sans-serif;
+  font: 500 16px/22px "Montserrat", sans-serif;
   color: #13112d;
   display: block;
   margin-top: 20px;
@@ -1771,7 +1817,7 @@ button:focus {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: #6754e2;
+  background: #4DD6DC;
   color: #fff;
   font-size: 11px;
   display: block;
@@ -1846,7 +1892,7 @@ button:focus {
   font-size: 15px;
   font-weight: 500;
   line-height: 22px;
-  font-family: "Nunito", sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin-bottom: 10px;
   -webkit-transition: color 0.3s linear;
   -o-transition: color 0.3s linear;
@@ -1862,7 +1908,7 @@ button:focus {
   p {
   font-size: 14px;
   line-height: 22px;
-  font-family: "Nunito", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #333;
   font-weight: 300;
   margin-bottom: 0px;
@@ -1910,7 +1956,7 @@ button:focus {
   .cart-single-item
   .cart-remove
   a:hover {
-  color: #6754e2;
+  color: #4DD6DC;
 }
 
 .navbar
@@ -1929,7 +1975,7 @@ button:focus {
   .cart-single-item:hover
   .cart-title
   a {
-  color: #6754e2;
+  color: #4DD6DC;
 }
 
 .navbar .search_cart .shpping-cart .dropdown-menu .cart_f {
@@ -1962,8 +2008,8 @@ button:focus {
   margin: 0px;
   line-height: 40px;
   padding: 0px 32px;
-  background: #6754e2;
-  border: 1px solid #6754e2;
+  background: #4DD6DC;
+  border: 1px solid #4DD6DC;
   color: #fff;
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
@@ -1978,7 +2024,7 @@ button:focus {
   .cart-button
   .get_btn:hover {
   background: transparent;
-  color: #6754e2;
+  color: #4DD6DC;
 }
 
 .navbar
@@ -1991,7 +2037,7 @@ button:focus {
   + .get_btn {
   margin-left: 10px;
   background: transparent;
-  color: #6754e2;
+  color: #4DD6DC;
 }
 
 .navbar
@@ -2002,7 +2048,7 @@ button:focus {
   .cart-button
   .get_btn
   + .get_btn:hover {
-  background: #6754e2;
+  background: #4DD6DC;
   color: #fff;
 }
 
@@ -2030,6 +2076,8 @@ button:focus {
 
 .w_menu .nav-item .nav-link {
   color: #fff;
+  /* line-height: 35px; */
+  padding-bottom: 10px;
 }
 
 .w_menu .nav-item .nav-link:before {
@@ -2037,7 +2085,7 @@ button:focus {
 }
 
 .nav_right_btn .login_btn {
-  font: 500 15px "Nunito", sans-serif;
+  font: 500 15px "Montserrat", sans-serif;
   padding: 13px 32px;
   min-width: 120px;
   display: inline-block;
@@ -2074,8 +2122,8 @@ button:focus {
 }
 
 .menu_four .btn_get:hover {
-  background: #5e2ced;
-  border-color: #5e2ced;
+  background: #3087E9;
+  border-color: #3087E9;
 }
 
 .menu_four .btn_get_radious {
@@ -2097,6 +2145,7 @@ button:focus {
 
 .menu_five .menu > .nav-item .nav-link {
   color: #fff;
+  
 }
 
 .menu_five .menu > .nav-item.submenu .dropdown-menu .nav-item:hover > .nav-link,
@@ -2117,6 +2166,7 @@ button:focus {
   > .nav-item
   > .nav-link {
   color: #051441;
+
 }
 
 .menu_five .btn_get {
@@ -2338,7 +2388,7 @@ button:focus {
 .menu_one .tracking_btn {
   font-size: 16px;
   color: #fff;
-  background: #6754e2;
+  background: #4DD6DC;
   border: 0px;
   padding: 0px 50px;
   line-height: 42px;
@@ -2398,7 +2448,7 @@ button:focus {
   left: 0;
   margin: 4px 0;
   display: block;
-  background: #5e2ced;
+  background: #3087E9;
   border-radius: 3px;
   -webkit-transition: 0.2s ease-in-out;
   -o-transition: 0.2s ease-in-out;
@@ -2435,7 +2485,7 @@ button:focus {
 
 .menu_toggle .hamburger-cross span {
   display: block;
-  background: #5e2ced;
+  background: #3087E9;
   border-radius: 3px;
   -webkit-transition: 0.2s ease-in-out;
   -o-transition: 0.2s ease-in-out;
@@ -2520,18 +2570,18 @@ button:focus {
 }
 
 .header_area_three .menu_four .btn_get {
-  border-color: #5e2ced;
-  background: #5e2ced;
+  border-color: #3087E9;
+  background: #3087E9;
   color: #fff;
 }
 
 .header_area_three .menu_four .btn_get:hover {
   background: transparent;
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .header_area_three.navbar_fixed .menu_four .btn_get {
-  border-color: #5e2ced !important;
+  border-color: #3087E9 !important;
 }
 
 .header_area_four .header_top {
@@ -2545,7 +2595,7 @@ button:focus {
 }
 
 .header_area_four .header_top a:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .header_area_four + section {
@@ -2563,7 +2613,7 @@ button:focus {
 .header_contact_info li {
   display: inline-block;
   font-size: 14px;
-  font-family: "Nunito", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   color: #fff;
   text-transform: capitalize;
@@ -2614,7 +2664,7 @@ button:focus {
 }
 
 .header_area_six .header_top a:hover {
-  color: #5e2ced !important;
+  color: #3087E9 !important;
 }
 
 .header_area_six .header_top .header_contact_info li {
@@ -2634,7 +2684,7 @@ button:focus {
 }
 
 .header_area_seven .header_top {
-  background: #5e2ced;
+  background: #3087E9;
   padding: 0px;
 }
 
@@ -2685,7 +2735,7 @@ button:focus {
 
 .header_area_seven .header_top .header_top_menu li a {
   font-size: 12px;
-  font-family: "Nunito", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
   color: #fff;
   -webkit-transition: opacity 0.2s linear;
@@ -2734,15 +2784,15 @@ button:focus {
   box-shadow: none;
 }
 .navbar_fixed .header_area .menu_one .btn_get.new_btn {
-  color: #6754e2;
+  color: #4DD6DC;
   border: 2px solid #ccc5fa;
   background: transparent;
 }
 
 .navbar_fixed .header_area .menu_one .btn_get.new_btn:hover {
   color: #fff;
-  background: #5e2ced;
-  border-color: #5e2ced;
+  background: #3087E9;
+  border-color: #3087E9;
 }
 
 .navbar_fixed .header_area .sticky_logo img {
@@ -2815,11 +2865,11 @@ button:focus {
   border-color: #ccc5fa;
 }
 .menu_four .btn_get:hover {
-  background: #5e2ced;
-  border-color: #5e2ced;
+  background: #3087E9;
+  border-color: #3087E9;
 }
 .navbar_fixed .header_area .menu_four .btn_get:hover {
-  border-color: #6754e2;
+  border-color: #4DD6DC;
 }
 .menu_one.erp_menu .er_btn {
   box-shadow: none;
@@ -2836,7 +2886,7 @@ button:focus {
 
 .navbar_fixed .header_area .menu_four .menu_toggle .hamburger span,
 .navbar_fixed .header_area .menu_four .menu_toggle .hamburger-cross span {
-  background: #6754e2;
+  background: #4DD6DC;
 }
 
 .navbar_fixed .header_area .nav_right_btn .login_btn {
@@ -3202,7 +3252,7 @@ button:focus {
   display: inline-block;
   color: #fff;
   font-weight: 700;
-  font-family: "Nunito", sans-serif;
+  font-family: "Montserrat", sans-serif;
   -webkit-transform: translateY(45px);
   -ms-transform: translateY(45px);
   transform: translateY(45px);
@@ -3622,7 +3672,7 @@ button:focus {
   background-color: white;
   -webkit-box-shadow: 0px 30px 30px 0px rgba(0, 11, 40, 0.1);
   box-shadow: 0px 30px 30px 0px rgba(0, 11, 40, 0.1);
-  font: 400 15px/46px "Nunito", sans-serif;
+  font: 400 15px/46px "Montserrat", sans-serif;
   padding-left: 30px;
   color: #051441;
   z-index: 0;
@@ -3798,7 +3848,7 @@ button:focus {
   padding-left: 30px;
   -webkit-box-shadow: 0px 2px 3px 0px rgba(12, 0, 46, 0.06);
   box-shadow: 0px 2px 3px 0px rgba(12, 0, 46, 0.06);
-  font: 300 14px/28px "Nunito", sans-serif;
+  font: 300 14px/28px "Montserrat", sans-serif;
   border: 1px solid transparent;
 }
 
@@ -3825,7 +3875,7 @@ button:focus {
 }
 
 .prototype_content .banner_subscribe .subcribes .form-control:focus {
-  border-color: #6754e2;
+  border-color: #4DD6DC;
 }
 
 .partner_logo {
@@ -3920,6 +3970,60 @@ button:focus {
   border-top-right-radius: 15px;
 }
 
+
+
+
+.box {
+  position: absolute;
+  /* z-index: 1; */
+  top: -1vh;
+  /* left: 13vw; */
+  width: 100vw;
+  height: 60%;
+  transform-style: preserve-3d;
+  animation: animate 10s linear infinite;
+  /* border: brown solid 2px; */
+  /* background: #fff; */
+  transform: perspective(500px);
+  justify-content: center;
+  align-items: center;
+}
+.light {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 50%;
+  /*height 80 bolgood uz*/
+  height: 60%;
+  /* border: brown solid 2px; */
+  /* background: linear-gradient(0deg, #f1f1f1, #bbb, #f1f1f1); */
+  border-radius: 20px;
+}
+
+/* .box span:nth-child(1) {
+  transform: rotateX(0deg);
+} */
+
+@keyframes animate {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  50%{
+        transform: perspective(1000px) rotateY(180deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+
+  /* 0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(359deg);
+  } */
+}
+
 /*============= app_banner_area css ===========*/
 
 .light-house{
@@ -3936,7 +4040,6 @@ button:focus {
   left: 50%;
   transform: translateX(-50%);
   top: -3vw;
-
   position: absolute;
   z-index: -1;
 }
@@ -4003,10 +4106,10 @@ button:focus {
 
 /*================ agency_banner_area_two css ===============*/
 .agency_banner_area_two {
-  background-image: -moz-linear-gradient(40deg, #5e2ced 0%, #a485fd 100%);
-  background-image: -webkit-linear-gradient(40deg, #5e2ced 0%, #a485fd 100%);
-  background-image: -ms-linear-gradient(40deg, #5e2ced 0%, #a485fd 100%);
-  background-image: linear-gradient(40deg, #5e2ced 0%, #a485fd 100%);
+  background-image: -moz-linear-gradient(40deg, #3087E9 0%, #a485fd 100%);
+  background-image: -webkit-linear-gradient(40deg, #3087E9 0%, #a485fd 100%);
+  background-image: -ms-linear-gradient(40deg, #3087E9 0%, #a485fd 100%);
+  background-image: linear-gradient(40deg, #3087E9 0%, #a485fd 100%);
   padding: 230px 0px 140px;
   position: relative;
   z-index: 1;
@@ -4050,7 +4153,7 @@ button:focus {
 }
 
 .agency_content_two .agency_banner_btn {
-  color: #5e2ced;
+  color: #3087E9;
   border-color: #fff;
   background: #fff;
 }
@@ -4140,7 +4243,7 @@ button:focus {
   background-color: white;
   -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 11, 40, 0.1);
   box-shadow: 0px 8px 16px 0px rgba(0, 11, 40, 0.1);
-  font: 300 16px/36px "Nunito", sans-serif;
+  font: 300 16px/36px "Montserrat", sans-serif;
   border: 0px;
   color: #a1a8be;
   height: 60px;
@@ -4172,7 +4275,7 @@ button:focus {
   position: absolute;
   top: 0;
   right: 0;
-  font: 400 14px/60px "Nunito", sans-serif;
+  font: 400 14px/60px "Montserrat", sans-serif;
   color: #fff;
   background: #1c7ce7;
   border-radius: 4px;
@@ -4365,7 +4468,7 @@ button:focus {
 
 .payment_content_two h2 {
   font-size: 50px;
-  font-family: "Nunito", sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 66px;
   color: #fff;
   font-weight: 400;
@@ -4584,7 +4687,7 @@ button:focus {
 }
 
 .new_startup_content h2 {
-  font: 300 50px "Nunito", sans-serif;
+  font: 300 50px "Montserrat", sans-serif;
   line-height: 58px;
 }
 
@@ -5231,10 +5334,10 @@ button:focus {
 /*====================================================*/
 /*================= Start breadcrumb_area css =================*/
 .breadcrumb_area {
-  background-image: -moz-linear-gradient(180deg, #5e2ced 0%, #a485fd 100%);
-  background-image: -webkit-linear-gradient(180deg, #5e2ced 0%, #a485fd 100%);
-  background-image: -ms-linear-gradient(180deg, #5e2ced 0%, #a485fd 100%);
-  background-image: linear-gradient(180deg, #5e2ced 0%, #a485fd 100%);
+  background-image: -moz-linear-gradient(180deg, #3087E9 0%, #a485fd 100%);
+  background-image: -webkit-linear-gradient(180deg, #3087E9 0%, #a485fd 100%);
+  background-image: -ms-linear-gradient(180deg, #3087E9 0%, #a485fd 100%);
+  background-image: linear-gradient(180deg, #3087E9 0%, #a485fd 100%);
   position: relative;
   z-index: 1;
   padding: 235px 0px 125px;
@@ -5271,7 +5374,7 @@ button:focus {
 }
 
 .breadcrumb_area_two .bubble li {
-  background: #5e2ced;
+  background: #3087E9;
   opacity: 0.1;
   width: 16px;
   height: 16px;
@@ -5502,9 +5605,9 @@ button:focus {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-image: -moz-linear-gradient(-140deg, #5e2ced 0%, #8037da 100%);
-  background-image: -webkit-linear-gradient(-140deg, #5e2ced 0%, #8037da 100%);
-  background-image: -ms-linear-gradient(-140deg, #5e2ced 0%, #8037da 100%);
+  background-image: -moz-linear-gradient(-140deg, #3087E9 0%, #8037da 100%);
+  background-image: -webkit-linear-gradient(-140deg, #3087E9 0%, #8037da 100%);
+  background-image: -ms-linear-gradient(-140deg, #3087E9 0%, #8037da 100%);
   opacity: 0.9;
   z-index: -1;
 }
@@ -5592,9 +5695,9 @@ button:focus {
 }
 
 .s_service_item {
-  background-image: -moz-linear-gradient(40deg, #6754e2 0%, #19cce6 100%);
-  background-image: -webkit-linear-gradient(40deg, #6754e2 0%, #19cce6 100%);
-  background-image: -ms-linear-gradient(40deg, #6754e2 0%, #19cce6 100%);
+  background-image: -moz-linear-gradient(40deg, #4DD6DC 0%, #19cce6 100%);
+  background-image: -webkit-linear-gradient(40deg, #4DD6DC 0%, #19cce6 100%);
+  background-image: -ms-linear-gradient(40deg, #4DD6DC 0%, #19cce6 100%);
   -webkit-box-shadow: 0px 20px 60px 0px rgba(0, 11, 40, 0.06);
   box-shadow: 0px 20px 60px 0px rgba(0, 11, 40, 0.06);
   padding: 50px 40px 40px;
@@ -5631,7 +5734,7 @@ button:focus {
 }
 
 .s_service_item .icon.icon_3 {
-  color: #6754e2;
+  color: #4DD6DC;
   background-color: rgba(103, 84, 226, 0.059);
   border-color: rgba(103, 84, 226, 0.3);
 }
@@ -5692,7 +5795,7 @@ button:focus {
 
 .learn_btn_two:before {
   content: "";
-  height: 1px;
+  height: 2.5px;
   width: 0;
   position: absolute;
   left: 0;
@@ -5782,11 +5885,11 @@ button:focus {
 .s_features_item.s_features_item_two .s_features_content .icon_square {
   background-color: rgba(94, 44, 237, 0.059);
   border-color: rgba(94, 44, 237, 0.3);
-  color: #6754e2;
+  color: #4DD6DC;
 }
 
 .learn_btn {
-  font: 500 16px/25px "Nunito", sans-serif;
+  font: 500 16px/25px "Montserrat", sans-serif;
   color: #051441;
   vertical-align: middle;
   display: inline-block;
@@ -6233,7 +6336,7 @@ button:focus {
 }
 
 .agency_featured_item .agency_featured_content h3 {
-  font: 500 26px/36px "Nunito", sans-serif;
+  font: 500 26px/36px "Montserrat", sans-serif;
   color: #222d39;
   margin: 32px 0px 25px;
 }
@@ -6247,10 +6350,10 @@ button:focus {
   height: 46px;
   line-height: 46px;
   border-radius: 50%;
-  background-image: -moz-linear-gradient(40deg, #5e2ced 0%, #a485fd 100%);
-  background-image: -webkit-linear-gradient(40deg, #5e2ced 0%, #a485fd 100%);
-  background-image: -ms-linear-gradient(40deg, #5e2ced 0%, #a485fd 100%);
-  background-image: linear-gradient(40deg, #5e2ced 0%, #a485fd 100%);
+  background-image: -moz-linear-gradient(40deg, #3087E9 0%, #a485fd 100%);
+  background-image: -webkit-linear-gradient(40deg, #3087E9 0%, #a485fd 100%);
+  background-image: -ms-linear-gradient(40deg, #3087E9 0%, #a485fd 100%);
+  background-image: linear-gradient(40deg, #3087E9 0%, #a485fd 100%);
   -webkit-box-shadow: 0px 10px 20px 0px rgba(94, 44, 237, 0.2);
   box-shadow: 0px 10px 20px 0px rgba(94, 44, 237, 0.2);
   font-size: 20px;
@@ -6289,7 +6392,7 @@ button:focus {
 }
 
 .software_featured_item .learn_btn {
-  font: 400 14px/26px "Nunito", sans-serif;
+  font: 400 14px/26px "Montserrat", sans-serif;
   color: #222d39;
   position: relative;
   margin-top: 0px;
@@ -6551,10 +6654,10 @@ button:focus {
 }
 
 .app_item.item_two {
-  background-image: -moz-linear-gradient(40deg, #5e2ced 0%, #a485fd 100%);
-  background-image: -webkit-linear-gradient(40deg, #5e2ced 0%, #a485fd 100%);
-  background-image: -ms-linear-gradient(40deg, #5e2ced 0%, #a485fd 100%);
-  background-image: linear-gradient(40deg, #5e2ced 0%, #a485fd 100%);
+  background-image: -moz-linear-gradient(40deg, #3087E9 0%, #a485fd 100%);
+  background-image: -webkit-linear-gradient(40deg, #3087E9 0%, #a485fd 100%);
+  background-image: -ms-linear-gradient(40deg, #3087E9 0%, #a485fd 100%);
+  background-image: linear-gradient(40deg, #3087E9 0%, #a485fd 100%);
   -webkit-box-shadow: 0px 20px 40px 0px rgba(94, 44, 237, 0.4);
   box-shadow: 0px 20px 40px 0px rgba(94, 44, 237, 0.4);
   left: 120px;
@@ -6912,7 +7015,7 @@ button:focus {
 }
 
 .payment_features_item h4 {
-  font: 600 20px/26px "Nunito", sans-serif;
+  font: 600 20px/26px "Montserrat", sans-serif;
   color: #051441;
   margin-bottom: 22px;
 }
@@ -7441,7 +7544,7 @@ button:focus {
   width: 540px;
   height: 540px;
   border-radius: 50%;
-  background: #5e2ced;
+  background: #3087E9;
   right: -126px;
   z-index: -1;
   opacity: 0.06;
@@ -7510,10 +7613,10 @@ button:focus {
   border-radius: 50%;
   color: #fff;
   text-align: center;
-  background-image: -moz-linear-gradient(40deg, #5e2ced 0%, #a485fd 100%);
-  background-image: -webkit-linear-gradient(40deg, #5e2ced 0%, #a485fd 100%);
-  background-image: -ms-linear-gradient(40deg, #5e2ced 0%, #a485fd 100%);
-  background-image: linear-gradient(40deg, #5e2ced 0%, #a485fd 100%);
+  background-image: -moz-linear-gradient(40deg, #3087E9 0%, #a485fd 100%);
+  background-image: -webkit-linear-gradient(40deg, #3087E9 0%, #a485fd 100%);
+  background-image: -ms-linear-gradient(40deg, #3087E9 0%, #a485fd 100%);
+  background-image: linear-gradient(40deg, #3087E9 0%, #a485fd 100%);
   box-shadow: 0px 14px 30px 0px rgba(94, 44, 237, 0.4);
   position: absolute;
   right: 30px;
@@ -7521,10 +7624,10 @@ button:focus {
 }
 
 .service_item .icon.s_icon_one {
-  background-image: -moz-linear-gradient(40deg, #5e2ced 0%, #a485fd 100%);
-  background-image: -webkit-linear-gradient(40deg, #5e2ced 0%, #a485fd 100%);
-  background-image: -ms-linear-gradient(40deg, #5e2ced 0%, #a485fd 100%);
-  background-image: linear-gradient(40deg, #5e2ced 0%, #a485fd 100%);
+  background-image: -moz-linear-gradient(40deg, #3087E9 0%, #a485fd 100%);
+  background-image: -webkit-linear-gradient(40deg, #3087E9 0%, #a485fd 100%);
+  background-image: -ms-linear-gradient(40deg, #3087E9 0%, #a485fd 100%);
+  background-image: linear-gradient(40deg, #3087E9 0%, #a485fd 100%);
   box-shadow: 0px 14px 30px 0px rgba(94, 44, 237, 0.4);
 }
 
@@ -7912,7 +8015,7 @@ button:focus {
 }
 
 .agency_service_item a {
-  font: 400 14px/26px "Nunito", sans-serif;
+  font: 400 14px/26px "Montserrat", sans-serif;
   color: #222d39;
   vertical-align: middle;
   position: relative;
@@ -7949,16 +8052,16 @@ button:focus {
 }
 
 .agency_service_item p:hover a {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .agency_service_item p:hover a:before {
   width: 132%;
-  background: #5e2ced;
+  background: #3087E9;
 }
 
 .agency_service_item p:hover i {
-  color: #5e2ced;
+  color: #3087E9;
   padding-left: 12px;
 }
 
@@ -8000,7 +8103,7 @@ button:focus {
   border: 0px;
   border-left: 4px solid #e6e8ef;
   background: transparent;
-  font: 400 16px "Nunito", sans-serif;
+  font: 400 16px "Montserrat", sans-serif;
   color: #677294;
   position: relative;
 }
@@ -8045,7 +8148,7 @@ button:focus {
 }
 
 .software_service_tab_content .software_service_item h5 {
-  font: 600 17px/25px "Nunito", sans-serif;
+  font: 600 17px/25px "Montserrat", sans-serif;
   color: #222d39;
 }
 
@@ -8075,7 +8178,7 @@ button:focus {
 }
 
 .developer_product_content .develor_tab .nav-item .nav-link {
-  font: 400 16px "Nunito", sans-serif;
+  font: 400 16px "Montserrat", sans-serif;
   color: #677294;
   border: 0px;
   padding: 0px 0px 10px;
@@ -8117,7 +8220,7 @@ button:focus {
 }
 
 .developer_product_content .developer_tab_content .details_btn {
-  font: 400 14px "Nunito", sans-serif;
+  font: 400 14px "Montserrat", sans-serif;
   color: #3d64f4;
   position: relative;
   display: inline-block;
@@ -8142,19 +8245,19 @@ button:focus {
 }
 
 .c_violet:before {
-  background: #5e2ced;
+  background: #3087E9;
 }
 
 .c_violet:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .d_product_content_two .develor_tab .nav-item .nav-link:before {
-  background: #5e2ced;
+  background: #3087E9;
 }
 
 .d_product_content_two .develor_tab .nav-item .nav-link.active {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .tab_img_info {
@@ -8222,7 +8325,7 @@ button:focus {
 
 .app_service_item .app_icon.three {
   text-shadow: 0px 14px 30px rgba(94, 44, 237, 0.4);
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .app_service_item .learn_btn_two {
@@ -8239,11 +8342,11 @@ button:focus {
 }
 
 .app_service_item .learn_btn_two.c_violet:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .app_service_item .learn_btn_two.c_violet:hover:before {
-  background: #5e2ced;
+  background: #3087E9;
 }
 
 .app_service_item:hover {
@@ -8270,7 +8373,7 @@ button:focus {
 }
 
 .service_details ul li {
-  font: 400 16px "Nunito", sans-serif;
+  font: 400 16px "Montserrat", sans-serif;
   color: #677294;
   position: relative;
   padding-left: 35px;
@@ -8281,7 +8384,7 @@ button:focus {
   position: absolute;
   left: 0;
   top: 5px;
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .service_details ul li:last-child {
@@ -8305,9 +8408,9 @@ button:focus {
 }
 
 .saas_service_item .saas_service_content .icon.icon_one {
-  background-image: -moz-linear-gradient(40deg, #5e2ced 0%, #a485fd 100%);
-  background-image: -webkit-linear-gradient(40deg, #5e2ced 0%, #a485fd 100%);
-  background-image: -ms-linear-gradient(40deg, #5e2ced 0%, #a485fd 100%);
+  background-image: -moz-linear-gradient(40deg, #3087E9 0%, #a485fd 100%);
+  background-image: -webkit-linear-gradient(40deg, #3087E9 0%, #a485fd 100%);
+  background-image: -ms-linear-gradient(40deg, #3087E9 0%, #a485fd 100%);
   -webkit-box-shadow: 0px 10px 20px 0px rgba(94, 44, 237, 0.2);
   box-shadow: 0px 10px 20px 0px rgba(94, 44, 237, 0.2);
 }
@@ -8470,7 +8573,7 @@ button:focus {
 .stratup_service_info .startup_service_item h3 {
   font-size: 18px;
   font-weight: 600;
-  font-family: "Nunito", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #051441;
   margin-bottom: 2px;
 }
@@ -8514,7 +8617,7 @@ button:focus {
   font-size: 20px;
   font-weight: 500;
   line-height: 30px;
-  font-family: "Nunito", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .progress_bar_area .progress_item p {
@@ -8531,7 +8634,7 @@ button:focus {
   transform: translate(-50%, -50%);
   font-size: 40px;
   color: #051441;
-  font-family: "Nunito", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
 }
 
@@ -8586,7 +8689,7 @@ button:focus {
 }
 
 .case_study_item h3:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .case_study_item:hover .text {
@@ -8620,7 +8723,7 @@ button:focus {
 }
 
 .study_details ul li {
-  font: 400 15px "Nunito", sans-serif;
+  font: 400 15px "Montserrat", sans-serif;
   color: #677294;
   margin-bottom: 15px;
 }
@@ -8678,7 +8781,7 @@ button:focus {
 }
 
 .study_details_three .study_details_content ul li {
-  font: 400 15px/34px "Nunito", sans-serif;
+  font: 400 15px/34px "Montserrat", sans-serif;
   color: #282835;
   position: relative;
   padding-left: 25px;
@@ -8690,7 +8793,7 @@ button:focus {
   left: 0;
   top: 0;
   font-family: "themify";
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 /*============= seo_service_area css =============*/
@@ -8719,7 +8822,7 @@ button:focus {
 }
 
 .seo_service_item h4:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .seo_service_item p {
@@ -8739,7 +8842,7 @@ button:focus {
 }
 
 .seo_service_item i:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .seo_service_item:hover {
@@ -8768,7 +8871,7 @@ button:focus {
 }
 
 .case_studies_slider .slick-dots li.slick-active button {
-  background: #5e2ced;
+  background: #3087E9;
 }
 
 .studies_item {
@@ -8792,7 +8895,7 @@ button:focus {
   margin-bottom: 3px;
 }
 .studies_item .text h4:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .studies_item .text p {
@@ -8821,7 +8924,7 @@ button:focus {
 }
 
 .s_pricing-item .tag_label {
-  font: 400 16px/22px "Nunito", sans-serif;
+  font: 400 16px/22px "Montserrat", sans-serif;
   color: #fff;
   background: #5f2eed;
   -webkit-transform: rotate(90deg);
@@ -8886,7 +8989,7 @@ button:focus {
 }
 
 .s_pricing-item .s_price_icon.p_icon2 {
-  color: #6754e2;
+  color: #4DD6DC;
 }
 
 .s_pricing-item .s_price_icon.p_icon3 {
@@ -8979,7 +9082,7 @@ button:focus {
 }
 
 .s_subcribes .form-control {
-  font: 300 16px/100px "Nunito", sans-serif;
+  font: 300 16px/100px "Montserrat", sans-serif;
   color: #9ea4b7;
   height: 100px;
   padding: 0px 0px 0px 50px;
@@ -9012,7 +9115,7 @@ button:focus {
 .s_subcribes .btn-submit {
   position: absolute;
   background: transparent;
-  color: #6754e2;
+  color: #4DD6DC;
   right: 40px;
   line-height: 100px;
   padding: 0px;
@@ -9049,7 +9152,7 @@ button:focus {
 
 .price_tab .nav-item .nav-link {
   margin: 0px;
-  font: 400 16px "Nunito", sans-serif;
+  font: 400 16px "Montserrat", sans-serif;
   color: #677294;
   padding: 12px 30px;
   display: inline-block;
@@ -9122,7 +9225,7 @@ button:focus {
 
 .price_content .price_item .tag {
   position: absolute;
-  font: 400 14px "Nunito", sans-serif;
+  font: 400 14px "Montserrat", sans-serif;
   color: #fff;
   background: #00aff0;
   padding: 19px 32px;
@@ -9162,7 +9265,7 @@ button:focus {
 }
 
 .price_content .price_item .p_list li {
-  font: 300 16px/40px "Nunito", sans-serif;
+  font: 300 16px/40px "Montserrat", sans-serif;
   color: #505975;
 }
 
@@ -9425,10 +9528,10 @@ button:focus {
 
 /*================= action area three css =================*/
 .action_area_three {
-  background-image: -moz-linear-gradient(0deg, #5e2ced 0%, #6c3cf4 100%);
-  background-image: -webkit-linear-gradient(0deg, #5e2ced 0%, #6c3cf4 100%);
-  background-image: -ms-linear-gradient(0deg, #5e2ced 0%, #6c3cf4 100%);
-  background-image: linear-gradient(0deg, #5e2ced 0%, #6c3cf4 100%);
+  background-image: -moz-linear-gradient(0deg, #3087E9 0%, #6c3cf4 100%);
+  background-image: -webkit-linear-gradient(0deg, #3087E9 0%, #6c3cf4 100%);
+  background-image: -ms-linear-gradient(0deg, #3087E9 0%, #6c3cf4 100%);
+  background-image: linear-gradient(0deg, #3087E9 0%, #6c3cf4 100%);
   position: relative;
   z-index: 1;
 }
@@ -9467,12 +9570,12 @@ button:focus {
 .action_area_three .action_content .about_btn:hover {
   -webkit-box-shadow: none;
   box-shadow: none;
-  color: #5e2ced;
+  color: #3087E9;
   background: #fff;
 }
 
 .action_area_three .action_content .white_btn {
-  color: #5e2ced;
+  color: #3087E9;
   -webkit-box-shadow: none;
   box-shadow: none;
   background: #fff;
@@ -9483,7 +9586,7 @@ button:focus {
   -webkit-box-shadow: 0px 20px 30px 0px rgba(12, 0, 46, 0.1);
   box-shadow: 0px 20px 30px 0px rgba(12, 0, 46, 0.1);
   color: #fff;
-  background: #5e2ced;
+  background: #3087E9;
 }
 
 /*=========== payment_priceing_area css ===========*/
@@ -9586,7 +9689,7 @@ button:focus {
 
 .payment_price_item .payment_price_btn {
   font-size: 15px;
-  font-family: "Nunito", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   border-radius: 45px;
   background: rgba(253, 83, 135, 0.1);
@@ -9773,7 +9876,7 @@ button:focus {
 }
 
 .price_info_two .price_item .pr_title:hover:before {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .price_info_two .price_item .check {
@@ -9802,8 +9905,8 @@ button:focus {
 }
 
 .price_info_two .price_btn:hover {
-  background: #5e2ced;
-  border-color: #5e2ced;
+  background: #3087E9;
+  border-color: #3087E9;
   color: #fff;
 }
 
@@ -9814,7 +9917,7 @@ button:focus {
   opacity: 1;
   -webkit-box-shadow: 0px 20px 40px 0px rgba(12, 0, 46, 0.14);
   box-shadow: 0px 20px 40px 0px rgba(12, 0, 46, 0.14);
-  font-size: "Nunito", sans-serif;
+  font-size: "Montserrat", sans-serif;
   font-size: 16px;
   color: #677294;
   line-height: 26px;
@@ -9862,10 +9965,10 @@ button:focus {
 }
 
 .about_content {
-  background-image: -moz-linear-gradient(40deg, #5e2ced 0%, #a485fd 100%);
-  background-image: -webkit-linear-gradient(40deg, #5e2ced 0%, #a485fd 100%);
-  background-image: -ms-linear-gradient(40deg, #5e2ced 0%, #a485fd 100%);
-  background-image: linear-gradient(40deg, #5e2ced 0%, #a485fd 100%);
+  background-image: -moz-linear-gradient(40deg, #3087E9 0%, #a485fd 100%);
+  background-image: -webkit-linear-gradient(40deg, #3087E9 0%, #a485fd 100%);
+  background-image: -ms-linear-gradient(40deg, #3087E9 0%, #a485fd 100%);
+  background-image: linear-gradient(40deg, #3087E9 0%, #a485fd 100%);
   height: 100%;
   color: #fff;
   padding: 100px;
@@ -9879,13 +9982,13 @@ button:focus {
 }
 
 .about_btn {
-  font: 500 14px "Nunito", sans-serif;
+  font: 500 14px "Montserrat", sans-serif;
   padding: 17px 28px;
   background: #fbfbfd;
   -webkit-box-shadow: 0px 20px 30px 0px rgba(12, 0, 46, 0.1);
   box-shadow: 0px 20px 30px 0px rgba(12, 0, 46, 0.1);
   border-radius: 3px;
-  color: #5e2ced;
+  color: #3087E9;
   display: inline-block;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -9894,7 +9997,7 @@ button:focus {
 
 .about_btn:hover {
   color: #fff;
-  background: #5e2ced;
+  background: #3087E9;
 }
 
 .about_img {
@@ -9994,7 +10097,7 @@ button:focus {
   width: 100px;
   height: 100px;
   text-align: center;
-  color: #5e2ced;
+  color: #3087E9;
   line-height: 100px;
   font-size: 22px;
   background-color: #fbfbfd;
@@ -10059,7 +10162,7 @@ button:focus {
   .testimonial_item
   .author_description
   h6 {
-  font: 400 14px/26px "Nunito", sans-serif;
+  font: 400 14px/26px "Montserrat", sans-serif;
   color: #959cb1;
 }
 
@@ -10108,7 +10211,7 @@ button:focus {
 }
 
 .agency_testimonial_info .testimonial_slider .owl-dots .owl-dot.active {
-  border-color: #5e2ced;
+  border-color: #3087E9;
 }
 
 .agency_testimonial_info .testimonial_slider .owl-dots .owl-dot.active span {
@@ -10155,7 +10258,7 @@ button:focus {
 
 .agency_testimonial_info .slick-prev:hover,
 .agency_testimonial_info .slick-next:hover {
-  background: #5e2ced;
+  background: #3087E9;
 }
 .agency_testimonial_info .slick-prev:hover:before,
 .agency_testimonial_info .slick-next:hover:before {
@@ -10234,7 +10337,7 @@ button:focus {
 .subscribe_form_info .subscribe-form .form-control {
   text-align: center;
   border: 0px;
-  font: 400 18px/28px "Nunito", sans-serif;
+  font: 400 18px/28px "Montserrat", sans-serif;
   color: #b4bacc;
   border-radius: 0px;
   border-bottom: 1px solid #3d64f4;
@@ -10270,13 +10373,13 @@ button:focus {
 }
 
 .s_form_info_two .subscribe-form .form-control {
-  border-color: #5e2ced;
+  border-color: #3087E9;
 }
 
 .s_form_info_two .subscribe-form .btn_four {
   border-radius: 4px;
-  border-color: #5e2ced;
-  background: #5e2ced;
+  border-color: #3087E9;
+  background: #3087E9;
   -webkit-box-shadow: 0px 20px 30px 0px rgba(61, 100, 244, 0.16);
   box-shadow: 0px 20px 30px 0px rgba(61, 100, 244, 0.16);
 }
@@ -10389,7 +10492,7 @@ button:focus {
 /*============== saas_signup_area css ==============*/
 .saas_signup_form .input-group .form-control {
   background: transparent;
-  font: 300 14px "Nunito", sans-serif;
+  font: 300 14px "Montserrat", sans-serif;
   color: rgba(255, 255, 255, 0.7);
   border-radius: 0px;
   border: 0px;
@@ -10508,10 +10611,10 @@ button:focus {
 }
 
 .fact_author_img_two .box_four {
-  background-image: -moz-linear-gradient(90deg, #5e2ced 0%, #a485fd 100%);
-  background-image: -webkit-linear-gradient(90deg, #5e2ced 0%, #a485fd 100%);
-  background-image: -ms-linear-gradient(90deg, #5e2ced 0%, #a485fd 100%);
-  background-image: linear-gradient(90deg, #5e2ced 0%, #a485fd 100%);
+  background-image: -moz-linear-gradient(90deg, #3087E9 0%, #a485fd 100%);
+  background-image: -webkit-linear-gradient(90deg, #3087E9 0%, #a485fd 100%);
+  background-image: -ms-linear-gradient(90deg, #3087E9 0%, #a485fd 100%);
+  background-image: linear-gradient(90deg, #3087E9 0%, #a485fd 100%);
 }
 
 /*============ feedback_area css ==============*/
@@ -10880,7 +10983,7 @@ button:focus {
   text-align: center;
   color: #f6f6fa;
   font-weight: 700;
-  font-family: "Nunito", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 200px;
   line-height: 200px;
   z-index: -1;
@@ -11044,7 +11147,7 @@ button:focus {
 }
 
 .ex_team_item h5 {
-  font: 300 14px/24px "Nunito", sans-serif;
+  font: 300 14px/24px "Montserrat", sans-serif;
   color: #677294;
   margin-bottom: 0px;
 }
@@ -11299,7 +11402,7 @@ button:focus {
 /*============ payment_testimonial_area css =============*/
 .payment_testimonial_area {
   background: #fafbff;
-  padding-top: 150px;
+  padding-top: 80px;
 }
 
 .payment_testimonial_area .testimonial_img {
@@ -11323,7 +11426,7 @@ button:focus {
   transform: rotate(180deg);
   left: -35px;
   top: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Montserrat", sans-serif;
   height: 133px;
 }
 
@@ -11464,7 +11567,7 @@ button:focus {
 }
 
 .payment_subscribe_info .payment_subscribe_content h2 {
-  font: 600 26px "Nunito", sans-serif;
+  font: 600 26px "Montserrat", sans-serif;
   color: #fff;
 }
 
@@ -11552,7 +11655,7 @@ button:focus {
 .testimonial_title h6 {
   font-size: 16px;
   color: #563bd1;
-  font-family: "Nunito", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-style: italic;
 }
 
@@ -11898,7 +12001,7 @@ button:focus {
 }
 
 .seo_call_to_action_area {
-  background: #5e2ced;
+  background: #3087E9;
 }
 
 .seo_call_action_text {
@@ -12064,7 +12167,7 @@ button:focus {
 }
 
 .get_content .app_btn {
-  font: 500 16px "Nunito", sans-serif;
+  font: 500 16px "Montserrat", sans-serif;
   padding: 12px 34px;
   border-color: #fff;
   background: #fff;
@@ -12198,7 +12301,7 @@ button:focus {
 }
 
 .job_listing .job_list_tab .list_item_tab {
-  font: 300 15px/26px "Nunito", sans-serif;
+  font: 300 15px/26px "Montserrat", sans-serif;
   color: #677294;
   padding: 0px 0px 10px;
   border: 0px;
@@ -12297,7 +12400,7 @@ button:focus {
 }
 
 .job_listing .listing_tab .list_item .joblisting_text h4 a:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .job_listing .listing_tab .list_item .joblisting_text ul {
@@ -12306,7 +12409,7 @@ button:focus {
 
 .job_listing .listing_tab .list_item .joblisting_text ul li {
   float: left;
-  font: 300 14px/15px "Nunito", sans-serif;
+  font: 300 14px/15px "Montserrat", sans-serif;
   color: #677294;
   padding: 0px 10px;
   border-left: 2px solid #aeb3c3;
@@ -12318,7 +12421,7 @@ button:focus {
 }
 
 .job_listing .listing_tab .list_item .joblisting_text ul li.p_color {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .job_listing .listing_tab .list_item .joblisting_text ul li.g_color {
@@ -12339,7 +12442,7 @@ button:focus {
   .joblisting_text
   .jobsearch-job-userlist
   .apply_btn {
-  font: 300 14px/36px "Nunito", sans-serif;
+  font: 300 14px/36px "Montserrat", sans-serif;
   color: #5c6789;
   border: 1px solid #e7e7f6;
   border-radius: 3px;
@@ -12356,8 +12459,8 @@ button:focus {
   .joblisting_text
   .jobsearch-job-userlist
   .apply_btn:hover {
-  background: #5e2ced;
-  border-color: #5e2ced;
+  background: #3087E9;
+  border-color: #3087E9;
   color: #fff;
 }
 
@@ -12391,7 +12494,7 @@ button:focus {
   .jobsearch-job-userlist
   .like-btn
   a:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .job_listing .listing_tab .list_item:hover {
@@ -12422,7 +12525,7 @@ button:focus {
 }
 
 .job_listing .pagination .nav-links .page-numbers.current {
-  background: #5e2ced;
+  background: #3087E9;
   color: #fff;
 }
 
@@ -12435,8 +12538,8 @@ button:focus {
 .details_content .btn_three {
   min-width: 150px;
   text-align: center;
-  background: #5e2ced;
-  border-color: #5e2ced;
+  background: #3087E9;
+  border-color: #3087E9;
   color: #fff;
 }
 
@@ -12508,7 +12611,7 @@ button:focus {
 .job_info .info_item h6 {
   font-size: 18px;
   color: #222d39;
-  font-family: "Nunito", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   margin-bottom: 5px;
 }
@@ -12532,7 +12635,7 @@ button:focus {
   background-color: white;
   -webkit-box-shadow: 0px 2px 4px 0px rgba(12, 0, 46, 0.04);
   box-shadow: 0px 2px 4px 0px rgba(12, 0, 46, 0.04);
-  font: 300 15px/60px "Nunito", sans-serif;
+  font: 300 15px/60px "Montserrat", sans-serif;
   color: #9ca3b9;
   width: 100%;
   height: 60px;
@@ -12584,13 +12687,13 @@ button:focus {
 .apply_form .upload_box {
   width: 100%;
   border: 1px dotted #e7e3f2;
-  font: 300 15px/26px "Nunito", sans-serif;
+  font: 300 15px/26px "Montserrat", sans-serif;
   color: #9ca3b9;
   padding: 20px 50px;
 }
 
 .apply_form .upload_box input[type="file"] {
-  font: 300 15px/26px "Nunito", sans-serif;
+  font: 300 15px/26px "Montserrat", sans-serif;
   color: #9ca3b9;
   display: block;
   margin-top: 45px;
@@ -12601,7 +12704,7 @@ button:focus {
 }
 
 .apply_form p {
-  font: 300 15px/26px "Nunito", sans-serif;
+  font: 300 15px/26px "Montserrat", sans-serif;
   color: #677294;
 }
 
@@ -12612,7 +12715,7 @@ button:focus {
 .apply_form .btn_three {
   font-size: 14px;
   font-weight: 500;
-  background: #5e2ced;
+  background: #3087E9;
   padding: 14px 37px;
   border-radius: 3px;
   -webkit-transition: all 0.3s linear;
@@ -12650,7 +12753,7 @@ button:focus {
 }
 
 .faq_tab .nav-item .nav-link {
-  font: 400 16px/22px "Nunito", sans-serif;
+  font: 400 16px/22px "Montserrat", sans-serif;
   color: #677294;
   padding: 0px;
   border: 0px;
@@ -12664,7 +12767,7 @@ button:focus {
   content: "";
   width: 0;
   height: 1px;
-  background: #5e2ced;
+  background: #3087E9;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -12674,7 +12777,7 @@ button:focus {
 }
 
 .faq_tab .nav-item .nav-link.active {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .faq_tab .nav-item .nav-link.active:before {
@@ -12695,11 +12798,11 @@ button:focus {
 }
 
 .faq_content .tab-pane .card .card-header .btn {
-  color: #5e2ced;
+  color: #3087E9;
   display: block;
   width: 100%;
   text-align: left;
-  font: 500 18px/26px "Nunito", sans-serif;
+  font: 500 18px/26px "Montserrat", sans-serif;
   padding: 20px 30px 20px 0px;
   position: relative;
   white-space: normal;
@@ -12734,7 +12837,7 @@ button:focus {
 
 .faq_content .tab-pane .card .card-body {
   padding: 0px 0px 45px;
-  font: 400 15px/26px "Nunito", sans-serif;
+  font: 400 15px/26px "Montserrat", sans-serif;
   color: #677294;
 }
 
@@ -12769,7 +12872,7 @@ button:focus {
 }
 
 .portfolio_filter .work_portfolio_item {
-  font: 400 16px/22px "Nunito", sans-serif;
+  font: 400 16px/22px "Montserrat", sans-serif;
   color: #677294;
   display: inline-block;
   border-radius: 3px;
@@ -12796,13 +12899,13 @@ button:focus {
 
 .portfolio_filter .work_portfolio_item.active,
 .portfolio_filter .work_portfolio_item:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .portfolio_filter .work_portfolio_item.active:before,
 .portfolio_filter .work_portfolio_item:hover:before {
   width: 100%;
-  background: #5e2ced;
+  background: #3087E9;
   right: auto;
   left: 0;
 }
@@ -13027,7 +13130,7 @@ button:focus {
 }
 
 .portfolio-description h3:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .portfolio-description .links {
@@ -13051,7 +13154,7 @@ button:focus {
   width: 0;
   height: 1px;
   bottom: 0;
-  background: #5e2ced;
+  background: #3087E9;
   position: absolute;
   left: auto;
   right: 0;
@@ -13061,7 +13164,7 @@ button:focus {
 }
 
 .portfolio-description .links a:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .portfolio-description .links a:hover:before {
@@ -13172,7 +13275,7 @@ button:focus {
 
 .pr_slider .owl-prev:hover,
 .pr_slider .owl-next:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .pr_slider .owl-prev {
@@ -13256,9 +13359,9 @@ button:focus {
   position: absolute;
   left: 0;
   font-size: 30px;
-  color: #5e2ced;
-  background-image: -moz-linear-gradient(0deg, #5e2ced 0%, #a485fd 100%);
-  background-image: -webkit-linear-gradient(0deg, #5e2ced 0%, #a485fd 100%);
+  color: #3087E9;
+  background-image: -moz-linear-gradient(0deg, #3087E9 0%, #a485fd 100%);
+  background-image: -webkit-linear-gradient(0deg, #3087E9 0%, #a485fd 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   top: 0px;
@@ -13299,7 +13402,7 @@ button:focus {
 }
 
 .contact_info_item a:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .contact_info_item + .contact_info_item {
@@ -13327,7 +13430,7 @@ button:focus {
 .text_box textarea,
 .text_box input[type="password"],
 .text_box input[type="email"] {
-  font: 400 15px/60px "Nunito", sans-serif;
+  font: 400 15px/60px "Montserrat", sans-serif;
   color: #222d39;
   height: 60px;
   border-radius: 4px;
@@ -13401,15 +13504,15 @@ button:focus {
 .contact_form_box .btn_three {
   min-width: 180px;
   text-align: center;
-  background: #5e2ced;
-  border-color: #5e2ced;
+  background: #3087E9;
+  border-color: #3087E9;
   margin-top: 0px;
   float: right;
 }
 
 .contact_form_box .btn_three:hover {
   background: transparent;
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .mapbox2 {
@@ -13465,7 +13568,7 @@ button:focus {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  font: 400 14px/30px "Nunito", sans-serif;
+  font: 400 14px/30px "Montserrat", sans-serif;
   margin-top: 45px;
 }
 
@@ -13515,7 +13618,7 @@ button:focus {
 
 .login-form .btn_three {
   width: 100%;
-  background: #5e2ced;
+  background: #3087E9;
   color: #fff;
   margin-top: 40px;
 }
@@ -13526,12 +13629,12 @@ button:focus {
 }
 
 .login-form .alter-login {
-  font: 400 15px/26px "Nunito", sans-serif;
+  font: 400 15px/26px "Montserrat", sans-serif;
   color: #9ca3b9;
 }
 
 .login-form .alter-login a {
-  color: #5e2ced;
+  color: #3087E9;
   display: inline-block;
   margin-left: 6px;
 }
@@ -13564,12 +13667,12 @@ button:focus {
 }
 
 .sign_info .sign_info_content ul li {
-  font: 400 16px/34px "Nunito", sans-serif;
+  font: 400 16px/34px "Montserrat", sans-serif;
   color: #677294;
 }
 
 .sign_info .sign_info_content ul li i {
-  color: #5e2ced;
+  color: #3087E9;
   margin-right: 10px;
 }
 
@@ -13578,7 +13681,7 @@ button:focus {
 }
 
 .sign_info .lead-text {
-  font: 400 14px/40px "Nunito", sans-serif;
+  font: 400 14px/40px "Montserrat", sans-serif;
   color: #677294;
   padding-right: 20px;
 }
@@ -13622,18 +13725,18 @@ button:focus {
 }
 
 .sign_info .sign-in-form .extra .forgotten-password a:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .sign_btn_transparent {
   display: inline-block;
   background: transparent;
-  border-color: #5e2ced;
-  color: #5e2ced;
+  border-color: #3087E9;
+  color: #3087E9;
 }
 
 .sign_btn_transparent:hover {
-  background: #5e2ced;
+  background: #3087E9;
   color: #fff;
 }
 
@@ -13643,7 +13746,7 @@ button:focus {
 }
 
 .get_quote_form .form-group .form-control {
-  font: 300 15px "Nunito", sans-serif;
+  font: 300 15px "Montserrat", sans-serif;
   color: #677294;
   border-radius: 4px;
   background-color: white;
@@ -13740,7 +13843,7 @@ button:focus {
 
 .saasland_container .saasland_col_content .saasland_content h2 {
   font-size: 30px;
-  font-family: "Nunito", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #747d99;
   margin-bottom: 30px;
   font-weight: 400;
@@ -13755,7 +13858,7 @@ button:focus {
 }
 
 .saasland_container .saasland_col_content .saasland_content .car_theme_btn {
-  font-family: "Nunito", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   text-transform: capitalize;
 }
@@ -13765,18 +13868,18 @@ button:focus {
   left: 21%;
   position: absolute;
   width: 70%;
-  font: 400 12px/40px "Nunito", sans-serif;
+  font: 400 12px/40px "Montserrat", sans-serif;
   color: #7f88a6;
 }
 
 .saasland_container .saasland_col_content .saasland_bottom a {
-  color: #6754e2;
+  color: #4DD6DC;
 }
 
 .saasland_col_screen {
-  background-image: -moz-linear-gradient(-120deg, #5e2ced 0%, #a485fd 100%);
-  background-image: -webkit-linear-gradient(-120deg, #5e2ced 0%, #a485fd 100%);
-  background-image: -ms-linear-gradient(-120deg, #5e2ced 0%, #a485fd 100%);
+  background-image: -moz-linear-gradient(-120deg, #3087E9 0%, #a485fd 100%);
+  background-image: -webkit-linear-gradient(-120deg, #3087E9 0%, #a485fd 100%);
+  background-image: -ms-linear-gradient(-120deg, #3087E9 0%, #a485fd 100%);
   width: 60%;
   position: relative;
   z-index: 1;
@@ -13854,7 +13957,7 @@ button:focus {
 }
 
 .saasland_col_screen .saasland_social ul li a:hover {
-  color: #6754e2;
+  color: #4DD6DC;
 }
 
 #success,
@@ -13879,7 +13982,7 @@ button:focus {
 
 /*=============== seo_subscribe_area css ============*/
 .seo_subscribe_area {
-  background-color: #5e2ced;
+  background-color: #3087E9;
   padding: 120px 0px 150px;
   position: relative;
   overflow: hidden;
@@ -14094,7 +14197,7 @@ button:focus {
 }
 
 .error_content_two .search .form-control:focus {
-  border-color: #5e2ced;
+  border-color: #3087E9;
 }
 
 .error_content_two .about_btn {
@@ -14204,9 +14307,9 @@ button:focus {
   width: 120px;
   height: 120px;
   display: inline-block;
-  background-image: -moz-linear-gradient(50deg, #5e2ced 0%, #a485fd 100%);
-  background-image: -webkit-linear-gradient(50deg, #5e2ced 0%, #a485fd 100%);
-  background-image: -ms-linear-gradient(50deg, #5e2ced 0%, #a485fd 100%);
+  background-image: -moz-linear-gradient(50deg, #3087E9 0%, #a485fd 100%);
+  background-image: -webkit-linear-gradient(50deg, #3087E9 0%, #a485fd 100%);
+  background-image: -ms-linear-gradient(50deg, #3087E9 0%, #a485fd 100%);
   -webkit-box-shadow: inset 2px -3.464px 6px 0px rgba(34, 10, 104, 0.2);
   box-shadow: inset 2px -3.464px 6px 0px rgba(34, 10, 104, 0.2);
   border-radius: 50%;
@@ -14236,7 +14339,7 @@ button:focus {
 }
 
 .download_content p a {
-  color: #5e2ced;
+  color: #3087E9;
   position: relative;
 }
 
@@ -14244,7 +14347,7 @@ button:focus {
   content: "";
   width: 100%;
   height: 1px;
-  background: #5e2ced;
+  background: #3087E9;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -14294,11 +14397,11 @@ button:focus {
 }
 
 .thanks_content a:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .thanks_content a:hover:before {
-  border-color: #5e2ced;
+  border-color: #3087E9;
 }
 
 .thanks_content a:hover i {
@@ -14504,7 +14607,7 @@ p span {
   position: relative;
   z-index: 1;
   height: 400px;
-  background-color: #5e2ced;
+  background-color: #3087E9;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15128,9 +15231,9 @@ p span {
 }
 
 .blog_content .post_date h2 {
-  font: 700 30px/20px "Nunito", sans-serif;
+  font: 700 30px/20px "Montserrat", sans-serif;
   margin-bottom: 0px;
-  color: #5e2ced;
+  color: #3087E9;
   padding-top: 5px;
 }
 
@@ -15147,12 +15250,13 @@ p span {
 }
 
 .blog_content h5:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .blog_content .learn_btn_two {
-  font: 400 14px "Nunito", sans-serif;
+  font: 400 14px "Montserrat", sans-serif;
   color: #282835;
+  
 }
 
 .blog_content .learn_btn_two:before {
@@ -15166,15 +15270,15 @@ p span {
 }
 
 .blog_content .learn_btn_two:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .blog_content .learn_btn_two:hover:before {
-  background: #5e2ced;
+  background: #3087E9;
 }
 
 .entry_post_info {
-  font: 400 15px/25px "Nunito", sans-serif;
+  font: 400 15px/25px "Montserrat", sans-serif;
   color: #677294;
   padding-bottom: 5px;
 }
@@ -15197,9 +15301,9 @@ p span {
 }
 
 .blog_single .blockquote {
-  color: #5e2ced;
+  color: #3087E9;
   font-style: italic;
-  border-left: 4px solid #5e2ced;
+  border-left: 4px solid #3087E9;
   padding-left: 35px;
 }
 
@@ -15212,7 +15316,7 @@ p span {
 }
 
 .post_share a {
-  font: 400 14px/26px "Nunito", sans-serif;
+  font: 400 14px/26px "Montserrat", sans-serif;
   color: #525c7c;
 }
 
@@ -15221,7 +15325,7 @@ p span {
 }
 
 .post_share a:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .post_share a + a {
@@ -15236,7 +15340,7 @@ p span {
 }
 
 .post-nam {
-  font: 400 15px/26px "Nunito", sans-serif;
+  font: 400 15px/26px "Montserrat", sans-serif;
   color: #282835;
 }
 
@@ -15249,7 +15353,7 @@ p span {
 }
 
 .post_tag a {
-  font: 400 13px/26px "Nunito", sans-serif;
+  font: 400 13px/26px "Montserrat", sans-serif;
   color: #595b64;
   border: 1px solid #cfcfe6;
   border-radius: 3px;
@@ -15299,7 +15403,7 @@ p span {
 }
 
 .comment-box .post_comment .post_author .replay:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .comment-box .post_comment .post_author .media-body {
@@ -15344,7 +15448,7 @@ p span {
 }
 
 .blog-sidebar .widget.widget_search .search-form .form-control {
-  font: 300 14px "Nunito", sans-serif;
+  font: 300 14px "Montserrat", sans-serif;
   color: #677294;
   border-radius: 3px;
   background-color: white;
@@ -15403,7 +15507,7 @@ p span {
 }
 
 .blog-sidebar .widget.widget_search .search-form button:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .blog-sidebar .widget.widget_recent_post .post_item img {
@@ -15422,7 +15526,7 @@ p span {
 }
 
 .blog-sidebar .widget.widget_recent_post .post_item .media-body h3:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .blog-sidebar
@@ -15446,7 +15550,7 @@ p span {
 }
 
 .blog-sidebar .widget.widget_categorie ul li a {
-  font: 400 16px/35px "Nunito", sans-serif;
+  font: 400 16px/35px "Montserrat", sans-serif;
   color: #282835;
   -webkit-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
@@ -15466,8 +15570,8 @@ p span {
 }
 
 .blog-sidebar .widget.widget_categorie ul li a:hover span {
-  color: #5e2ced;
-  border-color: #5e2ced;
+  color: #3087E9;
+  border-color: #3087E9;
 }
 
 .blog-sidebar .widget.widget_tag_cloud .post-tags {
@@ -15477,7 +15581,7 @@ p span {
 }
 
 .blog-sidebar .widget.widget_tag_cloud .post-tags a {
-  font: 400 13px/26px "Nunito", sans-serif;
+  font: 400 13px/26px "Montserrat", sans-serif;
   color: #595b64;
   border: 1px solid #cfcfe6;
   border-radius: 3px;
@@ -15490,8 +15594,8 @@ p span {
 }
 
 .blog-sidebar .widget.widget_tag_cloud .post-tags a:hover {
-  /* background: #5e2ced;
-  border-color: #5e2ced; */
+  /* background: #3087E9;
+  border-color: #3087E9; */
   /* color: #fff; */
 }
 
@@ -15538,7 +15642,7 @@ p span {
 }
 
 .blog-sidebar .widget.search_widget_two .search-form .form-control:focus {
-  border-color: #5e2ced;
+  border-color: #3087E9;
   background: #fff;
 }
 
@@ -15569,13 +15673,13 @@ p span {
 }
 
 .blog-sidebar .widget.recent_post_widget_two .post_item .media-body h3 {
-  font: 500 16px/22px "Nunito", sans-serif;
+  font: 500 16px/22px "Montserrat", sans-serif;
   color: #222d39;
   margin-bottom: 0;
 }
 
 .blog-sidebar .widget.recent_post_widget_two .post_item .media-body h3:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .blog-sidebar
@@ -15611,7 +15715,7 @@ p span {
 }
 
 .blog-sidebar .widget.categorie_widget_two ul li a:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .blog-sidebar .widget.tag_widget_two .post-tags {
@@ -15632,7 +15736,7 @@ p span {
 }
 
 .blog-sidebar .widget.tag_widget_two .post-tags a:hover {
-  /* background: #5e2ced; */
+  /* background: #3087E9; */
   /* color: #fff; */
 }
 
@@ -15709,7 +15813,7 @@ p span {
   -webkit-box-shadow: 0px 14px 30px 0px rgba(68, 28, 183, 0.25);
   box-shadow: 0px 14px 30px 0px rgba(68, 28, 183, 0.25);
   text-align: center;
-  color: #5e2ced;
+  color: #3087E9;
   padding: 13px 26px;
   z-index: 1;
 }
@@ -15806,7 +15910,7 @@ p span {
 }
 
 .blog_list_item_two .blog_content .post-info-bottom .post-info-comments i {
-  color: #5e2ced;
+  color: #3087E9;
   padding-right: 5px;
 }
 
@@ -15817,6 +15921,7 @@ p span {
   line-height: 20px;
   display: inline-block;
   font-weight: 500;
+  padding-bottom: 10px;
 }
 
 .blog_list_item_two .blog_content .post-info-comments {
@@ -15830,12 +15935,12 @@ p span {
   line-height: 36px;
   font-weight: 600;
   color: #222d39;
-  font-family: "Nunito", sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin-bottom: 15px;
 }
 
 .blog_title:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .qutoe_post .blog_content {
@@ -15846,7 +15951,7 @@ p span {
   padding: 28px 40px 42px 40px;
   position: relative;
   overflow: hidden;
-  border-left: 6px solid #5e2ced;
+  border-left: 6px solid #3087E9;
   z-index: 0;
 }
 
@@ -15867,7 +15972,7 @@ p span {
 
 .qutoe_post .blog_content i {
   font-size: 30px;
-  color: #5e2ced;
+  color: #3087E9;
   padding-bottom: 12px;
   display: inline-block;
 }
@@ -16009,11 +16114,11 @@ p span {
   ul
   li
   a:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .blog_single_info .blog_titles {
-  font: 600 20px "Nunito", sans-serif;
+  font: 600 20px "Montserrat", sans-serif;
   color: #282835;
   margin-bottom: 30px;
 }
@@ -16026,7 +16131,7 @@ p span {
   padding: 28px 40px 22px 40px;
   position: relative;
   overflow: hidden;
-  border-left: 6px solid #5e2ced;
+  border-left: 6px solid #3087E9;
   z-index: 0;
   margin: 40px 0px 45px;
 }
@@ -16034,7 +16139,7 @@ p span {
 .blog_single_info blockquote:before {
   content: "\f10d";
   font-size: 30px;
-  color: #5e2ced;
+  color: #3087E9;
   padding-bottom: 12px;
   display: inline-block;
   font-family: "Font Awesome 5 Free";
@@ -16059,7 +16164,7 @@ p span {
 
 .blog_single_info blockquote i {
   font-size: 30px;
-  color: #5e2ced;
+  color: #3087E9;
   padding-bottom: 12px;
   display: inline-block;
 }
@@ -16099,12 +16204,12 @@ p span {
 }
 
 .post_author_two .media-body .comment_info h3 {
-  font: 500 18px/24px "Nunito", sans-serif;
+  font: 500 18px/24px "Montserrat", sans-serif;
   color: #282835;
 }
 
 .post_author_two .media-body .comment_info .comment-date {
-  font: 400 14px "Nunito", sans-serif;
+  font: 400 14px "Montserrat", sans-serif;
   color: #677294;
 }
 
@@ -16168,7 +16273,7 @@ p span {
 
 .comment_inner .comment_box .post_comment .post_author_two .comment_reply {
   float: right;
-  font: 500 13px/26px "Nunito", sans-serif;
+  font: 500 13px/26px "Montserrat", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #424255;
@@ -16185,7 +16290,7 @@ p span {
   .post_comment
   .post_author_two
   .comment_reply:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .comment_inner .comment_box .post_comment .post_author_two p {
@@ -16238,7 +16343,7 @@ p span {
 }
 
 .blog_comment_box .get_quote_form .form-group .form-control:focus {
-  border-color: #5e2ced;
+  border-color: #3087E9;
   background: #fff;
 }
 
@@ -16262,7 +16367,7 @@ p span {
 }
 
 .comments_widget ul li .comments_items .media-body p:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .comments_widget ul li .comments_items .media-body span {
@@ -16290,21 +16395,21 @@ p span {
   font-size: 15px;
   line-height: 26px;
   color: #282835;
-  font-family: "Nunito", sans-serif;
+  font-family: "Montserrat", sans-serif;
   min-height: 66px;
 }
 
 .widget_recent_comments #recentcomments .recentcomments:before {
   content: "\76";
   font-family: eleganticons;
-  border: 1px solid #5e2ced;
+  border: 1px solid #3087E9;
   text-align: center;
   line-height: 60px;
   width: 60px;
   height: 60px;
   border-radius: 50%;
   font-size: 20px;
-  color: #5e2ced;
+  color: #3087E9;
   -webkit-transition: background 0.3s linear, color 0.3s linear;
   -o-transition: background 0.3s linear, color 0.3s linear;
   transition: background 0.3s linear, color 0.3s linear;
@@ -16326,11 +16431,11 @@ p span {
 }
 
 .widget_recent_comments #recentcomments .recentcomments a:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .widget_recent_comments #recentcomments .recentcomments:hover:before {
-  background: #5e2ced;
+  background: #3087E9;
   color: #fff;
 }
 
@@ -16343,12 +16448,12 @@ p span {
 /*============= shop_grid_area css ==============*/
 .shop_menu_left p {
   margin-bottom: 0px;
-  font: 300 16px "Nunito", sans-serif;
+  font: 300 16px "Montserrat", sans-serif;
   color: #282835;
 }
 
 .shop_menu_right h5 {
-  font: 500 16px "Nunito", sans-serif;
+  font: 500 16px "Montserrat", sans-serif;
   color: #282835;
   margin-bottom: 5px;
 }
@@ -16364,7 +16469,7 @@ p span {
 }
 
 .shop_menu_right .selectpickers .current {
-  font: 300 16px "Nunito", sans-serif;
+  font: 300 16px "Montserrat", sans-serif;
   color: #677294;
 }
 
@@ -16381,7 +16486,7 @@ p span {
 }
 
 .shop_menu_right .shop_grid .active a {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .single_product_item {
@@ -16426,7 +16531,7 @@ p span {
 }
 
 .single_product_item .product_img .hover_content a:hover {
-  background: #5e2ced;
+  background: #3087E9;
   color: #fff;
 }
 
@@ -16447,7 +16552,7 @@ p span {
 }
 
 .single_product_item .single_pr_details h3:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .single_product_item .single_pr_details .price {
@@ -16461,7 +16566,7 @@ p span {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font: 300 14px/28px "Nunito", sans-serif;
+  font: 300 14px/28px "Montserrat", sans-serif;
   color: #677294;
 }
 
@@ -16516,13 +16621,13 @@ p span {
 }
 
 .shop_page_number li .page-numbers:hover {
-  border-color: #5e2ced;
-  color: #5e2ced;
+  border-color: #3087E9;
+  color: #3087E9;
 }
 
 .shop_page_number li .page-numbers.current {
-  background: #5e2ced;
-  border-color: #5e2ced;
+  background: #3087E9;
+  border-color: #3087E9;
   color: #fff;
 }
 
@@ -16555,7 +16660,7 @@ p span {
 }
 
 .shop_list_item .single_product_item .single_pr_details .pr_button .cart_btn {
-  font: 400 15px/30px "Nunito", sans-serif;
+  font: 400 15px/30px "Montserrat", sans-serif;
   color: #677294;
   border: 1px solid #e7e7f6;
   border-radius: 45px;
@@ -16573,8 +16678,8 @@ p span {
   .pr_button
   .cart_btn:hover {
   color: #fff;
-  background: #5e2ced;
-  border-color: #5e2ced;
+  background: #3087E9;
+  border-color: #3087E9;
 }
 
 .shop_list_item .single_product_item .single_pr_details .pr_button a {
@@ -16597,8 +16702,8 @@ p span {
 
 .shop_list_item .single_product_item .single_pr_details .pr_button a:hover {
   color: #fff;
-  background: #5e2ced;
-  border-color: #5e2ced;
+  background: #3087E9;
+  border-color: #3087E9;
 }
 
 .product_details_area .product_slider {
@@ -16645,7 +16750,7 @@ p span {
 }
 
 .pr_details .ratting .star-rating {
-  color: #5e2ced;
+  color: #3087E9;
   line-height: 12px;
 }
 
@@ -16662,7 +16767,7 @@ p span {
 }
 
 .pr_details .price {
-  font: 300 20px "Nunito", sans-serif;
+  font: 300 20px "Montserrat", sans-serif;
   color: #677294;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -16685,8 +16790,8 @@ p span {
 }
 
 .pr_details .stock {
-  font: 400 16px "Nunito", sans-serif;
-  color: #5e2ced;
+  font: 400 16px "Montserrat", sans-serif;
+  color: #3087E9;
   vertical-align: middle;
   padding-top: 20px;
   display: inline-block;
@@ -16695,7 +16800,7 @@ p span {
 .pr_details .stock:before {
   content: "\e64c";
   font-family: "themify";
-  color: #5e2ced;
+  color: #3087E9;
   padding-right: 10px;
 }
 
@@ -16732,7 +16837,7 @@ p span {
 
 .pr_details .product-qty .ar_top:hover,
 .pr_details .product-qty .ar_down:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .pr_details .product-qty .ar_top {
@@ -16749,7 +16854,7 @@ p span {
 
 .pr_details .cart_button .cart_btn {
   border-radius: 45px;
-  font: 400 15px/48px "Nunito", sans-serif;
+  font: 400 15px/48px "Montserrat", sans-serif;
   color: #677294;
   border: 1px solid #e7e7f6;
   background: #f8f8fc;
@@ -16779,9 +16884,9 @@ p span {
 
 .pr_details .cart_button .cart_btn:hover,
 .pr_details .cart_button .wish_list:hover {
-  background: #5e2ced;
+  background: #3087E9;
   color: #fff;
-  border-color: #5e2ced;
+  border-color: #3087E9;
 }
 
 .pr_details .product_meta {
@@ -16789,7 +16894,7 @@ p span {
 }
 
 .pr_details .product_meta li {
-  font-family: "Nunito", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
   color: #677294;
   margin-bottom: 10px;
@@ -16800,7 +16905,7 @@ p span {
 }
 
 .pr_details .product_meta li a:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .pr_details .product_meta li span {
@@ -16811,7 +16916,7 @@ p span {
 
 .pr_details .share-link label {
   margin-bottom: 0px;
-  font: 400 15px "Nunito", sans-serif;
+  font: 400 15px "Montserrat", sans-serif;
   color: #282835;
 }
 
@@ -16834,7 +16939,7 @@ p span {
 }
 
 .pr_details .share-link .social-icon li a:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .pr_details_area {
@@ -16862,7 +16967,7 @@ p span {
 }
 
 .product_info_details .pr_tab .nav-item .nav-link {
-  font: 300 16px/40px "Nunito", sans-serif;
+  font: 300 16px/40px "Montserrat", sans-serif;
   color: #677294;
   padding: 5px 25px;
   min-width: 148px;
@@ -16872,7 +16977,7 @@ p span {
 }
 
 .product_info_details .pr_tab .nav-item .nav-link.active {
-  background: #5e2ced;
+  background: #3087E9;
   color: #fff;
 }
 
@@ -16906,7 +17011,7 @@ p span {
 }
 
 .product_info_details .comment-box .comment-content .comment-header {
-  font: 300 14px "Nunito", sans-serif;
+  font: 300 14px "Montserrat", sans-serif;
   display: inline-block;
 }
 
@@ -16932,7 +17037,7 @@ p span {
 .product_info_details .comment-box .comment-content .ratting a:nth-child(1),
 .product_info_details .comment-box .comment-content .ratting a:nth-child(2),
 .product_info_details .comment-box .comment-content .ratting a:nth-child(3) {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .car_get_quote_content {
@@ -16948,7 +17053,7 @@ p span {
   border: 1px solid #ebebf7;
   border-radius: 4px;
   background: transparent;
-  font: 300 14px "Nunito", sans-serif;
+  font: 300 14px "Montserrat", sans-serif;
   color: #282835;
   padding-left: 25px;
   -webkit-box-shadow: none;
@@ -17005,7 +17110,7 @@ p span {
 .car_get_quote_content .ratting a:nth-child(4),
 .car_get_quote_content .ratting a:nth-child(2),
 .car_get_quote_content .ratting a:nth-child(3) {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .car_get_quote_content .agency_banner_btn {
@@ -17044,7 +17149,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .shopping_cart_area .cart_table td {
   vertical-align: middle;
-  font: 400 16px/28px "Nunito", sans-serif;
+  font: 400 16px/28px "Montserrat", sans-serif;
   color: #282835;
   border: 0px;
   padding-top: 0px;
@@ -17072,7 +17177,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .shopping_cart_area .cart_table .product .media .media-body h5 {
-  font: 500 16px/28px "Nunito", sans-serif;
+  font: 500 16px/28px "Montserrat", sans-serif;
   color: #282835;
 }
 
@@ -17100,7 +17205,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .shopping_cart_area .cart_table .del-item a:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .shopping_cart_area .cart_table .del-item a i {
@@ -17137,7 +17242,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .shopping_cart_area .cart_table .product-qty .ar_top:hover,
 .shopping_cart_area .cart_table .product-qty .ar_down:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .shopping_cart_area .cart_table .product-qty .ar_top {
@@ -17177,11 +17282,11 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .shopping_cart_area .cart_btn {
-  font: 400 14px "Nunito", sans-serif;
+  font: 400 14px "Montserrat", sans-serif;
   color: #fff;
-  border: 1px solid #5e2ced;
+  border: 1px solid #3087E9;
   margin: 0px;
-  background: #5e2ced;
+  background: #3087E9;
   padding: 15px 33px;
   border-radius: 4px;
 }
@@ -17211,7 +17316,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .shopping_cart_area .wislist_table .add_cart {
-  font: 400 14px "Nunito", sans-serif;
+  font: 400 14px "Montserrat", sans-serif;
   border: 1px solid #e7e7f6;
   background: transparent;
   color: #5c6789;
@@ -17224,9 +17329,9 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .shopping_cart_area .wislist_table .add_cart:hover {
-  background: #5e2ced;
+  background: #3087E9;
   color: #fff !important;
-  border-color: #5e2ced;
+  border-color: #3087E9;
 }
 
 .cart_box {
@@ -17252,7 +17357,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .cart_box .shop_table tbody tr td,
 .cart_box .shop_table tbody tr th {
-  font: 400 16px/28px "Nunito", sans-serif;
+  font: 400 16px/28px "Montserrat", sans-serif;
   color: #282835;
   padding: 10px 0px;
 }
@@ -17281,7 +17386,7 @@ input[type="number"]::-webkit-inner-spin-button {
   background-color: white;
   -webkit-box-shadow: 0px 2px 4px 0px rgba(12, 0, 46, 0.04);
   box-shadow: 0px 2px 4px 0px rgba(12, 0, 46, 0.04);
-  font: 300 15px "Nunito", sans-serif;
+  font: 300 15px "Montserrat", sans-serif;
   color: #9ca3b9;
   height: 55px;
   padding-left: 25px;
@@ -17299,7 +17404,7 @@ input[type="number"]::-webkit-inner-spin-button {
   position: absolute;
   right: 4px;
   top: 50%;
-  font: 400 14px/38px "Nunito", sans-serif;
+  font: 400 14px/38px "Montserrat", sans-serif;
   color: #282835;
   height: 48px;
   padding: 0px 25px;
@@ -17316,21 +17421,21 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .coupon .button:hover {
-  background: #5e2ced;
+  background: #3087E9;
   color: #fff;
 }
 
 .checkout_button {
-  font: 500 15px/30px "Nunito", sans-serif;
+  font: 500 15px/30px "Montserrat", sans-serif;
   color: #fff;
-  background: #5e2ced;
+  background: #3087E9;
   border-radius: 0px;
   display: block;
   text-align: center;
   padding: 10px 0px;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
-  border: 1px solid #5e2ced;
+  border: 1px solid #3087E9;
   -webkit-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
@@ -17338,24 +17443,24 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .checkout_button:hover {
   background: transparent;
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 /*================== check list css ======================*/
 .return_customer {
-  font: 400 15px/25px "Nunito", sans-serif;
+  font: 400 15px/25px "Montserrat", sans-serif;
   color: #3d3f45;
   padding-bottom: 20px;
 }
 
 .return_customer i {
-  color: #5e2ced;
+  color: #3087E9;
   padding-right: 8px;
   font-size: 14px;
 }
 
 .return_customer a {
-  color: #5e2ced;
+  color: #3087E9;
   font-weight: 300;
 }
 
@@ -17377,7 +17482,7 @@ input[type="number"]::-webkit-inner-spin-button {
   box-shadow: 0px 2px 4px 0px rgba(12, 0, 46, 0.04);
   background: #fff;
   padding: 0px 30px;
-  font: 300 14px/60px "Nunito", sans-serif;
+  font: 300 14px/60px "Montserrat", sans-serif;
   color: #969ca5;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -17412,7 +17517,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .checkout_content label {
-  font: 600 16px/50px "Nunito", sans-serif;
+  font: 600 16px/50px "Montserrat", sans-serif;
   display: block;
   color: #282835;
   margin-bottom: 20px;
@@ -17430,7 +17535,7 @@ input[type="number"]::-webkit-inner-spin-button {
   border: 0px;
   -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 11, 40, 0.06);
   box-shadow: 0px 2px 3px 0px rgba(0, 11, 40, 0.06);
-  font: 300 14px/60px "Nunito", sans-serif;
+  font: 300 14px/60px "Montserrat", sans-serif;
   background: #fff;
   height: 60px;
   color: #9ca3b9;
@@ -17483,7 +17588,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .checkout_content .l_text {
   display: inline-block;
-  font: 300 15px/26px "Nunito", sans-serif;
+  font: 300 15px/26px "Montserrat", sans-serif;
   color: #9ca3b9;
   padding-left: 8px;
 }
@@ -17495,7 +17600,7 @@ input[type="number"]::-webkit-inner-spin-button {
   -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 11, 40, 0.06);
   box-shadow: 0px 2px 3px 0px rgba(0, 11, 40, 0.06);
   height: 170px;
-  font: 300 14px/20px "Nunito", sans-serif;
+  font: 300 14px/20px "Montserrat", sans-serif;
   color: #b6b9be;
   padding-left: 30px;
   padding-top: 20px;
@@ -17523,7 +17628,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .checkout_content .tab_content p {
-  font-family: "Nunito", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 15px;
   margin-bottom: 0px;
   padding: 0px 0px 25px;
@@ -17546,9 +17651,9 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .checkout_content .tab_content .login_btn {
   float: right;
-  font: 400 16px/48px "Nunito", sans-serif;
-  background: #5e2ced;
-  border: 1px solid #5e2ced;
+  font: 400 16px/48px "Montserrat", sans-serif;
+  background: #3087E9;
+  border: 1px solid #3087E9;
   color: #fff;
   border-radius: 4px;
   padding: 0px 38px;
@@ -17559,7 +17664,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .checkout_content .tab_content .login_btn:hover {
   background: transparent;
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .checkout_content .tab_content .coupon_form {
@@ -17599,7 +17704,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .woocommerce-checkout-review-order .shop_table tbody tr td {
-  font: 400 15px/30px "Nunito", sans-serif;
+  font: 400 15px/30px "Montserrat", sans-serif;
   color: #677294;
 }
 
@@ -17608,7 +17713,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .woocommerce-checkout-review-order .shop_table tbody tr td.total {
-  color: #5e2ced;
+  color: #3087E9;
   font-size: 20px;
 }
 
@@ -17628,7 +17733,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .woocommerce-checkout-review-order h6 {
   font-size: 15px;
   color: #282835;
-  font-family: "Nunito", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   margin: 0px;
   line-height: 30px;
@@ -17640,7 +17745,7 @@ input[type="number"]::-webkit-inner-spin-button {
   line-height: 26px;
   color: #677294;
   font-weight: 300;
-  font-family: "Nunito", sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin-bottom: 25px;
 }
 
@@ -17682,7 +17787,7 @@ input[type="number"]::-webkit-inner-spin-button {
   li
   input[type="checkbox"]:checked
   + label:before {
-  border-color: #5e2ced;
+  border-color: #3087E9;
 }
 
 .woocommerce-checkout-review-order ul li .radio-btn {
@@ -17718,7 +17823,7 @@ input[type="number"]::-webkit-inner-spin-button {
   top: 4px;
   left: 3px;
   border-radius: 50%;
-  background: #5e2ced;
+  background: #3087E9;
   opacity: 0;
 }
 
@@ -17751,7 +17856,7 @@ input[type="number"]::-webkit-inner-spin-button {
   .condition
   input[type="checkbox"]:checked
   + label:before {
-  border-color: #5e2ced;
+  border-color: #3087E9;
 }
 
 .woocommerce-checkout-review-order .condition .l_text {
@@ -17759,7 +17864,7 @@ input[type="number"]::-webkit-inner-spin-button {
   padding-left: 25px;
   font-size: 16px;
   line-height: 26px;
-  font-family: "Nunito", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #282835;
 }
 
@@ -17785,7 +17890,7 @@ input[type="number"]::-webkit-inner-spin-button {
   display: block;
   width: 5px;
   height: 7px;
-  border: solid #5e2ced;
+  border: solid #3087E9;
   border-width: 0 2px 2px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -17798,9 +17903,9 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .woocommerce-checkout-review-order .button {
   width: 100%;
-  background: #5e2ced;
-  border: 1px solid #5e2ced;
-  font: 500 16px/50px "Nunito", sans-serif;
+  background: #3087E9;
+  border: 1px solid #3087E9;
+  font: 500 16px/50px "Montserrat", sans-serif;
   color: #fff;
   cursor: pointer;
   margin-top: 25px;
@@ -17811,7 +17916,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .woocommerce-checkout-review-order .button:hover {
   background: transparent;
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .pr_sidebar .widget + .widget {
@@ -17846,7 +17951,7 @@ input[type="number"]::-webkit-inner-spin-button {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #5e2ced;
+  background: #3087E9;
   border: 0px;
   margin-left: 0;
   top: -7px;
@@ -17859,7 +17964,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .pr_sidebar .filter_slider_area .filter_content {
   font-size: 16px;
   text-transform: capitalize;
-  font-family: "Nunito", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #282835;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -17895,7 +18000,7 @@ input[type="number"]::-webkit-inner-spin-button {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: #5e2ced;
+  background: #3087E9;
   opacity: 0;
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
@@ -17903,7 +18008,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .pr_sidebar .widget_category ul li a:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .pr_sidebar .widget_category ul li a:hover:before {
@@ -18036,7 +18141,7 @@ input[type="number"]::-webkit-inner-spin-button {
   left: 0;
   width: 100%;
   height: 1px;
-  background: #5e2ced;
+  background: #3087E9;
   opacity: 0;
   -webkit-transition: opacity 0.2s linear;
   -o-transition: opacity 0.2s linear;
@@ -18044,7 +18149,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .pr_sidebar .widget_tag ul li a:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .pr_sidebar .widget_tag ul li a:hover:before {
@@ -18177,7 +18282,7 @@ input[type="number"]::-webkit-inner-spin-button {
   color: rgba(255, 255, 255, 0.6);
   font-size: 24px;
   padding: 0px;
-  font-family: "Nunito", sans-serif;
+  font-family: "Montserrat", sans-serif;
   outline: none !important;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
@@ -18645,7 +18750,7 @@ input[type="text"] {
   line-height: 50px;
   color: #051441;
   font-weight: 700;
-  font-family: "Nunito", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .split_title span {
@@ -20590,7 +20695,7 @@ a .h_head:hover {
   font-size: 16px;
   font-weight: 500;
   color: #4e78f4;
-  font-family: "Nunito", sans-serif;
+  font-family: "Montserrat", sans-serif;
   border-radius: 45px;
   line-height: 26px;
   padding: 8px 27px;
@@ -20979,7 +21084,7 @@ a .h_head:hover {
 .pos_banner_text h6 {
   font-size: 14px;
   line-height: 30px;
-  font-family: "Nunito", sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 4px;
@@ -21777,7 +21882,7 @@ a .h_head:hover {
 }
 
 .support_help_area .support_item .software_banner_btn {
-  background-color: #6754e2;
+  background-color: #4DD6DC;
   -webkit-box-shadow: 0px 20px 30px 0px rgba(12, 0, 46, 0.1);
   box-shadow: 0px 20px 30px 0px rgba(12, 0, 46, 0.1);
 }
@@ -21853,7 +21958,7 @@ a .h_head:hover {
 }
 
 .support_price_area .price_content .price_item:hover {
-  border-color: #6754e2;
+  border-color: #4DD6DC;
 }
 
 .support_testimonial_info .testimonial_slider {
@@ -21959,7 +22064,7 @@ a .h_head:hover {
 
 .support_subscribe .btn-submit {
   border-radius: 50%;
-  background: #6754e2;
+  background: #4DD6DC;
   width: 70px;
   height: 70px;
   font-size: 20px;
@@ -21998,14 +22103,14 @@ a .h_head:hover {
   .s_features_content
   .learn_btn:hover:before,
 .price_btn:hover {
-  background: #6754e2;
+  background: #4DD6DC;
 }
 
 .banner_top .subcribes .form-control:focus,
 .price_btn,
 .s_subcribes .form-control,
 .f_widget.about-widget .f_list li a:before {
-  border-color: #6754e2;
+  border-color: #4DD6DC;
 }
 
 .s_features_item.s_features_item_two .s_features_content .learn_btn:hover,
@@ -22033,7 +22138,7 @@ a .h_head:hover {
   .nav-item
   .item.active
   .text {
-  color: #6754e2;
+  color: #4DD6DC;
 }
 
 .w_menu .nav-item:hover .nav-link,
@@ -23344,9 +23449,10 @@ a .h_head:hover {
 }
 
 .f_widget.about-widget .f_list li a {
-  font: 300 16px/20px "Nunito", sans-serif;
+  font: 300 16px/20px "Montserrat", sans-serif;
   color: #677294;
   position: relative;
+  padding-bottom: 10px;
   -webkit-transition: color 0.2s linear;
   -o-transition: color 0.2s linear;
   transition: color 0.2s linear;
@@ -23356,8 +23462,8 @@ a .h_head:hover {
 .f_widget.about-widget .f_list li a:before {
   content: "";
   width: 0;
-  height: 1px;
-  background: #6754e2;
+  height: 2.5px;
+  background: #4DD6DC;
   right: 0;
   left: auto;
   bottom: 0;
@@ -23383,7 +23489,7 @@ a .h_head:hover {
 }
 
 .f_subscribe .form-control {
-  font: 300 14px "Nunito", sans-serif;
+  font: 300 14px "Montserrat", sans-serif;
   color: #333;
   border: 1px solid #e2e7f3;
   border-radius: 3px;
@@ -23459,7 +23565,7 @@ a .h_head:hover {
 }
 
 .footer_bottom .f_menu li a:hover {
-  color: #6754e2;
+  color: #4DD6DC;
 }
 
 .footer_bottom .f_menu li + li {
@@ -23477,7 +23583,7 @@ a .h_head:hover {
 }
 
 .footer_bottom a:hover {
-  color: #6754e2;
+  color: #4DD6DC;
 }
 
 .f_social_icon_two a {
@@ -23639,23 +23745,23 @@ a .h_head:hover {
 }
 
 .footer_area_four .footer_top .f_widget.about-widget .f_list li a:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .footer_area_four .footer_top .f_widget.about-widget .f_list li a:hover:before {
-  background: #5e2ced;
+  background: #3087E9;
 }
 
 .footer_area_four .footer_top .f_widget .widget-wrap p a:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .footer_area_four .footer_bottom p a {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .footer_area_four .footer_bottom a:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 /*======= footer_area_five css ========*/
@@ -23792,7 +23898,7 @@ a .h_head:hover {
 }
 
 .error_footer a:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .error_footer .f_menu li a {
@@ -23803,7 +23909,7 @@ a .h_head:hover {
   content: "";
   width: 0;
   height: 1px;
-  background: #5e2ced;
+  background: #3087E9;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -23813,7 +23919,7 @@ a .h_head:hover {
 }
 
 .error_footer .f_menu li a:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .error_footer .f_menu li a:hover:before {
@@ -23920,19 +24026,19 @@ a .h_head:hover {
 }
 
 .footer_dark_two .dark_widget.company_widget .f_social_icon_two a:hover {
-  color: #6754e2;
+  color: #4DD6DC;
 }
 
 .footer_dark_two .dark_widget .widget-wrap p a:hover {
-  color: #6754e2;
+  color: #4DD6DC;
 }
 
 .footer_dark_two .dark_widget.about-widget .f_list li a:before {
-  background: #6754e2;
+  background: #4DD6DC;
 }
 
 .footer_dark_two .dark_widget.about-widget .f_list li a:hover {
-  color: #6754e2;
+  color: #4DD6DC;
 }
 
 .footer_dark_two .dark_f_bottom a {
@@ -23942,15 +24048,15 @@ a .h_head:hover {
 }
 
 .footer_dark_two .dark_f_bottom a:hover {
-  color: #6754e2;
+  color: #4DD6DC;
 }
 
 .footer_dark_two .dark_f_bottom p a {
-  color: #6754e2;
+  color: #4DD6DC;
 }
 
 .footer_dark_two .dark_f_bottom .f_menu li a:hover {
-  color: #6754e2;
+  color: #4DD6DC;
 }
 
 .footer_dark_three {
@@ -23969,7 +24075,7 @@ a .h_head:hover {
 }
 
 .footer_dark_three .dark_widget .widget-wrap p a:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .footer_dark_three .dark_widget.about-widget .f_list li a {
@@ -23977,11 +24083,11 @@ a .h_head:hover {
 }
 
 .footer_dark_three .dark_widget.about-widget .f_list li a:before {
-  background: #5e2ced;
+  background: #3087E9;
 }
 
 .footer_dark_three .dark_widget.about-widget .f_list li a:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .footer_dark_three .dark_f_bottom a {
@@ -23989,7 +24095,7 @@ a .h_head:hover {
 }
 
 .footer_dark_three .dark_f_bottom a:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .footer_dark_three .dark_f_bottom p {
@@ -23997,7 +24103,7 @@ a .h_head:hover {
 }
 
 .footer_dark_three .dark_f_bottom p a {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .footer_dark_three .dark_f_bottom .f_menu li a {
@@ -24005,7 +24111,7 @@ a .h_head:hover {
 }
 
 .footer_dark_three .dark_f_bottom .f_menu li a:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .footer_dark_four {
@@ -24089,7 +24195,7 @@ a .h_head:hover {
 }
 
 .footer_nine_bottom p {
-  font: 300 14px "Nunito", sans-serif;
+  font: 300 14px "Montserrat", sans-serif;
   color: #7f88a6;
 }
 
@@ -24105,7 +24211,7 @@ a .h_head:hover {
   padding: 0px;
   -webkit-box-shadow: none;
   box-shadow: none;
-  font: 400 14px "Nunito", sans-serif;
+  font: 400 14px "Montserrat", sans-serif;
   color: #7f88a6;
 }
 
@@ -24116,7 +24222,7 @@ a .h_head:hover {
   padding: 0px;
   -webkit-box-shadow: none;
   box-shadow: none;
-  font: 400 14px "Nunito", sans-serif;
+  font: 400 14px "Montserrat", sans-serif;
   color: #7f88a6;
 }
 
@@ -24312,7 +24418,7 @@ a .h_head:hover {
 }
 
 .new_footer_top .f_widget.about-widget .f_list li a:hover {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .new_footer_top .f_social_icon a {
@@ -24325,8 +24431,8 @@ a .h_head:hover {
 }
 
 .new_footer_top .f_social_icon a:hover {
-  background: #5e2ced;
-  border-color: #5e2ced;
+  background: #3087E9;
+  border-color: #3087E9;
 }
 
 .new_footer_top .f_social_icon a + a {
@@ -24397,7 +24503,7 @@ a .h_head:hover {
   margin-bottom: 30px;
 }
 .CircularProgressbar .CircularProgressbar-text {
-  font-family: "Nunito", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
 }
 
@@ -24759,7 +24865,7 @@ a .h_head:hover {
 }
 
 .price_info_two .price_item .pr_title:hover:before {
-  color: #5e2ced;
+  color: #3087E9;
 }
 
 .price_info_two .price_item .check {
@@ -24788,8 +24894,8 @@ a .h_head:hover {
 }
 
 .price_info_two .price_btn:hover {
-  background: #5e2ced;
-  border-color: #5e2ced;
+  background: #3087E9;
+  border-color: #3087E9;
   color: #fff;
 }
 
@@ -24800,7 +24906,7 @@ a .h_head:hover {
   opacity: 1;
   -webkit-box-shadow: 0px 20px 40px 0px rgba(12, 0, 46, 0.14);
   box-shadow: 0px 20px 40px 0px rgba(12, 0, 46, 0.14);
-  font-size: "Nunito", sans-serif;
+  font-size: "Montserrat", sans-serif;
   font-size: 16px;
   color: #677294;
   line-height: 26px;
@@ -25158,7 +25264,7 @@ a .h_head:hover {
 }
 
 .tracking_item .media-body h3:hover {
-  color: #6754e2;
+  color: #4DD6DC;
 }
 
 .tracking_item .media-body p {
@@ -25305,7 +25411,7 @@ a .h_head:hover {
 
 .tracking_price_inner .software_banner_btn {
   font-size: 16px;
-  background-color: #6754e2;
+  background-color: #4DD6DC;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -25336,7 +25442,7 @@ a .h_head:hover {
 }
 
 .tracking_getting_area .software_banner_btn {
-  background-color: #6754e2;
+  background-color: #4DD6DC;
   font-size: 16px;
   -webkit-box-shadow: 0px 17px 35px 0px rgba(103, 84, 226, 0.27);
   box-shadow: 0px 17px 35px 0px rgba(103, 84, 226, 0.27);
@@ -25424,8 +25530,8 @@ a .h_head:hover {
   font-size: 16px;
   padding: 11px 51px;
   border-radius: 45px;
-  background: #fd475d;
-  border: 2px solid #fd475d;
+  background: #3087E9;
+  border: 2px solid #3087E9;
   color: #fff;
 }
 
@@ -25448,9 +25554,9 @@ a .h_head:hover {
 }
 
 .event_btn_two:hover {
-  background: #fd475d;
+  background: #3087E9;
   color: #fff;
-  border-color: #fd475d;
+  border-color: #3087E9;
 }
 
 .event_counter_area {
@@ -25472,7 +25578,7 @@ a .h_head:hover {
 
 .event_text h3 span {
   font-weight: 700;
-  color: #fd475d;
+  color: #3087E9;
 }
 
 /* .event_counter .box > div {
@@ -25483,7 +25589,7 @@ a .h_head:hover {
 .event_counter .box {
   width: 165px;
   height: 165px;
-  border: 8px solid #fd475d;
+  border: 8px solid #3087E9;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -25495,14 +25601,14 @@ a .h_head:hover {
   font-size: 40px;
   font-weight: 600;
   line-height: 30px;
-  color: #fd475d;
+  color: #3087E9;
   margin-bottom: 5px;
 }
 
 .event_counter .box span {
   font-size: 16px;
   font-weight: 400;
-  color: #fd475d;
+  color: #3087E9;
 }
 .event_counter .box.two {
   border-color: #2d8dfa;
@@ -25570,7 +25676,7 @@ a .h_head:hover {
 .event_about_img .about_bg {
   height: 330px;
   border-radius: 10px;
-  background-image: linear-gradient(140deg, #fd475d 0%, #0e044b 100%);
+  background-image: linear-gradient(140deg, #3087E9 0%, #0e044b 100%);
   position: absolute;
   left: 90px;
   right: -50px;
@@ -25591,11 +25697,11 @@ a .h_head:hover {
 
 .event_team_area .slick-dots li button {
   border: 0px;
-  background: #f2dcdf;
+  background: #c1dbf8;
 }
 
 .event_team_area .slick-dots li.slick-active button {
-  background: #fd475d;
+  background: #3087E9;
 }
 
 .event_team_slider .item {
@@ -25681,7 +25787,7 @@ a .h_head:hover {
 
 .event_team_slider .item .e_team_img ul li a:hover {
   background: #fff;
-  color: #fd475d;
+  color: #3087E9;
 }
 
 .event_team_slider .item .e_team_img ul li:nth-child(1) a {
@@ -25712,7 +25818,7 @@ a .h_head:hover {
 }
 
 .event_team_slider .item h4:hover {
-  color: #fd475d;
+  color: #3087E9;
 }
 
 .event_team_slider .item p {
@@ -25786,7 +25892,7 @@ a .h_head:hover {
 }
 
 .event_features_item h5:hover {
-  color: #fd475d;
+  color: #3087E9;
 }
 
 .event_features_item p {
@@ -25805,7 +25911,7 @@ a .h_head:hover {
 }
 
 .event_features_item .e_features_btn:hover {
-  color: #fd475d;
+  color: #3087E9;
 }
 
 .event_promotion_area {
@@ -25838,7 +25944,7 @@ a .h_head:hover {
   color: #fff;
   display: inline-block;
   border-radius: 4px;
-  background: #fd475d;
+  background: #3087E9;
 }
 
 .e_promo_text h3 {
@@ -25881,7 +25987,7 @@ a .h_head:hover {
 
 .event_schedule_inner .event_tab .nav-item .nav-link {
   text-align: center;
-  border: 2px solid #fd475d;
+  border: 2px solid #3087E9;
   border-radius: 45px;
   padding: 6px 58px 8px;
   -webkit-transition: all 0.2s linear;
@@ -25893,7 +25999,7 @@ a .h_head:hover {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 0;
-  color: #fd475d;
+  color: #3087E9;
 }
 
 .event_schedule_inner .event_tab .nav-item .nav-link h5 span {
@@ -25905,7 +26011,7 @@ a .h_head:hover {
 
 .event_schedule_inner .event_tab .nav-item .nav-link.active,
 .event_schedule_inner .event_tab .nav-item .nav-link:hover {
-  background: #fd475d;
+  background: #3087E9;
   -webkit-box-shadow: 0px 10px 50px 0px rgba(195, 33, 52, 0.3);
   box-shadow: 0px 10px 50px 0px rgba(195, 33, 52, 0.3);
 }
@@ -25957,7 +26063,7 @@ a .h_head:hover {
 }
 
 .event_tab_content .media .media-left a i {
-  color: #fd475d;
+  color: #3087E9;
   padding-right: 8px;
 }
 
@@ -26065,7 +26171,7 @@ a .h_head:hover {
 }
 
 .event_price_item.active .p_head .rate {
-  color: #fd475d;
+  color: #3087E9;
 }
 
 .event_price_item.active .p_body li {
@@ -26096,7 +26202,7 @@ a .h_head:hover {
 }
 
 .event_gallery .portfolio_item .portfolio_img:hover .hover_content {
-  background-image: linear-gradient(-120deg, #fd475d 0%, #0e044b 100%);
+  background-image: linear-gradient(-120deg, #3087E9 0%, #0e044b 100%);
   opacity: 0.8;
 }
 
@@ -26183,7 +26289,7 @@ a .h_head:hover {
 }
 
 .event_location .f_social_icon_two a:hover {
-  color: #fd475d;
+  color: #3087E9;
 }
 
 /*============= chat_banner_area css ============*/
@@ -26421,7 +26527,7 @@ a .h_head:hover {
   font-weight: 700;
 }
 .chat_features_content a:hover {
-  color: #6754e2;
+  color: #4DD6DC;
 }
 
 .chat_features_img_two {
@@ -26535,7 +26641,7 @@ a .h_head:hover {
 }
 
 .chat_btn {
-  background: #6754e2;
+  background: #4DD6DC;
   color: #fff;
   padding: 9px 95px;
   border-radius: 4px;
@@ -26638,4 +26744,11 @@ a .h_head:hover {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+.navbar-logo{
+  fill: #fff;
+}
+
+.navbar_fixed .navbar-logo{
+  fill:#3087e9;
 }

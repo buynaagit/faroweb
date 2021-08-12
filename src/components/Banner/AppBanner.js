@@ -1,6 +1,11 @@
 import React from "react";
 import Reveal from "react-reveal";
+<<<<<<< HEAD
 import { getLocale } from "../../locales";
+=======
+import light from "../../img/home9/light.png";
+
+>>>>>>> 480e796b157f05e62369ad7d7a62f6285ae7f9e9
 
 const AppBanner = () => {
   
@@ -12,25 +17,23 @@ const AppBanner = () => {
             <Reveal bottom cascade>
               <div className="app_banner_contentmt mt_40">
                 <h2
-                  className="f_p f_700 f_size_50 w_color mb_20 wow fadeInLeft"
+                  className="f_p f_900 f_size_70 w_color mb_20 wow fadeInLeft"
                   data-wow-delay="0.2s"
                 >
-                 { getLocale("AppBanner1") }
+                   { getLocale("AppBanner1") } <br/>Limited<br/> Group
                   <br />
                 </h2>
                 <p
                   className="f_400 f_size_18 l_height30 w_color wow fadeInLeft"
                   data-wow-delay="0.3s"
                 >
-                  { getLocale("AppBanner2") }
+                  THE LIGHT TOWER FOR THE FUTURE
                 </p>
               </div>
             </Reveal>
           </div>
           <div className="col-lg-6 light-house" >
-            {/* <center> */}
-
-            <div className="app_img">
+              <div className="app_img">
               {/* <img
                 className="app_screen one wow fadeInDown"
                 src={require("../../img/home7/light-tower.png")}
@@ -48,16 +51,16 @@ const AppBanner = () => {
               /> */}
               <div className="light-house-back"/>
               <img
-                className="light-house"
                 src={require("../../img/home7/light-tower.png")}
                 alt=""
-              />
+              /><div className="box">
+                  <img src={light} className="light" />
+                </div>
             </div>
-            {/* </center> */}
-
           </div>
         </div>
       </div>
+      
     </section>
   );
 };

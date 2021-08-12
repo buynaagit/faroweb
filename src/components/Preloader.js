@@ -27,19 +27,19 @@ export default class Preloader extends Component {
           <div className="animation-preloader">
             <div className="spinner" />
             <div className="txt-loading">
-              <span data-text-preloader="S" className="letters-loading">
-                S
+              <span data-text-preloader="F" className="letters-loading">
+                F
               </span>
               <span data-text-preloader="A" className="letters-loading">
                 A
               </span>
-              <span data-text-preloader="A" className="letters-loading">
-                A
+              <span data-text-preloader="R" className="letters-loading">
+                R
               </span>
-              <span data-text-preloader="S" className="letters-loading">
-                S
+              <span data-text-preloader="O" className="letters-loading">
+                O
               </span>
-              <span data-text-preloader="L" className="letters-loading">
+              {/* <span data-text-preloader="L" className="letters-loading">
                 L
               </span>
               <span data-text-preloader="A" className="letters-loading">
@@ -50,7 +50,7 @@ export default class Preloader extends Component {
               </span>
               <span data-text-preloader="D" className="letters-loading">
                 D
-              </span>
+              </span> */}
             </div>
             <p className="text-center">Loading</p>
           </div>

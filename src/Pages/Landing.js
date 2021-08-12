@@ -26,10 +26,10 @@ const Landing = () => {
       <AppBanner />
       <FaroWebsites />
       {/* <CorporateInfo /> */}
+      <Features />
       <Quote />
       <News ServiceData={ServiceData} />
       <FaroTeam />
-      <Features />
       <Career />
       <FaroAdress />
       <FooterTwo FooterData={FooterData} />

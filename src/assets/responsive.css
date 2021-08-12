@@ -177,6 +177,10 @@
 }
 
 @media (max-width:1450px){
+    .box{
+        top:-0.5vh;
+        width: 130vw;
+    }
     .app_banner_area{
         background-size: cover;
         padding-bottom: 100px;
@@ -412,6 +416,9 @@
 }
 
 @media (max-width:1199px){
+    .box{
+        width: 140vw;
+    }
     .s_service_item{
         padding: 50px 22px 40px;
     }
@@ -1287,6 +1294,9 @@
 
 
 @media (max-width:991px){
+    .box{
+        width: 160vw;
+    }
     .navbar_fixed .header_area .menu_one {
         padding: 15px 0px;
     }
@@ -2750,6 +2760,7 @@
 }
 
 @media (max-width:768px){
+    .light-house{display: none;}
     .sec_title br,.prototype_service_info h2 br,.hosting_title h2 br{
         display: none;
     }
